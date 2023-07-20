@@ -38,6 +38,7 @@
 		57559DD72A69225000A1A476 /* ActivityOffsetContentTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DD62A69225000A1A476 /* ActivityOffsetContentTrip.swift */; };
 		57559DD92A69226B00A1A476 /* TransportationContentTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DD82A69226B00A1A476 /* TransportationContentTrip.swift */; };
 		57559DE12A69265200A1A476 /* ItemImageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DE02A69265200A1A476 /* ItemImageCard.swift */; };
+		57559DE32A69488900A1A476 /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DE22A69488900A1A476 /* ExtensionColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		57559DD62A69225000A1A476 /* ActivityOffsetContentTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityOffsetContentTrip.swift; sourceTree = "<group>"; };
 		57559DD82A69226B00A1A476 /* TransportationContentTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationContentTrip.swift; sourceTree = "<group>"; };
 		57559DE02A69265200A1A476 /* ItemImageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImageCard.swift; sourceTree = "<group>"; };
+		57559DE22A69488900A1A476 /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 			children = (
 				092B75072A663CBE00723890 /* CardView.swift */,
 				57559DCC2A691D0600A1A476 /* CustomCorner.swift */,
+				57559DE22A69488900A1A476 /* ExtensionColor.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				57559DCF2A6921AB00A1A476 /* TripCardScreen.swift in Sources */,
 				09297B802A6833E7008D6CD0 /* CalculateViewModel.swift in Sources */,
 				57559DC52A6918A700A1A476 /* TourismViewModel.swift in Sources */,
+				57559DE32A69488900A1A476 /* ExtensionColor.swift in Sources */,
 				57559DC92A691CB500A1A476 /* ItemContentVertical.swift in Sources */,
 				0950A19F2A6793720062628E /* UpcomIngTripsScreen.swift in Sources */,
 				57559DC72A691C9600A1A476 /* ExploreScreen.swift in Sources */,
