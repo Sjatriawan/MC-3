@@ -65,58 +65,146 @@ struct Activity: Decodable {
     let instagram: String
 }
 
-struct MapScreen: View {
-    @StateObject private var locationManager = LocationManager()
-    @State private var annotations: [MKPointAnnotation] = []
+
+struct MapAnnotationItem: Identifiable {
+    var id = UUID()
+    var annotation: MKPointAnnotation
+}
+
+struct CardViewPr: View {
+    let title: String
+    let message: String
+    let image:String
 
     var body: some View {
-        VStack {
-            MapView(annotations: $annotations)
-                .edgesIgnoringSafeArea(.all)
-
-            List {
-                ForEach(annotations, id: \.self) { annotation in
-                    Text("\(annotation.title ?? "Unknown"): \(distanceFromCurrentLocation(to: annotation.coordinate))")
-                }
+        HStack{
+            ZStack{
+                Text(title)
+                    .font(.title)
             }
-          
-            
-        }
-        .onAppear {
-            
-            if let url = Bundle.main.url(forResource: "data", withExtension: "json") {
-                do {
-                    let jsonData = try Data(contentsOf: url)
-                    let provinces = try JSONDecoder().decode([Province].self, from: jsonData)
-                    var newAnnotations: [MKPointAnnotation] = []
-
-                    for province in provinces {
-                        let annotation = MKPointAnnotation()
-                        annotation.coordinate = CLLocationCoordinate2D(latitude: province.coordinateKota.latitude, longitude: province.coordinateKota.longitude)
-                        annotation.title = province.namaProvinsi
-                        newAnnotations.append(annotation)
-                    }
-
-                    // Add current user location annotation
-                    if let userLocation = locationManager.lastKnownLocation {
-                        let userAnnotation = MKPointAnnotation()
-                        userAnnotation.coordinate = userLocation.coordinate
-                        userAnnotation.title = "Current Location"
-                        newAnnotations.append(userAnnotation)
-                    }
-                    
-
-                    annotations = newAnnotations
-                    
-                    
-                    
-                } catch {
-                    print("Error decoding JSON: \(error)")
+            Spacer()
+            VStack{
+                NavigationLink(destination: TravelPlannerStepView()) {
+                    Text("Add trip")
+                        .foregroundColor(.white)
+                        .frame(width: 150, height: 44)
+                        .background(Color.green)
+                        .cornerRadius(12)
+                        .shadow(radius: 8)
                 }
+
+                
+                Button {
+                    
+                } label: {
+                    Text("See more")
+                }
+                .foregroundColor(.green)
+                .frame(width: 150, height: 44)
+                .background(.white)
+                .cornerRadius(12)
+                .overlay(
+                RoundedRectangle(cornerRadius: 12)
+                .inset(by: 0.5)
+                .stroke(Color(red: 0.25, green: 0.55, blue: 0.25), lineWidth: 1)
+                )
+
+               
             }
-            
         }
+        .padding()
+        .frame(maxWidth: .infinity, maxHeight: 200)
+        .background(Color.white)
+        .cornerRadius(20)
+        .padding()
     }
+}
+
+
+
+struct MapScreen: View {
+    @StateObject private var locationManager = LocationManager()
+       @State private var annotations: [MapAnnotationItem] = []
+       @State private var selectedAnnotation: MapAnnotationItem? = nil
+
+    var body: some View {
+        NavigationView{
+            VStack {
+                ZStack{
+                    MapView(annotations: $annotations, selectedAnnotation: $selectedAnnotation)
+                        .edgesIgnoringSafeArea(.all)
+                        .onTapGesture {
+                            selectedAnnotation = nil
+                        }
+                    
+                    if let annotation = selectedAnnotation?.annotation {
+                        createCardView(for: annotation)
+                            .transition(.move(edge: .bottom))
+                            .position(x:200, y: 600)
+                    }
+                }
+                
+                
+                
+            }
+            .onAppear {
+                if let url = Bundle.main.url(forResource: "data", withExtension: "json") {
+                    do {
+                        let jsonData = try Data(contentsOf: url)
+                        let provinces = try JSONDecoder().decode([Province].self, from: jsonData)
+                        var newAnnotations: [MapAnnotationItem] = []
+                        
+                        for province in provinces {
+                            let annotation = MKPointAnnotation()
+                            annotation.coordinate = CLLocationCoordinate2D(latitude: province.coordinateKota.latitude, longitude: province.coordinateKota.longitude)
+                            annotation.title = province.namaProvinsi
+                            newAnnotations.append(MapAnnotationItem(annotation: annotation))
+                        }
+                        
+                        // Add current user location annotation
+                        if let userLocation = locationManager.lastKnownLocation {
+                            let userAnnotation = MKPointAnnotation()
+                            userAnnotation.coordinate = userLocation.coordinate
+                            userAnnotation.title = "Current Location"
+                            newAnnotations.append(MapAnnotationItem(annotation: userAnnotation))
+                        }
+                        
+                        annotations = newAnnotations
+                    } catch {
+                        print("Error decoding JSON: \(error)")
+                    }
+                }
+            }
+        }
+//        .overlay(
+//            Group {
+//                            if let annotation = selectedAnnotation?.annotation {
+//                                createCardView(for: annotation)
+//                                    .transition(.move(edge: .bottom))
+//                            }
+//            }.frame(maxWidth: .infinity, maxHeight: .infinity ,alignment: .bottom)
+//        )
+    }
+
+    func createAlert(for annotation: MKPointAnnotation) -> Alert {
+        let distanceString = distanceFromCurrentLocation(to: annotation.coordinate)
+        let alertTitle = annotation.title ?? "Unknown Location"
+        let message = "Distance from Current Location: \(distanceString)"
+
+        return Alert(title: Text(alertTitle), message: Text(message), dismissButton: .default(Text("OK")))
+    }
+    
+    func createCardView(for annotation: MKPointAnnotation) -> some View {
+        let distanceString = distanceFromCurrentLocation(to: annotation.coordinate)
+        let title = annotation.title ?? "Unknown Location"
+        let message = "Distance from Current Location: \(distanceString)"
+        let image = ""
+
+        return CardViewPr(title: title, message: message, image: image)
+    }
+
+    
+    
 
     func distanceFromCurrentLocation(to coordinate: CLLocationCoordinate2D) -> String {
         guard let userLocation = locationManager.lastKnownLocation else {
@@ -131,6 +219,8 @@ struct MapScreen: View {
         return String(format: "%.2f km", distanceInKilometers)
     }
 }
+
+
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
@@ -152,19 +242,41 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
 }
 
 struct MapView: UIViewRepresentable {
-    @Binding var annotations: [MKPointAnnotation]
+    @Binding var annotations: [MapAnnotationItem]
+    @Binding var selectedAnnotation: MapAnnotationItem?
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
 
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
         mapView.showsUserLocation = true
+        mapView.delegate = context.coordinator // Set the delegate to the coordinator
         return mapView
     }
 
     func updateUIView(_ uiView: MKMapView, context: Context) {
         uiView.removeAnnotations(uiView.annotations)
-        uiView.addAnnotations(annotations)
+        uiView.addAnnotations(annotations.map(\.annotation)) // Extract the annotations from the MapAnnotationItem
+    }
+
+    class Coordinator: NSObject, MKMapViewDelegate {
+        var parent: MapView
+
+        init(_ parent: MapView) {
+            self.parent = parent
+        }
+
+        func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+            // Get the selected annotation and set it in the parent view
+            if let selectedAnnotation = view.annotation as? MKPointAnnotation {
+                parent.selectedAnnotation = parent.annotations.first(where: { $0.annotation == selectedAnnotation })
+            }
+        }
     }
 }
+
 
 struct MapScreen_Previews: PreviewProvider {
     static var previews: some View {
