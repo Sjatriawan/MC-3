@@ -1,0 +1,699 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09297B7E2A683389008D6CD0 /* CalculateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B7D2A683389008D6CD0 /* CalculateScreen.swift */; };
+		09297B802A6833E7008D6CD0 /* CalculateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B7F2A6833E7008D6CD0 /* CalculateViewModel.swift */; };
+		09297B842A6834FB008D6CD0 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B832A6834FB008D6CD0 /* MapScreen.swift */; };
+		09297B862A684016008D6CD0 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 09297B852A684016008D6CD0 /* data.json */; };
+		092B74D32A66372300723890 /* EnviroamerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B74D22A66372300723890 /* EnviroamerApp.swift */; };
+		092B74D52A66372300723890 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B74D42A66372300723890 /* ContentView.swift */; };
+		092B74D72A66372400723890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 092B74D62A66372400723890 /* Assets.xcassets */; };
+		092B74DB2A66372400723890 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 092B74DA2A66372400723890 /* Preview Assets.xcassets */; };
+		092B74E52A66372400723890 /* EnviroamerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B74E42A66372400723890 /* EnviroamerTests.swift */; };
+		092B74EF2A66372400723890 /* EnviroamerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B74EE2A66372400723890 /* EnviroamerUITests.swift */; };
+		092B74F12A66372400723890 /* EnviroamerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B74F02A66372400723890 /* EnviroamerUITestsLaunchTests.swift */; };
+		092B75042A66389C00723890 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B75032A66389C00723890 /* HomeScreen.swift */; };
+		092B75062A6638B100723890 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B75052A6638B100723890 /* HomeViewModel.swift */; };
+		092B75082A663CBE00723890 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B75072A663CBE00723890 /* CardView.swift */; };
+		0950A19F2A6793720062628E /* UpcomIngTripsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950A19E2A6793720062628E /* UpcomIngTripsScreen.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		092B74E12A66372400723890 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 092B74C72A66372300723890 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 092B74CE2A66372300723890;
+			remoteInfo = Enviroamer;
+		};
+		092B74EB2A66372400723890 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 092B74C72A66372300723890 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 092B74CE2A66372300723890;
+			remoteInfo = Enviroamer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09297B7D2A683389008D6CD0 /* CalculateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateScreen.swift; sourceTree = "<group>"; };
+		09297B7F2A6833E7008D6CD0 /* CalculateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewModel.swift; sourceTree = "<group>"; };
+		09297B832A6834FB008D6CD0 /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
+		09297B852A684016008D6CD0 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		092B74CF2A66372300723890 /* Enviroamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enviroamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		092B74D22A66372300723890 /* EnviroamerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviroamerApp.swift; sourceTree = "<group>"; };
+		092B74D42A66372300723890 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		092B74D62A66372400723890 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		092B74D82A66372400723890 /* Enviroamer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Enviroamer.entitlements; sourceTree = "<group>"; };
+		092B74DA2A66372400723890 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		092B74E02A66372400723890 /* EnviroamerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnviroamerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		092B74E42A66372400723890 /* EnviroamerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviroamerTests.swift; sourceTree = "<group>"; };
+		092B74EA2A66372400723890 /* EnviroamerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnviroamerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		092B74EE2A66372400723890 /* EnviroamerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviroamerUITests.swift; sourceTree = "<group>"; };
+		092B74F02A66372400723890 /* EnviroamerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviroamerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		092B75032A66389C00723890 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		092B75052A6638B100723890 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		092B75072A663CBE00723890 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		0950A19E2A6793720062628E /* UpcomIngTripsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomIngTripsScreen.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		092B74CC2A66372300723890 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		092B74DD2A66372400723890 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		092B74E72A66372400723890 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09297B7C2A683351008D6CD0 /* CalculateScreen */ = {
+			isa = PBXGroup;
+			children = (
+				09297B7D2A683389008D6CD0 /* CalculateScreen.swift */,
+				09297B7F2A6833E7008D6CD0 /* CalculateViewModel.swift */,
+			);
+			path = CalculateScreen;
+			sourceTree = "<group>";
+		};
+		09297B812A6834E6008D6CD0 /* MapScreen */ = {
+			isa = PBXGroup;
+			children = (
+				09297B832A6834FB008D6CD0 /* MapScreen.swift */,
+			);
+			path = MapScreen;
+			sourceTree = "<group>";
+		};
+		092B74C62A66372300723890 = {
+			isa = PBXGroup;
+			children = (
+				092B74D12A66372300723890 /* Enviroamer */,
+				092B74E32A66372400723890 /* EnviroamerTests */,
+				092B74ED2A66372400723890 /* EnviroamerUITests */,
+				092B74D02A66372300723890 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		092B74D02A66372300723890 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				092B74CF2A66372300723890 /* Enviroamer.app */,
+				092B74E02A66372400723890 /* EnviroamerTests.xctest */,
+				092B74EA2A66372400723890 /* EnviroamerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		092B74D12A66372300723890 /* Enviroamer */ = {
+			isa = PBXGroup;
+			children = (
+				092B75092A663D7400723890 /* Model */,
+				092B75002A6637EC00723890 /* Screen */,
+				092B75012A6637F400723890 /* Components */,
+				092B74D22A66372300723890 /* EnviroamerApp.swift */,
+				092B74D42A66372300723890 /* ContentView.swift */,
+				092B74D62A66372400723890 /* Assets.xcassets */,
+				092B74D82A66372400723890 /* Enviroamer.entitlements */,
+				092B74D92A66372400723890 /* Preview Content */,
+			);
+			path = Enviroamer;
+			sourceTree = "<group>";
+		};
+		092B74D92A66372400723890 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				092B74DA2A66372400723890 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		092B74E32A66372400723890 /* EnviroamerTests */ = {
+			isa = PBXGroup;
+			children = (
+				092B74E42A66372400723890 /* EnviroamerTests.swift */,
+			);
+			path = EnviroamerTests;
+			sourceTree = "<group>";
+		};
+		092B74ED2A66372400723890 /* EnviroamerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				092B74EE2A66372400723890 /* EnviroamerUITests.swift */,
+				092B74F02A66372400723890 /* EnviroamerUITestsLaunchTests.swift */,
+			);
+			path = EnviroamerUITests;
+			sourceTree = "<group>";
+		};
+		092B75002A6637EC00723890 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				09297B812A6834E6008D6CD0 /* MapScreen */,
+				09297B7C2A683351008D6CD0 /* CalculateScreen */,
+				092B75022A66380A00723890 /* HomeScreen */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		092B75012A6637F400723890 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				092B75072A663CBE00723890 /* CardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		092B75022A66380A00723890 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				092B75032A66389C00723890 /* HomeScreen.swift */,
+				092B75052A6638B100723890 /* HomeViewModel.swift */,
+				0950A19E2A6793720062628E /* UpcomIngTripsScreen.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		092B75092A663D7400723890 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				09297B852A684016008D6CD0 /* data.json */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		092B74CE2A66372300723890 /* Enviroamer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 092B74F42A66372400723890 /* Build configuration list for PBXNativeTarget "Enviroamer" */;
+			buildPhases = (
+				092B74CB2A66372300723890 /* Sources */,
+				092B74CC2A66372300723890 /* Frameworks */,
+				092B74CD2A66372300723890 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Enviroamer;
+			productName = Enviroamer;
+			productReference = 092B74CF2A66372300723890 /* Enviroamer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		092B74DF2A66372400723890 /* EnviroamerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 092B74F72A66372400723890 /* Build configuration list for PBXNativeTarget "EnviroamerTests" */;
+			buildPhases = (
+				092B74DC2A66372400723890 /* Sources */,
+				092B74DD2A66372400723890 /* Frameworks */,
+				092B74DE2A66372400723890 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				092B74E22A66372400723890 /* PBXTargetDependency */,
+			);
+			name = EnviroamerTests;
+			productName = EnviroamerTests;
+			productReference = 092B74E02A66372400723890 /* EnviroamerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		092B74E92A66372400723890 /* EnviroamerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 092B74FA2A66372400723890 /* Build configuration list for PBXNativeTarget "EnviroamerUITests" */;
+			buildPhases = (
+				092B74E62A66372400723890 /* Sources */,
+				092B74E72A66372400723890 /* Frameworks */,
+				092B74E82A66372400723890 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				092B74EC2A66372400723890 /* PBXTargetDependency */,
+			);
+			name = EnviroamerUITests;
+			productName = EnviroamerUITests;
+			productReference = 092B74EA2A66372400723890 /* EnviroamerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		092B74C72A66372300723890 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					092B74CE2A66372300723890 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					092B74DF2A66372400723890 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 092B74CE2A66372300723890;
+					};
+					092B74E92A66372400723890 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 092B74CE2A66372300723890;
+					};
+				};
+			};
+			buildConfigurationList = 092B74CA2A66372300723890 /* Build configuration list for PBXProject "Enviroamer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 092B74C62A66372300723890;
+			productRefGroup = 092B74D02A66372300723890 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				092B74CE2A66372300723890 /* Enviroamer */,
+				092B74DF2A66372400723890 /* EnviroamerTests */,
+				092B74E92A66372400723890 /* EnviroamerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		092B74CD2A66372300723890 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				092B74DB2A66372400723890 /* Preview Assets.xcassets in Resources */,
+				09297B862A684016008D6CD0 /* data.json in Resources */,
+				092B74D72A66372400723890 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		092B74DE2A66372400723890 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		092B74E82A66372400723890 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		092B74CB2A66372300723890 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09297B842A6834FB008D6CD0 /* MapScreen.swift in Sources */,
+				092B74D52A66372300723890 /* ContentView.swift in Sources */,
+				092B74D32A66372300723890 /* EnviroamerApp.swift in Sources */,
+				092B75042A66389C00723890 /* HomeScreen.swift in Sources */,
+				09297B7E2A683389008D6CD0 /* CalculateScreen.swift in Sources */,
+				092B75062A6638B100723890 /* HomeViewModel.swift in Sources */,
+				09297B802A6833E7008D6CD0 /* CalculateViewModel.swift in Sources */,
+				0950A19F2A6793720062628E /* UpcomIngTripsScreen.swift in Sources */,
+				092B75082A663CBE00723890 /* CardView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		092B74DC2A66372400723890 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				092B74E52A66372400723890 /* EnviroamerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		092B74E62A66372400723890 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				092B74F12A66372400723890 /* EnviroamerUITestsLaunchTests.swift in Sources */,
+				092B74EF2A66372400723890 /* EnviroamerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		092B74E22A66372400723890 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 092B74CE2A66372300723890 /* Enviroamer */;
+			targetProxy = 092B74E12A66372400723890 /* PBXContainerItemProxy */;
+		};
+		092B74EC2A66372400723890 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 092B74CE2A66372300723890 /* Enviroamer */;
+			targetProxy = 092B74EB2A66372400723890 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		092B74F22A66372400723890 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		092B74F32A66372400723890 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		092B74F52A66372400723890 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Enviroamer/Enviroamer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Enviroamer/Preview Content\"";
+				DEVELOPMENT_TEAM = 2U39LWX9H7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Want to know your location!";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mys.enviroamer.Enviroamer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		092B74F62A66372400723890 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Enviroamer/Enviroamer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Enviroamer/Preview Content\"";
+				DEVELOPMENT_TEAM = 2U39LWX9H7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Want to know your location!";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mys.enviroamer.Enviroamer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		092B74F82A66372400723890 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2U39LWX9H7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mys.enviroamer.EnviroamerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Enviroamer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Enviroamer";
+			};
+			name = Debug;
+		};
+		092B74F92A66372400723890 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2U39LWX9H7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mys.enviroamer.EnviroamerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Enviroamer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Enviroamer";
+			};
+			name = Release;
+		};
+		092B74FB2A66372400723890 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2U39LWX9H7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mys.enviroamer.EnviroamerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Enviroamer;
+			};
+			name = Debug;
+		};
+		092B74FC2A66372400723890 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2U39LWX9H7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mys.enviroamer.EnviroamerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Enviroamer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		092B74CA2A66372300723890 /* Build configuration list for PBXProject "Enviroamer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				092B74F22A66372400723890 /* Debug */,
+				092B74F32A66372400723890 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		092B74F42A66372400723890 /* Build configuration list for PBXNativeTarget "Enviroamer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				092B74F52A66372400723890 /* Debug */,
+				092B74F62A66372400723890 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		092B74F72A66372400723890 /* Build configuration list for PBXNativeTarget "EnviroamerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				092B74F82A66372400723890 /* Debug */,
+				092B74F92A66372400723890 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		092B74FA2A66372400723890 /* Build configuration list for PBXNativeTarget "EnviroamerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				092B74FB2A66372400723890 /* Debug */,
+				092B74FC2A66372400723890 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 092B74C72A66372300723890 /* Project object */;
+}
