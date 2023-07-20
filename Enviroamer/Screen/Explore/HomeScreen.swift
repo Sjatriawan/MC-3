@@ -14,19 +14,19 @@ struct TabBar: View {
             HomeScreen()
                 .tabItem {
                     Image(systemName: "1.square.fill")
-                    Text("First")
+                    Text("Explore")
                 }.onAppear(
                 )
             
-            ContentView()
+            TripScreen()
                 .tabItem {
                     Image(systemName: "2.square.fill")
-                    Text("Second")
+                    Text("Trip")
                 }
-            ContentView()
+            WishlistScreen()
                 .tabItem {
                     Image(systemName: "3.square.fill")
-                    Text("Third")
+                    Text("Wishlist")
                 }
         }
     }
@@ -88,7 +88,6 @@ struct MenuTrips: View {
     var body: some View {
         ZStack{
             VStack(alignment: .leading){
-                
                 SegmentedBar(selectedSegment: $selectedSegment, segments: segments)
                 
                 if selectedSegment == 0 {
