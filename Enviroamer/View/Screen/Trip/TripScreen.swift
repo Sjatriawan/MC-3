@@ -9,12 +9,7 @@ import SwiftUI
 
 struct TripScreen: View {
     var body: some View {
-        ZStack{
-            MapScreen()
-            
-            
-
-        }.ignoresSafeArea()
+        Text("Trip Screen")
     }
 }
 

@@ -5,8 +5,6 @@
 //  Created by M Yogi Satriawan on 19/07/23.
 //
 
-import SwiftUI
-
 
 import SwiftUI
 import CoreLocation
@@ -22,7 +20,7 @@ struct Province: Decodable, Identifiable, Hashable{
     let tranportasiProvinsi: [String]
     let kegiatanOffset: [Activity]
 
-    var id: Int { // Implementing the Identifiable protocol with 'id' property
+    var id: Int {
         return idProvinsi
     }
     
@@ -149,31 +147,31 @@ struct MapScreen: View {
             }
             .onAppear {
                 if let url = Bundle.main.url(forResource: "data", withExtension: "json") {
-                    do {
-                        let jsonData = try Data(contentsOf: url)
-                        let provinces = try JSONDecoder().decode([Province].self, from: jsonData)
-                        var newAnnotations: [MapAnnotationItem] = []
-                        
-                        for province in provinces {
-                            let annotation = MKPointAnnotation()
-                            annotation.coordinate = CLLocationCoordinate2D(latitude: province.coordinateKota.latitude, longitude: province.coordinateKota.longitude)
-                            annotation.title = province.namaProvinsi
-                            newAnnotations.append(MapAnnotationItem(annotation: annotation))
+                        do {
+                            let jsonData = try Data(contentsOf: url)
+                            let provinces = try JSONDecoder().decode([Province].self, from: jsonData)
+                            var newAnnotations: [MapAnnotationItem] = []
+                            
+                            for province in provinces {
+                                let annotation = MKPointAnnotation()
+                                annotation.coordinate = CLLocationCoordinate2D(latitude: province.coordinateKota.latitude, longitude: province.coordinateKota.longitude)
+                                annotation.title = province.namaProvinsi
+                                newAnnotations.append(MapAnnotationItem(annotation: annotation))
+                            }
+                            
+                            if let userLocation = locationManager.lastKnownLocation {
+                                let userAnnotation = MKPointAnnotation()
+                                userAnnotation.coordinate = userLocation.coordinate
+                                userAnnotation.title = "Current Location"
+                                newAnnotations.append(MapAnnotationItem(annotation: userAnnotation))
+                            }
+                            
+                            annotations = newAnnotations
+                        } catch {
+                            print("Error decoding JSON: \(error)")
                         }
-                        
-                        // Add current user location annotation
-                        if let userLocation = locationManager.lastKnownLocation {
-                            let userAnnotation = MKPointAnnotation()
-                            userAnnotation.coordinate = userLocation.coordinate
-                            userAnnotation.title = "Current Location"
-                            newAnnotations.append(MapAnnotationItem(annotation: userAnnotation))
-                        }
-                        
-                        annotations = newAnnotations
-                    } catch {
-                        print("Error decoding JSON: \(error)")
                     }
-                }
+                
             }
         }
 //        .overlay(
