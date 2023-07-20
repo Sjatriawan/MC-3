@@ -11,6 +11,8 @@
 		09297B802A6833E7008D6CD0 /* CalculateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B7F2A6833E7008D6CD0 /* CalculateViewModel.swift */; };
 		09297B842A6834FB008D6CD0 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B832A6834FB008D6CD0 /* MapScreen.swift */; };
 		09297B862A684016008D6CD0 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 09297B852A684016008D6CD0 /* data.json */; };
+		09297B8A2A68DB86008D6CD0 /* TripScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B892A68DB85008D6CD0 /* TripScreen.swift */; };
+		09297B8C2A68DB98008D6CD0 /* WishlistScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B8B2A68DB98008D6CD0 /* WishlistScreen.swift */; };
 		092B74D32A66372300723890 /* EnviroamerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B74D22A66372300723890 /* EnviroamerApp.swift */; };
 		092B74D52A66372300723890 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B74D42A66372300723890 /* ContentView.swift */; };
 		092B74D72A66372400723890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 092B74D62A66372400723890 /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		09297B7F2A6833E7008D6CD0 /* CalculateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewModel.swift; sourceTree = "<group>"; };
 		09297B832A6834FB008D6CD0 /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
 		09297B852A684016008D6CD0 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		09297B892A68DB85008D6CD0 /* TripScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripScreen.swift; sourceTree = "<group>"; };
+		09297B8B2A68DB98008D6CD0 /* WishlistScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistScreen.swift; sourceTree = "<group>"; };
 		092B74CF2A66372300723890 /* Enviroamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enviroamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		092B74D22A66372300723890 /* EnviroamerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviroamerApp.swift; sourceTree = "<group>"; };
 		092B74D42A66372300723890 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,21 +92,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09297B7C2A683351008D6CD0 /* CalculateScreen */ = {
+		09297B7C2A683351008D6CD0 /* Calculate */ = {
 			isa = PBXGroup;
 			children = (
 				09297B7D2A683389008D6CD0 /* CalculateScreen.swift */,
 				09297B7F2A6833E7008D6CD0 /* CalculateViewModel.swift */,
 			);
-			path = CalculateScreen;
+			path = Calculate;
 			sourceTree = "<group>";
 		};
-		09297B812A6834E6008D6CD0 /* MapScreen */ = {
+		09297B812A6834E6008D6CD0 /* Map */ = {
 			isa = PBXGroup;
 			children = (
 				09297B832A6834FB008D6CD0 /* MapScreen.swift */,
 			);
-			path = MapScreen;
+			path = Map;
+			sourceTree = "<group>";
+		};
+		09297B872A68DB0B008D6CD0 /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				09297B892A68DB85008D6CD0 /* TripScreen.swift */,
+			);
+			path = Trip;
+			sourceTree = "<group>";
+		};
+		09297B882A68DB17008D6CD0 /* Wishlist */ = {
+			isa = PBXGroup;
+			children = (
+				09297B8B2A68DB98008D6CD0 /* WishlistScreen.swift */,
+			);
+			path = Wishlist;
 			sourceTree = "<group>";
 		};
 		092B74C62A66372300723890 = {
@@ -168,9 +188,11 @@
 		092B75002A6637EC00723890 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				09297B812A6834E6008D6CD0 /* MapScreen */,
-				09297B7C2A683351008D6CD0 /* CalculateScreen */,
-				092B75022A66380A00723890 /* HomeScreen */,
+				09297B882A68DB17008D6CD0 /* Wishlist */,
+				09297B872A68DB0B008D6CD0 /* Trip */,
+				09297B812A6834E6008D6CD0 /* Map */,
+				09297B7C2A683351008D6CD0 /* Calculate */,
+				092B75022A66380A00723890 /* Explore */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -183,14 +205,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		092B75022A66380A00723890 /* HomeScreen */ = {
+		092B75022A66380A00723890 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
 				092B75032A66389C00723890 /* HomeScreen.swift */,
 				092B75052A6638B100723890 /* HomeViewModel.swift */,
 				0950A19E2A6793720062628E /* UpcomIngTripsScreen.swift */,
 			);
-			path = HomeScreen;
+			path = Explore;
 			sourceTree = "<group>";
 		};
 		092B75092A663D7400723890 /* Model */ = {
@@ -334,10 +356,12 @@
 			files = (
 				09297B842A6834FB008D6CD0 /* MapScreen.swift in Sources */,
 				092B74D52A66372300723890 /* ContentView.swift in Sources */,
+				09297B8A2A68DB86008D6CD0 /* TripScreen.swift in Sources */,
 				092B74D32A66372300723890 /* EnviroamerApp.swift in Sources */,
 				092B75042A66389C00723890 /* HomeScreen.swift in Sources */,
 				09297B7E2A683389008D6CD0 /* CalculateScreen.swift in Sources */,
 				092B75062A6638B100723890 /* HomeViewModel.swift in Sources */,
+				09297B8C2A68DB98008D6CD0 /* WishlistScreen.swift in Sources */,
 				09297B802A6833E7008D6CD0 /* CalculateViewModel.swift in Sources */,
 				0950A19F2A6793720062628E /* UpcomIngTripsScreen.swift in Sources */,
 				092B75082A663CBE00723890 /* CardView.swift in Sources */,
