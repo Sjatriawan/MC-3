@@ -21,9 +21,23 @@
 		092B74EF2A66372400723890 /* EnviroamerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B74EE2A66372400723890 /* EnviroamerUITests.swift */; };
 		092B74F12A66372400723890 /* EnviroamerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B74F02A66372400723890 /* EnviroamerUITestsLaunchTests.swift */; };
 		092B75042A66389C00723890 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B75032A66389C00723890 /* HomeScreen.swift */; };
-		092B75062A6638B100723890 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B75052A6638B100723890 /* HomeViewModel.swift */; };
 		092B75082A663CBE00723890 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B75072A663CBE00723890 /* CardView.swift */; };
 		0950A19F2A6793720062628E /* UpcomIngTripsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950A19E2A6793720062628E /* UpcomIngTripsScreen.swift */; };
+		57559DBF2A69181600A1A476 /* Tourism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DBE2A69181600A1A476 /* Tourism.swift */; };
+		57559DC12A69182700A1A476 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DC02A69182700A1A476 /* Location.swift */; };
+		57559DC32A69183800A1A476 /* OffsetActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DC22A69183800A1A476 /* OffsetActivity.swift */; };
+		57559DC52A6918A700A1A476 /* TourismViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DC42A6918A700A1A476 /* TourismViewModel.swift */; };
+		57559DC72A691C9600A1A476 /* ExploreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DC62A691C9600A1A476 /* ExploreScreen.swift */; };
+		57559DC92A691CB500A1A476 /* ItemContentVertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DC82A691CB500A1A476 /* ItemContentVertical.swift */; };
+		57559DCB2A691CC500A1A476 /* ItemContentHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DCA2A691CC500A1A476 /* ItemContentHorizontal.swift */; };
+		57559DCD2A691D0600A1A476 /* CustomCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DCC2A691D0600A1A476 /* CustomCorner.swift */; };
+		57559DCF2A6921AB00A1A476 /* TripCardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DCE2A6921AB00A1A476 /* TripCardScreen.swift */; };
+		57559DD12A6921CD00A1A476 /* ContentTripCardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DD02A6921CD00A1A476 /* ContentTripCardScreen.swift */; };
+		57559DD32A6921EE00A1A476 /* CarbonContentTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DD22A6921EE00A1A476 /* CarbonContentTrip.swift */; };
+		57559DD52A69220100A1A476 /* DestinationContentTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DD42A69220100A1A476 /* DestinationContentTrip.swift */; };
+		57559DD72A69225000A1A476 /* ActivityOffsetContentTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DD62A69225000A1A476 /* ActivityOffsetContentTrip.swift */; };
+		57559DD92A69226B00A1A476 /* TransportationContentTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DD82A69226B00A1A476 /* TransportationContentTrip.swift */; };
+		57559DE12A69265200A1A476 /* ItemImageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DE02A69265200A1A476 /* ItemImageCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +76,23 @@
 		092B74EE2A66372400723890 /* EnviroamerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviroamerUITests.swift; sourceTree = "<group>"; };
 		092B74F02A66372400723890 /* EnviroamerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviroamerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		092B75032A66389C00723890 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		092B75052A6638B100723890 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		092B75072A663CBE00723890 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0950A19E2A6793720062628E /* UpcomIngTripsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomIngTripsScreen.swift; sourceTree = "<group>"; };
+		57559DBE2A69181600A1A476 /* Tourism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tourism.swift; sourceTree = "<group>"; };
+		57559DC02A69182700A1A476 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		57559DC22A69183800A1A476 /* OffsetActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetActivity.swift; sourceTree = "<group>"; };
+		57559DC42A6918A700A1A476 /* TourismViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourismViewModel.swift; sourceTree = "<group>"; };
+		57559DC62A691C9600A1A476 /* ExploreScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreScreen.swift; sourceTree = "<group>"; };
+		57559DC82A691CB500A1A476 /* ItemContentVertical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemContentVertical.swift; sourceTree = "<group>"; };
+		57559DCA2A691CC500A1A476 /* ItemContentHorizontal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemContentHorizontal.swift; sourceTree = "<group>"; };
+		57559DCC2A691D0600A1A476 /* CustomCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorner.swift; sourceTree = "<group>"; };
+		57559DCE2A6921AB00A1A476 /* TripCardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardScreen.swift; sourceTree = "<group>"; };
+		57559DD02A6921CD00A1A476 /* ContentTripCardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTripCardScreen.swift; sourceTree = "<group>"; };
+		57559DD22A6921EE00A1A476 /* CarbonContentTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonContentTrip.swift; sourceTree = "<group>"; };
+		57559DD42A69220100A1A476 /* DestinationContentTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationContentTrip.swift; sourceTree = "<group>"; };
+		57559DD62A69225000A1A476 /* ActivityOffsetContentTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityOffsetContentTrip.swift; sourceTree = "<group>"; };
+		57559DD82A69226B00A1A476 /* TransportationContentTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationContentTrip.swift; sourceTree = "<group>"; };
+		57559DE02A69265200A1A476 /* ItemImageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImageCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,9 +176,10 @@
 		092B74D12A66372300723890 /* Enviroamer */ = {
 			isa = PBXGroup;
 			children = (
+				57559DBD2A68F48400A1A476 /* Resource */,
+				57559DBC2A68F44700A1A476 /* View */,
+				57559DBB2A68F43600A1A476 /* ViewModel */,
 				092B75092A663D7400723890 /* Model */,
-				092B75002A6637EC00723890 /* Screen */,
-				092B75012A6637F400723890 /* Components */,
 				092B74D22A66372300723890 /* EnviroamerApp.swift */,
 				092B74D42A66372300723890 /* ContentView.swift */,
 				092B74D62A66372400723890 /* Assets.xcassets */,
@@ -188,11 +217,13 @@
 		092B75002A6637EC00723890 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				092B75032A66389C00723890 /* HomeScreen.swift */,
 				09297B882A68DB17008D6CD0 /* Wishlist */,
 				09297B872A68DB0B008D6CD0 /* Trip */,
 				09297B812A6834E6008D6CD0 /* Map */,
 				09297B7C2A683351008D6CD0 /* Calculate */,
 				092B75022A66380A00723890 /* Explore */,
+				57559DDB2A69231C00A1A476 /* TripCard */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -201,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				092B75072A663CBE00723890 /* CardView.swift */,
+				57559DCC2A691D0600A1A476 /* CustomCorner.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -208,9 +240,9 @@
 		092B75022A66380A00723890 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
-				092B75032A66389C00723890 /* HomeScreen.swift */,
-				092B75052A6638B100723890 /* HomeViewModel.swift */,
+				57559DDD2A69237E00A1A476 /* Components */,
 				0950A19E2A6793720062628E /* UpcomIngTripsScreen.swift */,
+				57559DC62A691C9600A1A476 /* ExploreScreen.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -218,9 +250,67 @@
 		092B75092A663D7400723890 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				09297B852A684016008D6CD0 /* data.json */,
+				57559DBE2A69181600A1A476 /* Tourism.swift */,
+				57559DC02A69182700A1A476 /* Location.swift */,
+				57559DC22A69183800A1A476 /* OffsetActivity.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		57559DBB2A68F43600A1A476 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				57559DC42A6918A700A1A476 /* TourismViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		57559DBC2A68F44700A1A476 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				092B75002A6637EC00723890 /* Screen */,
+				092B75012A6637F400723890 /* Components */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		57559DBD2A68F48400A1A476 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				09297B852A684016008D6CD0 /* data.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		57559DDB2A69231C00A1A476 /* TripCard */ = {
+			isa = PBXGroup;
+			children = (
+				57559DDF2A69239F00A1A476 /* Components */,
+				57559DCE2A6921AB00A1A476 /* TripCardScreen.swift */,
+			);
+			path = TripCard;
+			sourceTree = "<group>";
+		};
+		57559DDD2A69237E00A1A476 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				57559DC82A691CB500A1A476 /* ItemContentVertical.swift */,
+				57559DCA2A691CC500A1A476 /* ItemContentHorizontal.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		57559DDF2A69239F00A1A476 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				57559DD02A6921CD00A1A476 /* ContentTripCardScreen.swift */,
+				57559DD22A6921EE00A1A476 /* CarbonContentTrip.swift */,
+				57559DD42A69220100A1A476 /* DestinationContentTrip.swift */,
+				57559DD62A69225000A1A476 /* ActivityOffsetContentTrip.swift */,
+				57559DD82A69226B00A1A476 /* TransportationContentTrip.swift */,
+				57559DE02A69265200A1A476 /* ItemImageCard.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,17 +444,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57559DD72A69225000A1A476 /* ActivityOffsetContentTrip.swift in Sources */,
 				09297B842A6834FB008D6CD0 /* MapScreen.swift in Sources */,
+				57559DC32A69183800A1A476 /* OffsetActivity.swift in Sources */,
 				092B74D52A66372300723890 /* ContentView.swift in Sources */,
+				57559DD52A69220100A1A476 /* DestinationContentTrip.swift in Sources */,
+				57559DD32A6921EE00A1A476 /* CarbonContentTrip.swift in Sources */,
+				57559DD12A6921CD00A1A476 /* ContentTripCardScreen.swift in Sources */,
 				09297B8A2A68DB86008D6CD0 /* TripScreen.swift in Sources */,
 				092B74D32A66372300723890 /* EnviroamerApp.swift in Sources */,
+				57559DD92A69226B00A1A476 /* TransportationContentTrip.swift in Sources */,
 				092B75042A66389C00723890 /* HomeScreen.swift in Sources */,
 				09297B7E2A683389008D6CD0 /* CalculateScreen.swift in Sources */,
-				092B75062A6638B100723890 /* HomeViewModel.swift in Sources */,
+				57559DC12A69182700A1A476 /* Location.swift in Sources */,
+				57559DCD2A691D0600A1A476 /* CustomCorner.swift in Sources */,
 				09297B8C2A68DB98008D6CD0 /* WishlistScreen.swift in Sources */,
+				57559DCB2A691CC500A1A476 /* ItemContentHorizontal.swift in Sources */,
+				57559DCF2A6921AB00A1A476 /* TripCardScreen.swift in Sources */,
 				09297B802A6833E7008D6CD0 /* CalculateViewModel.swift in Sources */,
+				57559DC52A6918A700A1A476 /* TourismViewModel.swift in Sources */,
+				57559DC92A691CB500A1A476 /* ItemContentVertical.swift in Sources */,
 				0950A19F2A6793720062628E /* UpcomIngTripsScreen.swift in Sources */,
+				57559DC72A691C9600A1A476 /* ExploreScreen.swift in Sources */,
+				57559DE12A69265200A1A476 /* ItemImageCard.swift in Sources */,
 				092B75082A663CBE00723890 /* CardView.swift in Sources */,
+				57559DBF2A69181600A1A476 /* Tourism.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,7 +623,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Enviroamer/Preview Content\"";
-				DEVELOPMENT_TEAM = 2U39LWX9H7;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -534,7 +638,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -558,7 +662,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Enviroamer/Preview Content\"";
-				DEVELOPMENT_TEAM = 2U39LWX9H7;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -573,7 +677,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
