@@ -9,7 +9,16 @@ import SwiftUI
 
 struct TripScreen: View {
     var body: some View {
-        Text("Trip Screen")
+        NavigationStack{
+            VStack{
+                
+                
+            }
+            .padding(24)
+            .navigationTitle(Text("Trips"))
+            
+            
+        }
     }
 }
 

@@ -34,5 +34,7 @@ struct Location : Codable,Identifiable, Hashable {
         var latitude : Double
         var longitude : Double
     }
+    
+
 
 }

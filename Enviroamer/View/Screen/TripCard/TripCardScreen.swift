@@ -11,50 +11,33 @@ struct TripCardScreen: View {
     @EnvironmentObject var modelWisata : TourismViewModel
     @State private var selectedIndex = 0
     
-    var listContent  : [ContentTripCardScreen<AnyView>] = [
-        ContentTripCardScreen(
-            title: "Get ready for the odyssey!",
-            desc: "Before start your trip, understand your carbon footprint first",
-            content: AnyView(CarbonContentTrip())
-        ),
-        
-        ContentTripCardScreen(
-            title: "Unforgettable adventure",
-            desc: "Welcome to the wonderland for eco-conscious tourist. Discover many more interesting places that really suit you!",
-            content: AnyView(DestinationContentTrip())
-        ),
-        ContentTripCardScreen(
-            title: "Neutralize carbon footprint",
-            desc: "There will always be many ways to minimize or eliminate environmental impact from travelling by offsetting your carbon footprint",
-            content: AnyView(ActivityOffsetContentTrip())
-        ),
-        ContentTripCardScreen(
-            title: "Get around the city",
-            desc: "People say \"All roads lead to Rome.\" There are also many different ways to reach the same destination. Rethink how you will go there",
-            content: AnyView(TransportationContentTrip())
-        )
-    ]
     
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 32){
-                ItemImageCard(location: modelWisata.tourisms[2])
-                
-               TabBarView(selectedIndex: $selectedIndex)
-                
-                if selectedIndex == 0 {
-                    CarbonContentTrip()
-                } else if selectedIndex == 1 {
-                    DestinationContentTrip()
-                } else if selectedIndex == 2 {
-                    ActivityOffsetContentTrip()
-                } else if selectedIndex == 3 {
-                    TransportationContentTrip()
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 32){
+                    ItemImageCard(location: modelWisata.tourisms[0])
+                    
+                   TabBarView(selectedIndex: $selectedIndex)
+                    
+                    if selectedIndex == 0 {
+                        CarbonContentTrip()
+                    } else if selectedIndex == 1 {
+                        DestinationContentTrip()
+                    } else if selectedIndex == 2 {
+                        ActivityOffsetContentTrip()
+                    } else if selectedIndex == 3 {
+                        TransportationContentTrip()
+                    } else {
+                        Text("")
+                    }
+                       
                 }
-                   
+                .padding(.horizontal, 24)
             }
-            .padding(.horizontal, 24)
         }
+        .toolbar(.hidden, for: .tabBar)
+
     }
     
     
@@ -63,7 +46,7 @@ struct TripCardScreen: View {
         var tabBarOptions : [String] = ["Prediction" , "Eco-destination", "Offset", "Get around"]
          var body : some View {
              ScrollView(.horizontal, showsIndicators: false) {
-                 HStack (spacing: 32){
+                 HStack (spacing: 24){
                      ForEach(Array(zip(self.tabBarOptions.indices, self.tabBarOptions)), id: \.0) {
                          index , name in
                          TabBarItem(selectedIndex: $selectedIndex, tabBarItemName: name, tab: index,
@@ -89,7 +72,7 @@ struct TripCardScreen: View {
                 VStack{
                     Spacer()
                     Text(tabBarItemName)
-                        .font(.system(size: 17))
+                        .font(.custom("SFProRounded-Bold", size: 17))
                         .bold()
                         .foregroundColor(colorText)
                     

@@ -6,10 +6,21 @@
 //
 
 import SwiftUI
+import SlidingTabView
 
 struct WishlistScreen: View {
+    @State private var selectedTab : Int = 0
     var body: some View {
-        Text("Wishlist Screen")
+        NavigationStack{
+            VStack{
+              
+                
+            }
+            .padding(24)
+            .navigationTitle(Text("WishLists"))
+           
+        }
+        
     }
 }
 

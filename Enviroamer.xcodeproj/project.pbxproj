@@ -23,6 +23,13 @@
 		092B75042A66389C00723890 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B75032A66389C00723890 /* HomeScreen.swift */; };
 		092B75082A663CBE00723890 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B75072A663CBE00723890 /* CardView.swift */; };
 		0950A19F2A6793720062628E /* UpcomIngTripsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950A19E2A6793720062628E /* UpcomIngTripsScreen.swift */; };
+		573C401B2A6B893F00B12D5E /* ModalDescOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573C401A2A6B893F00B12D5E /* ModalDescOffset.swift */; };
+		573C401D2A6B918600B12D5E /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573C401C2A6B918600B12D5E /* ContactViewModel.swift */; };
+		573C40202A6B987200B12D5E /* SlidingTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 573C401F2A6B987200B12D5E /* SlidingTabView */; };
+		573C40292A6BDA0700B12D5E /* SF-Pro-Rounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 573C40252A6BDA0600B12D5E /* SF-Pro-Rounded-Regular.otf */; };
+		573C402A2A6BDA0700B12D5E /* SF-Pro-Rounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 573C40262A6BDA0600B12D5E /* SF-Pro-Rounded-Medium.otf */; };
+		573C402B2A6BDA0700B12D5E /* SF-Pro-Rounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 573C40272A6BDA0700B12D5E /* SF-Pro-Rounded-Bold.otf */; };
+		573C402C2A6BDA0700B12D5E /* SF-Pro-Rounded-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 573C40282A6BDA0700B12D5E /* SF-Pro-Rounded-Semibold.otf */; };
 		57559DBF2A69181600A1A476 /* Tourism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DBE2A69181600A1A476 /* Tourism.swift */; };
 		57559DC12A69182700A1A476 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DC02A69182700A1A476 /* Location.swift */; };
 		57559DC32A69183800A1A476 /* OffsetActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DC22A69183800A1A476 /* OffsetActivity.swift */; };
@@ -32,13 +39,18 @@
 		57559DCB2A691CC500A1A476 /* ItemContentHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DCA2A691CC500A1A476 /* ItemContentHorizontal.swift */; };
 		57559DCD2A691D0600A1A476 /* CustomCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DCC2A691D0600A1A476 /* CustomCorner.swift */; };
 		57559DCF2A6921AB00A1A476 /* TripCardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DCE2A6921AB00A1A476 /* TripCardScreen.swift */; };
-		57559DD12A6921CD00A1A476 /* ContentTripCardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DD02A6921CD00A1A476 /* ContentTripCardScreen.swift */; };
 		57559DD32A6921EE00A1A476 /* CarbonContentTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DD22A6921EE00A1A476 /* CarbonContentTrip.swift */; };
 		57559DD52A69220100A1A476 /* DestinationContentTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DD42A69220100A1A476 /* DestinationContentTrip.swift */; };
 		57559DD72A69225000A1A476 /* ActivityOffsetContentTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DD62A69225000A1A476 /* ActivityOffsetContentTrip.swift */; };
 		57559DD92A69226B00A1A476 /* TransportationContentTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DD82A69226B00A1A476 /* TransportationContentTrip.swift */; };
 		57559DE12A69265200A1A476 /* ItemImageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DE02A69265200A1A476 /* ItemImageCard.swift */; };
 		57559DE32A69488900A1A476 /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DE22A69488900A1A476 /* ExtensionColor.swift */; };
+		57559DE52A696F1900A1A476 /* ItemDestinationActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DE42A696F1900A1A476 /* ItemDestinationActivity.swift */; };
+		57559DE72A69CC4100A1A476 /* DestinationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DE62A69CC4100A1A476 /* DestinationScreen.swift */; };
+		57559DE92A69CC4F00A1A476 /* ActivityOffsetScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DE82A69CC4F00A1A476 /* ActivityOffsetScreen.swift */; };
+		57559DEB2A6A412500A1A476 /* ItemImageDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DEA2A6A412500A1A476 /* ItemImageDestination.swift */; };
+		57559DED2A6A977A00A1A476 /* ModalSheetDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DEC2A6A977A00A1A476 /* ModalSheetDescription.swift */; };
+		57559DEF2A6A978C00A1A476 /* ModalSheetActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DEE2A6A978C00A1A476 /* ModalSheetActivities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +91,13 @@
 		092B75032A66389C00723890 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		092B75072A663CBE00723890 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0950A19E2A6793720062628E /* UpcomIngTripsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomIngTripsScreen.swift; sourceTree = "<group>"; };
+		573C401A2A6B893F00B12D5E /* ModalDescOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDescOffset.swift; sourceTree = "<group>"; };
+		573C401C2A6B918600B12D5E /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+		573C40252A6BDA0600B12D5E /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
+		573C40262A6BDA0600B12D5E /* SF-Pro-Rounded-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Medium.otf"; sourceTree = "<group>"; };
+		573C40272A6BDA0700B12D5E /* SF-Pro-Rounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Bold.otf"; sourceTree = "<group>"; };
+		573C40282A6BDA0700B12D5E /* SF-Pro-Rounded-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Semibold.otf"; sourceTree = "<group>"; };
+		573C402D2A6BDA6200B12D5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		57559DBE2A69181600A1A476 /* Tourism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tourism.swift; sourceTree = "<group>"; };
 		57559DC02A69182700A1A476 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		57559DC22A69183800A1A476 /* OffsetActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetActivity.swift; sourceTree = "<group>"; };
@@ -88,13 +107,18 @@
 		57559DCA2A691CC500A1A476 /* ItemContentHorizontal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemContentHorizontal.swift; sourceTree = "<group>"; };
 		57559DCC2A691D0600A1A476 /* CustomCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorner.swift; sourceTree = "<group>"; };
 		57559DCE2A6921AB00A1A476 /* TripCardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardScreen.swift; sourceTree = "<group>"; };
-		57559DD02A6921CD00A1A476 /* ContentTripCardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTripCardScreen.swift; sourceTree = "<group>"; };
 		57559DD22A6921EE00A1A476 /* CarbonContentTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonContentTrip.swift; sourceTree = "<group>"; };
 		57559DD42A69220100A1A476 /* DestinationContentTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationContentTrip.swift; sourceTree = "<group>"; };
 		57559DD62A69225000A1A476 /* ActivityOffsetContentTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityOffsetContentTrip.swift; sourceTree = "<group>"; };
 		57559DD82A69226B00A1A476 /* TransportationContentTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationContentTrip.swift; sourceTree = "<group>"; };
 		57559DE02A69265200A1A476 /* ItemImageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImageCard.swift; sourceTree = "<group>"; };
 		57559DE22A69488900A1A476 /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
+		57559DE42A696F1900A1A476 /* ItemDestinationActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDestinationActivity.swift; sourceTree = "<group>"; };
+		57559DE62A69CC4100A1A476 /* DestinationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationScreen.swift; sourceTree = "<group>"; };
+		57559DE82A69CC4F00A1A476 /* ActivityOffsetScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityOffsetScreen.swift; sourceTree = "<group>"; };
+		57559DEA2A6A412500A1A476 /* ItemImageDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImageDestination.swift; sourceTree = "<group>"; };
+		57559DEC2A6A977A00A1A476 /* ModalSheetDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSheetDescription.swift; sourceTree = "<group>"; };
+		57559DEE2A6A978C00A1A476 /* ModalSheetActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSheetActivities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				573C40202A6B987200B12D5E /* SlidingTabView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +203,8 @@
 		092B74D12A66372300723890 /* Enviroamer */ = {
 			isa = PBXGroup;
 			children = (
+				573C402D2A6BDA6200B12D5E /* Info.plist */,
+				573C40242A6BD94100B12D5E /* Font */,
 				57559DBD2A68F48400A1A476 /* Resource */,
 				57559DBC2A68F44700A1A476 /* View */,
 				57559DBB2A68F43600A1A476 /* ViewModel */,
@@ -260,10 +287,53 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		573C40212A6BAFB100B12D5E /* ModalSheet */ = {
+			isa = PBXGroup;
+			children = (
+				57559DEC2A6A977A00A1A476 /* ModalSheetDescription.swift */,
+				57559DEE2A6A978C00A1A476 /* ModalSheetActivities.swift */,
+				573C401A2A6B893F00B12D5E /* ModalDescOffset.swift */,
+			);
+			path = ModalSheet;
+			sourceTree = "<group>";
+		};
+		573C40222A6BAFC500B12D5E /* ContentTripCardScreen */ = {
+			isa = PBXGroup;
+			children = (
+				57559DD22A6921EE00A1A476 /* CarbonContentTrip.swift */,
+				57559DD42A69220100A1A476 /* DestinationContentTrip.swift */,
+				57559DD62A69225000A1A476 /* ActivityOffsetContentTrip.swift */,
+				57559DD82A69226B00A1A476 /* TransportationContentTrip.swift */,
+			);
+			path = ContentTripCardScreen;
+			sourceTree = "<group>";
+		};
+		573C40232A6BAFE300B12D5E /* ImageComponent */ = {
+			isa = PBXGroup;
+			children = (
+				57559DE02A69265200A1A476 /* ItemImageCard.swift */,
+				57559DE42A696F1900A1A476 /* ItemDestinationActivity.swift */,
+				57559DEA2A6A412500A1A476 /* ItemImageDestination.swift */,
+			);
+			path = ImageComponent;
+			sourceTree = "<group>";
+		};
+		573C40242A6BD94100B12D5E /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				573C40272A6BDA0700B12D5E /* SF-Pro-Rounded-Bold.otf */,
+				573C40262A6BDA0600B12D5E /* SF-Pro-Rounded-Medium.otf */,
+				573C40252A6BDA0600B12D5E /* SF-Pro-Rounded-Regular.otf */,
+				573C40282A6BDA0700B12D5E /* SF-Pro-Rounded-Semibold.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		57559DBB2A68F43600A1A476 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				57559DC42A6918A700A1A476 /* TourismViewModel.swift */,
+				573C401C2A6B918600B12D5E /* ContactViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -290,6 +360,8 @@
 			children = (
 				57559DDF2A69239F00A1A476 /* Components */,
 				57559DCE2A6921AB00A1A476 /* TripCardScreen.swift */,
+				57559DE62A69CC4100A1A476 /* DestinationScreen.swift */,
+				57559DE82A69CC4F00A1A476 /* ActivityOffsetScreen.swift */,
 			);
 			path = TripCard;
 			sourceTree = "<group>";
@@ -306,12 +378,9 @@
 		57559DDF2A69239F00A1A476 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				57559DD02A6921CD00A1A476 /* ContentTripCardScreen.swift */,
-				57559DD22A6921EE00A1A476 /* CarbonContentTrip.swift */,
-				57559DD42A69220100A1A476 /* DestinationContentTrip.swift */,
-				57559DD62A69225000A1A476 /* ActivityOffsetContentTrip.swift */,
-				57559DD82A69226B00A1A476 /* TransportationContentTrip.swift */,
-				57559DE02A69265200A1A476 /* ItemImageCard.swift */,
+				573C40232A6BAFE300B12D5E /* ImageComponent */,
+				573C40222A6BAFC500B12D5E /* ContentTripCardScreen */,
+				573C40212A6BAFB100B12D5E /* ModalSheet */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -332,6 +401,9 @@
 			dependencies = (
 			);
 			name = Enviroamer;
+			packageProductDependencies = (
+				573C401F2A6B987200B12D5E /* SlidingTabView */,
+			);
 			productName = Enviroamer;
 			productReference = 092B74CF2A66372300723890 /* Enviroamer.app */;
 			productType = "com.apple.product-type.application";
@@ -404,6 +476,9 @@
 				Base,
 			);
 			mainGroup = 092B74C62A66372300723890;
+			packageReferences = (
+				573C401E2A6B987200B12D5E /* XCRemoteSwiftPackageReference "SlidingTabView" */,
+			);
 			productRefGroup = 092B74D02A66372300723890 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -421,7 +496,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				092B74DB2A66372400723890 /* Preview Assets.xcassets in Resources */,
+				573C402A2A6BDA0700B12D5E /* SF-Pro-Rounded-Medium.otf in Resources */,
+				573C40292A6BDA0700B12D5E /* SF-Pro-Rounded-Regular.otf in Resources */,
+				573C402B2A6BDA0700B12D5E /* SF-Pro-Rounded-Bold.otf in Resources */,
 				09297B862A684016008D6CD0 /* data.json in Resources */,
+				573C402C2A6BDA0700B12D5E /* SF-Pro-Rounded-Semibold.otf in Resources */,
 				092B74D72A66372400723890 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,12 +527,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				57559DD72A69225000A1A476 /* ActivityOffsetContentTrip.swift in Sources */,
+				573C401D2A6B918600B12D5E /* ContactViewModel.swift in Sources */,
 				09297B842A6834FB008D6CD0 /* MapScreen.swift in Sources */,
 				57559DC32A69183800A1A476 /* OffsetActivity.swift in Sources */,
+				573C401B2A6B893F00B12D5E /* ModalDescOffset.swift in Sources */,
 				092B74D52A66372300723890 /* ContentView.swift in Sources */,
+				57559DE52A696F1900A1A476 /* ItemDestinationActivity.swift in Sources */,
+				57559DE92A69CC4F00A1A476 /* ActivityOffsetScreen.swift in Sources */,
 				57559DD52A69220100A1A476 /* DestinationContentTrip.swift in Sources */,
 				57559DD32A6921EE00A1A476 /* CarbonContentTrip.swift in Sources */,
-				57559DD12A6921CD00A1A476 /* ContentTripCardScreen.swift in Sources */,
+				57559DED2A6A977A00A1A476 /* ModalSheetDescription.swift in Sources */,
+				57559DEF2A6A978C00A1A476 /* ModalSheetActivities.swift in Sources */,
+				57559DEB2A6A412500A1A476 /* ItemImageDestination.swift in Sources */,
 				09297B8A2A68DB86008D6CD0 /* TripScreen.swift in Sources */,
 				092B74D32A66372300723890 /* EnviroamerApp.swift in Sources */,
 				57559DD92A69226B00A1A476 /* TransportationContentTrip.swift in Sources */,
@@ -471,6 +556,7 @@
 				0950A19F2A6793720062628E /* UpcomIngTripsScreen.swift in Sources */,
 				57559DC72A691C9600A1A476 /* ExploreScreen.swift in Sources */,
 				57559DE12A69265200A1A476 /* ItemImageCard.swift in Sources */,
+				57559DE72A69CC4100A1A476 /* DestinationScreen.swift in Sources */,
 				092B75082A663CBE00723890 /* CardView.swift in Sources */,
 				57559DBF2A69181600A1A476 /* Tourism.swift in Sources */,
 			);
@@ -631,6 +717,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Enviroamer/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Want to know your location!";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -642,7 +729,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -670,6 +757,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Enviroamer/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Want to know your location!";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -681,7 +769,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -826,6 +914,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		573C401E2A6B987200B12D5E /* XCRemoteSwiftPackageReference "SlidingTabView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/QuynhNguyen/SlidingTabView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		573C401F2A6B987200B12D5E /* SlidingTabView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 573C401E2A6B987200B12D5E /* XCRemoteSwiftPackageReference "SlidingTabView" */;
+			productName = SlidingTabView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 092B74C72A66372300723890 /* Project object */;
 }
