@@ -18,10 +18,21 @@ struct Tourism : Codable, Identifiable, Hashable {
     var isWishlistDestination : Bool
     var lokasi : String?
     var waktuOperasional : String?
+<<<<<<< HEAD
     var deskripsi : String?
     var image : [String]?
     var kegiatan : [String]
     var transportasiWisata : [String]
+=======
+    var deskripsiSingkat : String?
+    var deskripsi :[ String]
+    var image : [String]?
+    var judulKegiatan : [String]
+    var kegiatan : [String]
+    var transportasiWisata : [String]
+    var timeToDestination : [String]
+    var kotaPusat : String
+>>>>>>> origin/trip-card-screen
     
     var coordinateWisata :  Coordinates
     var locationCoordinate : CLLocationCoordinate2D{

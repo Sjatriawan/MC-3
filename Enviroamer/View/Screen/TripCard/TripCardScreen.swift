@@ -11,6 +11,7 @@ struct TripCardScreen: View {
     @EnvironmentObject var modelWisata : TourismViewModel
     @State private var selectedIndex = 0
     
+<<<<<<< HEAD
     var listContent  : [ContentTripCardScreen<AnyView>] = [
         ContentTripCardScreen(
             title: "Get ready for the odyssey!",
@@ -55,6 +56,35 @@ struct TripCardScreen: View {
             }
             .padding(.horizontal, 24)
         }
+=======
+    
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 32){
+                    ItemImageCard(location: modelWisata.tourisms[0])
+                    
+                   TabBarView(selectedIndex: $selectedIndex)
+                    
+                    if selectedIndex == 0 {
+                        CarbonContentTrip()
+                    } else if selectedIndex == 1 {
+                        DestinationContentTrip()
+                    } else if selectedIndex == 2 {
+                        ActivityOffsetContentTrip()
+                    } else if selectedIndex == 3 {
+                        TransportationContentTrip()
+                    } else {
+                        Text("")
+                    }
+                       
+                }
+                .padding(.horizontal, 24)
+            }
+        }
+        .toolbar(.hidden, for: .tabBar)
+
+>>>>>>> origin/trip-card-screen
     }
     
     
@@ -63,7 +93,11 @@ struct TripCardScreen: View {
         var tabBarOptions : [String] = ["Prediction" , "Eco-destination", "Offset", "Get around"]
          var body : some View {
              ScrollView(.horizontal, showsIndicators: false) {
+<<<<<<< HEAD
                  HStack (spacing: 32){
+=======
+                 HStack (spacing: 24){
+>>>>>>> origin/trip-card-screen
                      ForEach(Array(zip(self.tabBarOptions.indices, self.tabBarOptions)), id: \.0) {
                          index , name in
                          TabBarItem(selectedIndex: $selectedIndex, tabBarItemName: name, tab: index,
@@ -89,7 +123,11 @@ struct TripCardScreen: View {
                 VStack{
                     Spacer()
                     Text(tabBarItemName)
+<<<<<<< HEAD
                         .font(.system(size: 17))
+=======
+                        .font(.custom("SFProRounded-Bold", size: 17))
+>>>>>>> origin/trip-card-screen
                         .bold()
                         .foregroundColor(colorText)
                     

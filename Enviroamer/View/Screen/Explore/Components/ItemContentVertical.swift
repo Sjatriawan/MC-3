@@ -17,12 +17,20 @@ struct ItemContentVertical: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 208, height: 242)
         } placeholder: {
+<<<<<<< HEAD
             
+=======
+            Image("placeholder")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 208, height: 242)
+>>>>>>> origin/trip-card-screen
         }
         .overlay{
             VStack {
                 Spacer()
                 ZStack{
+<<<<<<< HEAD
                     Rectangle()
                         .foregroundColor(.clear)
                         .frame(width: 155.41791, height: 55.19178)
@@ -62,6 +70,30 @@ struct ItemContentVertical: View {
                         
                         Spacer()
                     }
+=======
+                    Image("gradientVertical")
+                    
+                    VStack(alignment: .leading){
+                        Text(tourism.nama!)
+                            .font(.custom("SFProRounded-Semibold", size: 20))
+                            .padding(.horizontal)
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(2)
+                            .foregroundColor(.white)
+                        
+                        HStack{
+                            Image("pin_location")
+                                .frame(width: 10 , height: 15)
+                            Text(tourism.lokasi!)
+                                .font(.custom("SFProRounded-Regular", size: 13))
+                                .lineLimit(1)
+                                .foregroundColor(.white)
+                        }
+                        .padding(.horizontal)
+                        
+                    }
+                    .padding()
+>>>>>>> origin/trip-card-screen
                     
                     
                     

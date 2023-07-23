@@ -14,11 +14,15 @@ struct ExploreScreen: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24){
+<<<<<<< HEAD
                     NavigationLink {
                         MapScreen()
                     } label: {
                         searchBar
                     }
+=======
+                    searchBar
+>>>>>>> origin/trip-card-screen
                     Text("Explore New Place")
                     ScrollView(.horizontal) {
                         HStack (spacing: 12){
@@ -43,9 +47,14 @@ struct ExploreScreen: View {
                     }
                     
                 }
+<<<<<<< HEAD
                 .font(.system(size: 28))
                 .fontWeight(.semibold)
                 .foregroundColor(.black)
+=======
+                .font(.custom("SFProRounded-Semibold", size: 28))
+                .foregroundColor(Color("black800"))
+>>>>>>> origin/trip-card-screen
                  .padding(24)
             }
         }
@@ -68,9 +77,14 @@ var searchBar : some View {
         
         VStack(alignment: .leading){
             Text("Plan Your Trip")
+<<<<<<< HEAD
                 .font(.system(size: 17))
                 .foregroundColor(.black)
                 .fontWeight(.regular)
+=======
+                .font(.custom("SFProRounded-Regular", size: 17))
+                .foregroundColor(Color("black800"))
+>>>>>>> origin/trip-card-screen
             HStack{
                 Text("Destination •")
                 
@@ -78,10 +92,16 @@ var searchBar : some View {
                 
                 Text("Accommodation")
             }
+<<<<<<< HEAD
             .font(.system(size: 12))
             .foregroundColor(.black)
             .fontWeight(.regular)
             
+=======
+            .font(.custom("SFProRounded-Regular", size: 12))
+            .foregroundColor(Color("black800"))
+         
+>>>>>>> origin/trip-card-screen
         }
     }
     .padding()
@@ -95,3 +115,10 @@ var searchBar : some View {
     )
     
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/trip-card-screen

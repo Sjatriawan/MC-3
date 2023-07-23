@@ -16,11 +16,20 @@ struct HomeScreen: View {
             ExploreScreen()
                 .tabItem {
                     if selectionTab == 0 {
+<<<<<<< HEAD
                         Image(systemName: "magnifyingglass")
+=======
+                        Image("magnifying.glass.filled")
+>>>>>>> origin/trip-card-screen
                     } else {
                         Image(systemName: "magnifyingglass")
                     }
                     Text("Explore")
+<<<<<<< HEAD
+=======
+                        .font(.custom("SFProRounded-Semibold", size: 13))
+
+>>>>>>> origin/trip-card-screen
                 }
                 .tag(0)
                 
@@ -33,6 +42,10 @@ struct HomeScreen: View {
                         Image("trip_notActive")
                     }
                     Text("Trips")
+<<<<<<< HEAD
+=======
+                        .font(.custom("SFProRounded-Semibold", size: 13))
+>>>>>>> origin/trip-card-screen
                 }
                 .tag(1)
             
@@ -44,6 +57,10 @@ struct HomeScreen: View {
                         Image("heartNotActive")
                     }
                     Text("Wishlist")
+<<<<<<< HEAD
+=======
+                        .font(.custom("SFProRounded-Semibold", size: 13))
+>>>>>>> origin/trip-card-screen
                 }
                 .tag(2)
         }

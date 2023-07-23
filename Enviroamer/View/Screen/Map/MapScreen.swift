@@ -5,6 +5,11 @@
 //  Created by M Yogi Satriawan on 19/07/23.
 //
 
+<<<<<<< HEAD
+=======
+import SwiftUI
+
+>>>>>>> origin/trip-card-screen
 
 import SwiftUI
 import CoreLocation
@@ -20,7 +25,11 @@ struct Province: Decodable, Identifiable, Hashable{
     let tranportasiProvinsi: [String]
     let kegiatanOffset: [Activity]
 
+<<<<<<< HEAD
     var id: Int {
+=======
+    var id: Int { // Implementing the Identifiable protocol with 'id' property
+>>>>>>> origin/trip-card-screen
         return idProvinsi
     }
     
@@ -63,6 +72,7 @@ struct Activity: Decodable {
     let instagram: String
 }
 
+<<<<<<< HEAD
 
 struct MapAnnotationItem: Identifiable {
     var id = UUID()
@@ -195,6 +205,61 @@ struct MapScreen: View {
     
     
 
+=======
+struct MapScreen: View {
+    @StateObject private var locationManager = LocationManager()
+    @State private var annotations: [MKPointAnnotation] = []
+
+    var body: some View {
+        VStack {
+            MapView(annotations: $annotations)
+                .edgesIgnoringSafeArea(.all)
+
+            List {
+                ForEach(annotations, id: \.self) { annotation in
+                    Text("\(annotation.title ?? "Unknown"): \(distanceFromCurrentLocation(to: annotation.coordinate))")
+                }
+            }
+          
+            
+        }
+        .onAppear {
+            
+            if let url = Bundle.main.url(forResource: "data", withExtension: "json") {
+                do {
+                    let jsonData = try Data(contentsOf: url)
+                    let provinces = try JSONDecoder().decode([Province].self, from: jsonData)
+                    var newAnnotations: [MKPointAnnotation] = []
+
+                    for province in provinces {
+                        let annotation = MKPointAnnotation()
+                        annotation.coordinate = CLLocationCoordinate2D(latitude: province.coordinateKota.latitude, longitude: province.coordinateKota.longitude)
+                        annotation.title = province.namaProvinsi
+                        newAnnotations.append(annotation)
+                    }
+
+                    // Add current user location annotation
+                    if let userLocation = locationManager.lastKnownLocation {
+                        let userAnnotation = MKPointAnnotation()
+                        userAnnotation.coordinate = userLocation.coordinate
+                        userAnnotation.title = "Current Location"
+                        newAnnotations.append(userAnnotation)
+                    }
+                    
+
+                    annotations = newAnnotations
+                    
+                    
+                    
+                } catch {
+                    print("Error decoding JSON: \(error)")
+                }
+            }
+            
+        }
+    }
+
+>>>>>>> origin/trip-card-screen
     func distanceFromCurrentLocation(to coordinate: CLLocationCoordinate2D) -> String {
         guard let userLocation = locationManager.lastKnownLocation else {
             return "N/A"
@@ -209,8 +274,11 @@ struct MapScreen: View {
     }
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/trip-card-screen
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
 
@@ -231,22 +299,30 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
 }
 
 struct MapView: UIViewRepresentable {
+<<<<<<< HEAD
     @Binding var annotations: [MapAnnotationItem]
     @Binding var selectedAnnotation: MapAnnotationItem?
 
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
+=======
+    @Binding var annotations: [MKPointAnnotation]
+>>>>>>> origin/trip-card-screen
 
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
         mapView.showsUserLocation = true
+<<<<<<< HEAD
         mapView.delegate = context.coordinator // Set the delegate to the coordinator
+=======
+>>>>>>> origin/trip-card-screen
         return mapView
     }
 
     func updateUIView(_ uiView: MKMapView, context: Context) {
         uiView.removeAnnotations(uiView.annotations)
+<<<<<<< HEAD
         uiView.addAnnotations(annotations.map(\.annotation)) // Extract the annotations from the MapAnnotationItem
     }
 
@@ -267,6 +343,12 @@ struct MapView: UIViewRepresentable {
 }
 
 
+=======
+        uiView.addAnnotations(annotations)
+    }
+}
+
+>>>>>>> origin/trip-card-screen
 struct MapScreen_Previews: PreviewProvider {
     static var previews: some View {
         MapScreen()
