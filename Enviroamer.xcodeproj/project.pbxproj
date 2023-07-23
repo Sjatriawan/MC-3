@@ -23,6 +23,10 @@
 		092B75042A66389C00723890 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B75032A66389C00723890 /* HomeScreen.swift */; };
 		092B75082A663CBE00723890 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B75072A663CBE00723890 /* CardView.swift */; };
 		0950A19F2A6793720062628E /* UpcomIngTripsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950A19E2A6793720062628E /* UpcomIngTripsScreen.swift */; };
+		5704EDE12A6C62CD0044EEC0 /* TripsWishListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704EDE02A6C62CD0044EEC0 /* TripsWishListScreen.swift */; };
+		5704EDE32A6C62E10044EEC0 /* DestinationWishListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704EDE22A6C62E10044EEC0 /* DestinationWishListScreen.swift */; };
+		5704EDE52A6C62FB0044EEC0 /* UpcomingTripsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704EDE42A6C62FB0044EEC0 /* UpcomingTripsScreen.swift */; };
+		5704EDE72A6C630B0044EEC0 /* PastTripScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704EDE62A6C630B0044EEC0 /* PastTripScreen.swift */; };
 		573C401B2A6B893F00B12D5E /* ModalDescOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573C401A2A6B893F00B12D5E /* ModalDescOffset.swift */; };
 		573C401D2A6B918600B12D5E /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573C401C2A6B918600B12D5E /* ContactViewModel.swift */; };
 		573C40202A6B987200B12D5E /* SlidingTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 573C401F2A6B987200B12D5E /* SlidingTabView */; };
@@ -91,6 +95,10 @@
 		092B75032A66389C00723890 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		092B75072A663CBE00723890 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0950A19E2A6793720062628E /* UpcomIngTripsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomIngTripsScreen.swift; sourceTree = "<group>"; };
+		5704EDE02A6C62CD0044EEC0 /* TripsWishListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsWishListScreen.swift; sourceTree = "<group>"; };
+		5704EDE22A6C62E10044EEC0 /* DestinationWishListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationWishListScreen.swift; sourceTree = "<group>"; };
+		5704EDE42A6C62FB0044EEC0 /* UpcomingTripsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTripsScreen.swift; sourceTree = "<group>"; };
+		5704EDE62A6C630B0044EEC0 /* PastTripScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastTripScreen.swift; sourceTree = "<group>"; };
 		573C401A2A6B893F00B12D5E /* ModalDescOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDescOffset.swift; sourceTree = "<group>"; };
 		573C401C2A6B918600B12D5E /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
 		573C40252A6BDA0600B12D5E /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
@@ -168,6 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				09297B892A68DB85008D6CD0 /* TripScreen.swift */,
+				5704EDE42A6C62FB0044EEC0 /* UpcomingTripsScreen.swift */,
+				5704EDE62A6C630B0044EEC0 /* PastTripScreen.swift */,
 			);
 			path = Trip;
 			sourceTree = "<group>";
@@ -176,6 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				09297B8B2A68DB98008D6CD0 /* WishlistScreen.swift */,
+				5704EDE02A6C62CD0044EEC0 /* TripsWishListScreen.swift */,
+				5704EDE22A6C62E10044EEC0 /* DestinationWishListScreen.swift */,
 			);
 			path = Wishlist;
 			sourceTree = "<group>";
@@ -531,11 +543,14 @@
 				09297B842A6834FB008D6CD0 /* MapScreen.swift in Sources */,
 				57559DC32A69183800A1A476 /* OffsetActivity.swift in Sources */,
 				573C401B2A6B893F00B12D5E /* ModalDescOffset.swift in Sources */,
+				5704EDE12A6C62CD0044EEC0 /* TripsWishListScreen.swift in Sources */,
 				092B74D52A66372300723890 /* ContentView.swift in Sources */,
 				57559DE52A696F1900A1A476 /* ItemDestinationActivity.swift in Sources */,
 				57559DE92A69CC4F00A1A476 /* ActivityOffsetScreen.swift in Sources */,
+				5704EDE32A6C62E10044EEC0 /* DestinationWishListScreen.swift in Sources */,
 				57559DD52A69220100A1A476 /* DestinationContentTrip.swift in Sources */,
 				57559DD32A6921EE00A1A476 /* CarbonContentTrip.swift in Sources */,
+				5704EDE52A6C62FB0044EEC0 /* UpcomingTripsScreen.swift in Sources */,
 				57559DED2A6A977A00A1A476 /* ModalSheetDescription.swift in Sources */,
 				57559DEF2A6A978C00A1A476 /* ModalSheetActivities.swift in Sources */,
 				57559DEB2A6A412500A1A476 /* ItemImageDestination.swift in Sources */,
@@ -548,6 +563,7 @@
 				57559DCD2A691D0600A1A476 /* CustomCorner.swift in Sources */,
 				09297B8C2A68DB98008D6CD0 /* WishlistScreen.swift in Sources */,
 				57559DCB2A691CC500A1A476 /* ItemContentHorizontal.swift in Sources */,
+				5704EDE72A6C630B0044EEC0 /* PastTripScreen.swift in Sources */,
 				57559DCF2A6921AB00A1A476 /* TripCardScreen.swift in Sources */,
 				09297B802A6833E7008D6CD0 /* CalculateViewModel.swift in Sources */,
 				57559DC52A6918A700A1A476 /* TourismViewModel.swift in Sources */,
