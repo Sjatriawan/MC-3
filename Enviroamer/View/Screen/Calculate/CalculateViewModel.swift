@@ -5,17 +5,20 @@
 //  Created by M Yogi Satriawan on 19/07/23.
 //
 
-import SwiftUI
-import MapKit
+import Foundation
 import CoreLocation
+import SwiftUI
+import CoreData
 
 class TravelPlannerViewModel: ObservableObject {
     @Published var locationManager = LocationManager()
     @Published var currentLocation: String = ""
     @Published var selectedProvinceIndex: Int = 0
-    
+
     @Published var startDate = Date()
     @Published var endDate = Date()
+    @Published var isDataSaved: Bool = false
+
     
     @Published var transportationMethod = "Walk"
     @Published var hotelStarRating = "1 Star"
@@ -27,8 +30,6 @@ class TravelPlannerViewModel: ObservableObject {
     var selectedProvince: Province {
         provinces[selectedProvinceIndex]
     }
-    
-    
     
     var daysOfTravel: Int {
         Calendar.current.dateComponents([.day], from: startDate, to: endDate).day ?? 0
@@ -52,8 +53,7 @@ class TravelPlannerViewModel: ObservableObject {
         
         return String(format: "%.2f km", distanceInKilometers)
     }
-    
-    
+
     let carbonEmissionsPerKilometer: [String: Double] = [
         "Walk": 0,
         "Bicycle": 0,
@@ -100,9 +100,39 @@ class TravelPlannerViewModel: ObservableObject {
         return totalTransportationCarbon + totalHotelCarbon
     }
     
+    // Core Data context
+    private let context = PersistenceController.shared.container.viewContext
+
+    // Save the input data to Core Data
+    func saveData() {
+        let newTrip = Trip(context: context)
+        newTrip.startDate = startDate
+        newTrip.endDate = endDate
+        newTrip.transportationMethod = transportationMethod
+        newTrip.hotelStarRating = hotelStarRating
+        newTrip.distanceToProvince = distanceToProvince
+        newTrip.totalCarbonEmissions = totalCarbonEmissions
+        newTrip.provinceName = provinces[selectedProvinceIndex].namaProvinsi
+
+        PersistenceController.shared.save()
+        isDataSaved = true
+    }
+
+    func resetIsDataSaved() {
+            isDataSaved = false
+        }
     
-    // Rest of the functions and properties for carbon emissions calculation
-    
+    // Fetch the saved data from Core Data
+    func fetchSavedTrips() -> [Trip] {
+        let fetchRequest: NSFetchRequest<Trip> = Trip.fetchRequest()
+        do {
+            return try context.fetch(fetchRequest)
+        } catch {
+            print("Error fetching data: \(error)")
+            return []
+        }
+    }
+
     private func loadProvincesFromJSON() -> [Province] {
         if let url = Bundle.main.url(forResource: "data", withExtension: "json") {
             do {

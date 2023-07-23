@@ -82,7 +82,7 @@ struct CardViewPr: View {
             }
             Spacer()
             VStack{
-                NavigationLink(destination: TravelPlannerStepView()) {
+                NavigationLink(destination: TravelPlannerView()) {
                     Text("Add trip")
                         .foregroundColor(.white)
                         .frame(width: 150, height: 44)
@@ -141,9 +141,7 @@ struct MapScreen: View {
                             .position(x:200, y: 600)
                     }
                 }
-                
-                
-                
+      
             }
             .onAppear {
                 if let url = Bundle.main.url(forResource: "data", withExtension: "json") {
@@ -174,14 +172,7 @@ struct MapScreen: View {
                 
             }
         }
-//        .overlay(
-//            Group {
-//                            if let annotation = selectedAnnotation?.annotation {
-//                                createCardView(for: annotation)
-//                                    .transition(.move(edge: .bottom))
-//                            }
-//            }.frame(maxWidth: .infinity, maxHeight: .infinity ,alignment: .bottom)
-//        )
+
     }
 
     func createAlert(for annotation: MKPointAnnotation) -> Alert {

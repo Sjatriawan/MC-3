@@ -35,6 +35,8 @@
 		09297BD22A6981A6008D6CD0 /* OffsetActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297BB52A6981A6008D6CD0 /* OffsetActivity.swift */; };
 		09297BD32A6981A6008D6CD0 /* Tourism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297BB62A6981A6008D6CD0 /* Tourism.swift */; };
 		09297BD42A6981A6008D6CD0 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 09297BB82A6981A6008D6CD0 /* data.json */; };
+		09297C1A2A6CDCC0008D6CD0 /* TravelPlannerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09297C182A6CDCC0008D6CD0 /* TravelPlannerModel.xcdatamodeld */; };
+		09297C252A6CE11E008D6CD0 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297C242A6CE11E008D6CD0 /* PersistenceController.swift */; };
 		092B74DB2A66372400723890 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 092B74DA2A66372400723890 /* Preview Assets.xcassets */; };
 		092B74E52A66372400723890 /* EnviroamerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B74E42A66372400723890 /* EnviroamerTests.swift */; };
 		092B74EF2A66372400723890 /* EnviroamerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B74EE2A66372400723890 /* EnviroamerUITests.swift */; };
@@ -88,6 +90,8 @@
 		09297BB52A6981A6008D6CD0 /* OffsetActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffsetActivity.swift; sourceTree = "<group>"; };
 		09297BB62A6981A6008D6CD0 /* Tourism.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tourism.swift; sourceTree = "<group>"; };
 		09297BB82A6981A6008D6CD0 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		09297C192A6CDCC0008D6CD0 /* TravelPlannerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TravelPlannerModel.xcdatamodel; sourceTree = "<group>"; };
+		09297C242A6CE11E008D6CD0 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		092B74CF2A66372300723890 /* Enviroamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enviroamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		092B74DA2A66372400723890 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		092B74E02A66372400723890 /* EnviroamerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnviroamerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,9 +259,18 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		09297C232A6CE104008D6CD0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				09297C242A6CE11E008D6CD0 /* PersistenceController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		092B74C62A66372300723890 = {
 			isa = PBXGroup;
 			children = (
+				09297C182A6CDCC0008D6CD0 /* TravelPlannerModel.xcdatamodeld */,
 				092B74D12A66372300723890 /* Enviroamer */,
 				092B74E32A66372400723890 /* EnviroamerTests */,
 				092B74ED2A66372400723890 /* EnviroamerUITests */,
@@ -278,6 +291,7 @@
 		092B74D12A66372300723890 /* Enviroamer */ = {
 			isa = PBXGroup;
 			children = (
+				09297C232A6CE104008D6CD0 /* Controller */,
 				09297B902A6981A5008D6CD0 /* Assets.xcassets */,
 				09297B932A6981A6008D6CD0 /* ContentView.swift */,
 				09297B922A6981A6008D6CD0 /* Enviroamer.entitlements */,
@@ -455,6 +469,7 @@
 				09297BC42A6981A6008D6CD0 /* ExploreScreen.swift in Sources */,
 				09297BC22A6981A6008D6CD0 /* ItemContentHorizontal.swift in Sources */,
 				09297BC62A6981A6008D6CD0 /* MapScreen.swift in Sources */,
+				09297C252A6CE11E008D6CD0 /* PersistenceController.swift in Sources */,
 				09297BC32A6981A6008D6CD0 /* ItemContentVertical.swift in Sources */,
 				09297BCB2A6981A6008D6CD0 /* ContentTripCardScreen.swift in Sources */,
 				09297BC52A6981A6008D6CD0 /* UpcomIngTripsScreen.swift in Sources */,
@@ -469,6 +484,7 @@
 				09297BC82A6981A6008D6CD0 /* HomeScreen.swift in Sources */,
 				09297BBD2A6981A6008D6CD0 /* ExtensionColor.swift in Sources */,
 				09297BC72A6981A6008D6CD0 /* TripScreen.swift in Sources */,
+				09297C1A2A6CDCC0008D6CD0 /* TravelPlannerModel.xcdatamodeld in Sources */,
 				09297BBE2A6981A6008D6CD0 /* CardView.swift in Sources */,
 				09297BCF2A6981A6008D6CD0 /* TransportationContentTrip.swift in Sources */,
 				09297BD02A6981A6008D6CD0 /* WishlistScreen.swift in Sources */,
@@ -830,6 +846,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		09297C182A6CDCC0008D6CD0 /* TravelPlannerModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				09297C192A6CDCC0008D6CD0 /* TravelPlannerModel.xcdatamodel */,
+			);
+			currentVersion = 09297C192A6CDCC0008D6CD0 /* TravelPlannerModel.xcdatamodel */;
+			path = TravelPlannerModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 092B74C72A66372300723890 /* Project object */;
 }
