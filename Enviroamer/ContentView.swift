@@ -10,8 +10,15 @@ import CoreLocation
 
 struct ContentView: View {
     var body: some View {
-        NavigationView{
-         TabBar()
+       HomeScreen()
+    }
+//     check nama font 
+    init(){
+        for familyName in UIFont.familyNames {
+            print(familyName)
+            for fontName in UIFont.fontNames(forFamilyName: familyName){
+                print("---\(fontName)---")
+            }
         }
     }
 }
@@ -21,5 +28,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(TourismViewModel())
     }
 }
