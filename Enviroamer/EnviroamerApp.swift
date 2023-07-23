@@ -9,12 +9,15 @@ import SwiftUI
 
 @main
 struct EnviroamerApp: App {
+    let persistenceController = PersistenceController.shared
+
     //     add state ibjetc
         @StateObject private var modelWisata = TourismViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(modelWisata)
+                .environmentObject(modelWisata )
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
 
         }
     }

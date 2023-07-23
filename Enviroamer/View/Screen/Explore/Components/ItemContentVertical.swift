@@ -17,37 +17,51 @@ struct ItemContentVertical: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 208, height: 242)
         } placeholder: {
-            Image("placeholder")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 208, height: 242)
+            
         }
         .overlay{
             VStack {
                 Spacer()
                 ZStack{
-                    Image("gradientVertical")
+                    Rectangle()
+                        .foregroundColor(.clear)
+                        .frame(width: 155.41791, height: 55.19178)
+                        .background(
+                            EllipticalGradient(
+                                stops: [
+                                    Gradient.Stop(color: Color(red: 0.02, green: 0.03, blue: 0.03).opacity(0.2), location: 0.00),
+                                    Gradient.Stop(color: Color(red: 0.75, green: 0.78, blue: 0.78).opacity(0), location: 1.00),
+                                ],
+                                center: UnitPoint(x: 0.32, y: 0.74)
+                            )
+                        )
+                        .cornerRadius(10)
+                        .blur(radius: 4)
                     
-                    VStack(alignment: .leading){
-                        Text(tourism.nama!)
-                            .font(.custom("SFProRounded-Semibold", size: 20))
-                            .padding(.horizontal)
-                            .multilineTextAlignment(.leading)
-                            .lineLimit(2)
-                            .foregroundColor(.white)
-                        
-                        HStack{
-                            Image("pin_location")
-                                .frame(width: 10 , height: 15)
-                            Text(tourism.lokasi!)
-                                .font(.custom("SFProRounded-Regular", size: 13))
-                                .lineLimit(1)
+                    HStack {
+                        VStack(alignment: .leading){
+                            Text(tourism.nama!)
+                                .font(.system(size: 20))
+                                .fontWeight(.semibold)
+                                .padding(.horizontal)
+                                .lineLimit(2)
                                 .foregroundColor(.white)
+                            
+                            HStack{
+                                Image("pin_location")
+                                    .frame(width: 10 , height: 15)
+                                Text(tourism.lokasi!)
+                                    .font(.system(size: 13))
+                                    .lineLimit(1)
+                                    .foregroundColor(.white)
+                            }
+                            .padding(.horizontal)
+                            
                         }
-                        .padding(.horizontal)
+                        .padding()
                         
+                        Spacer()
                     }
-                    .padding()
                     
                     
                     

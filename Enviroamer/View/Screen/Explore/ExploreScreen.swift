@@ -14,7 +14,11 @@ struct ExploreScreen: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24){
-                    searchBar
+                    NavigationLink {
+                        MapScreen()
+                    } label: {
+                        searchBar
+                    }
                     Text("Explore New Place")
                     ScrollView(.horizontal) {
                         HStack (spacing: 12){
@@ -39,8 +43,9 @@ struct ExploreScreen: View {
                     }
                     
                 }
-                .font(.custom("SFProRounded-Semibold", size: 28))
-                .foregroundColor(Color("black800"))
+                .font(.system(size: 28))
+                .fontWeight(.semibold)
+                .foregroundColor(.black)
                  .padding(24)
             }
         }
@@ -63,8 +68,9 @@ var searchBar : some View {
         
         VStack(alignment: .leading){
             Text("Plan Your Trip")
-                .font(.custom("SFProRounded-Regular", size: 17))
-                .foregroundColor(Color("black800"))
+                .font(.system(size: 17))
+                .foregroundColor(.black)
+                .fontWeight(.regular)
             HStack{
                 Text("Destination •")
                 
@@ -72,9 +78,10 @@ var searchBar : some View {
                 
                 Text("Accommodation")
             }
-            .font(.custom("SFProRounded-Regular", size: 12))
-            .foregroundColor(Color("black800"))
-         
+            .font(.system(size: 12))
+            .foregroundColor(.black)
+            .fontWeight(.regular)
+            
         }
     }
     .padding()
@@ -88,7 +95,3 @@ var searchBar : some View {
     )
     
 }
-
-
-
-

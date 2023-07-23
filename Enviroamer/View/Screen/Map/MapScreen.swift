@@ -5,8 +5,6 @@
 //  Created by M Yogi Satriawan on 19/07/23.
 //
 
-import SwiftUI
-
 
 import SwiftUI
 import CoreLocation
@@ -22,7 +20,7 @@ struct Province: Decodable, Identifiable, Hashable{
     let tranportasiProvinsi: [String]
     let kegiatanOffset: [Activity]
 
-    var id: Int { // Implementing the Identifiable protocol with 'id' property
+    var id: Int {
         return idProvinsi
     }
     
@@ -84,7 +82,7 @@ struct CardViewPr: View {
             }
             Spacer()
             VStack{
-                NavigationLink(destination: TravelPlannerStepView()) {
+                NavigationLink(destination: TravelPlannerView()) {
                     Text("Add trip")
                         .foregroundColor(.white)
                         .frame(width: 150, height: 44)
@@ -143,47 +141,38 @@ struct MapScreen: View {
                             .position(x:200, y: 600)
                     }
                 }
-                
-                
-                
+      
             }
             .onAppear {
                 if let url = Bundle.main.url(forResource: "data", withExtension: "json") {
-                    do {
-                        let jsonData = try Data(contentsOf: url)
-                        let provinces = try JSONDecoder().decode([Province].self, from: jsonData)
-                        var newAnnotations: [MapAnnotationItem] = []
-                        
-                        for province in provinces {
-                            let annotation = MKPointAnnotation()
-                            annotation.coordinate = CLLocationCoordinate2D(latitude: province.coordinateKota.latitude, longitude: province.coordinateKota.longitude)
-                            annotation.title = province.namaProvinsi
-                            newAnnotations.append(MapAnnotationItem(annotation: annotation))
+                        do {
+                            let jsonData = try Data(contentsOf: url)
+                            let provinces = try JSONDecoder().decode([Province].self, from: jsonData)
+                            var newAnnotations: [MapAnnotationItem] = []
+                            
+                            for province in provinces {
+                                let annotation = MKPointAnnotation()
+                                annotation.coordinate = CLLocationCoordinate2D(latitude: province.coordinateKota.latitude, longitude: province.coordinateKota.longitude)
+                                annotation.title = province.namaProvinsi
+                                newAnnotations.append(MapAnnotationItem(annotation: annotation))
+                            }
+                            
+                            if let userLocation = locationManager.lastKnownLocation {
+                                let userAnnotation = MKPointAnnotation()
+                                userAnnotation.coordinate = userLocation.coordinate
+                                userAnnotation.title = "Current Location"
+                                newAnnotations.append(MapAnnotationItem(annotation: userAnnotation))
+                            }
+                            
+                            annotations = newAnnotations
+                        } catch {
+                            print("Error decoding JSON: \(error)")
                         }
-                        
-                        // Add current user location annotation
-                        if let userLocation = locationManager.lastKnownLocation {
-                            let userAnnotation = MKPointAnnotation()
-                            userAnnotation.coordinate = userLocation.coordinate
-                            userAnnotation.title = "Current Location"
-                            newAnnotations.append(MapAnnotationItem(annotation: userAnnotation))
-                        }
-                        
-                        annotations = newAnnotations
-                    } catch {
-                        print("Error decoding JSON: \(error)")
                     }
-                }
+                
             }
         }
-//        .overlay(
-//            Group {
-//                            if let annotation = selectedAnnotation?.annotation {
-//                                createCardView(for: annotation)
-//                                    .transition(.move(edge: .bottom))
-//                            }
-//            }.frame(maxWidth: .infinity, maxHeight: .infinity ,alignment: .bottom)
-//        )
+
     }
 
     func createAlert(for annotation: MKPointAnnotation) -> Alert {

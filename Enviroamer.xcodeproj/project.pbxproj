@@ -7,15 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09297B7E2A683389008D6CD0 /* CalculateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B7D2A683389008D6CD0 /* CalculateScreen.swift */; };
-		09297B802A6833E7008D6CD0 /* CalculateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B7F2A6833E7008D6CD0 /* CalculateViewModel.swift */; };
-		09297B842A6834FB008D6CD0 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B832A6834FB008D6CD0 /* MapScreen.swift */; };
-		09297B862A684016008D6CD0 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 09297B852A684016008D6CD0 /* data.json */; };
-		09297B8A2A68DB86008D6CD0 /* TripScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B892A68DB85008D6CD0 /* TripScreen.swift */; };
-		09297B8C2A68DB98008D6CD0 /* WishlistScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B8B2A68DB98008D6CD0 /* WishlistScreen.swift */; };
-		092B74D32A66372300723890 /* EnviroamerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B74D22A66372300723890 /* EnviroamerApp.swift */; };
-		092B74D52A66372300723890 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B74D42A66372300723890 /* ContentView.swift */; };
-		092B74D72A66372400723890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 092B74D62A66372400723890 /* Assets.xcassets */; };
+		09297BB92A6981A6008D6CD0 /* TourismViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B8F2A6981A5008D6CD0 /* TourismViewModel.swift */; };
+		09297BBA2A6981A6008D6CD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09297B902A6981A5008D6CD0 /* Assets.xcassets */; };
+		09297BBB2A6981A6008D6CD0 /* EnviroamerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B912A6981A6008D6CD0 /* EnviroamerApp.swift */; };
+		09297BBC2A6981A6008D6CD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B932A6981A6008D6CD0 /* ContentView.swift */; };
+		09297BBD2A6981A6008D6CD0 /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B962A6981A6008D6CD0 /* ExtensionColor.swift */; };
+		09297BBE2A6981A6008D6CD0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B972A6981A6008D6CD0 /* CardView.swift */; };
+		09297BBF2A6981A6008D6CD0 /* CustomCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B982A6981A6008D6CD0 /* CustomCorner.swift */; };
+		09297BC02A6981A6008D6CD0 /* CalculateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B9B2A6981A6008D6CD0 /* CalculateScreen.swift */; };
+		09297BC12A6981A6008D6CD0 /* CalculateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B9C2A6981A6008D6CD0 /* CalculateViewModel.swift */; };
+		09297BC22A6981A6008D6CD0 /* ItemContentHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297B9F2A6981A6008D6CD0 /* ItemContentHorizontal.swift */; };
+		09297BC32A6981A6008D6CD0 /* ItemContentVertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297BA02A6981A6008D6CD0 /* ItemContentVertical.swift */; };
+		09297BC42A6981A6008D6CD0 /* ExploreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297BA12A6981A6008D6CD0 /* ExploreScreen.swift */; };
+		09297BC52A6981A6008D6CD0 /* UpcomIngTripsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297BA22A6981A6008D6CD0 /* UpcomIngTripsScreen.swift */; };
+		09297BC62A6981A6008D6CD0 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297BA42A6981A6008D6CD0 /* MapScreen.swift */; };
+		09297BC72A6981A6008D6CD0 /* TripScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297BA62A6981A6008D6CD0 /* TripScreen.swift */; };
+		09297BC82A6981A6008D6CD0 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297BA72A6981A6008D6CD0 /* HomeScreen.swift */; };
+		09297BC92A6981A6008D6CD0 /* TripCardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297BA92A6981A6008D6CD0 /* TripCardScreen.swift */; };
+		09297BCA2A6981A6008D6CD0 /* CarbonContentTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297BAB2A6981A6008D6CD0 /* CarbonContentTrip.swift */; };
+		09297BCB2A6981A6008D6CD0 /* ContentTripCardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297BAC2A6981A6008D6CD0 /* ContentTripCardScreen.swift */; };
+		09297BCC2A6981A6008D6CD0 /* ActivityOffsetContentTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297BAD2A6981A6008D6CD0 /* ActivityOffsetContentTrip.swift */; };
+		09297BCD2A6981A6008D6CD0 /* ItemImageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297BAE2A6981A6008D6CD0 /* ItemImageCard.swift */; };
+		09297BCE2A6981A6008D6CD0 /* DestinationContentTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297BAF2A6981A6008D6CD0 /* DestinationContentTrip.swift */; };
+		09297BCF2A6981A6008D6CD0 /* TransportationContentTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297BB02A6981A6008D6CD0 /* TransportationContentTrip.swift */; };
+		09297BD02A6981A6008D6CD0 /* WishlistScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297BB22A6981A6008D6CD0 /* WishlistScreen.swift */; };
+		09297BD12A6981A6008D6CD0 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297BB42A6981A6008D6CD0 /* Location.swift */; };
+		09297BD22A6981A6008D6CD0 /* OffsetActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297BB52A6981A6008D6CD0 /* OffsetActivity.swift */; };
+		09297BD32A6981A6008D6CD0 /* Tourism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297BB62A6981A6008D6CD0 /* Tourism.swift */; };
+		09297BD42A6981A6008D6CD0 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 09297BB82A6981A6008D6CD0 /* data.json */; };
+		09297C1A2A6CDCC0008D6CD0 /* TravelPlannerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09297C182A6CDCC0008D6CD0 /* TravelPlannerModel.xcdatamodeld */; };
+		09297C252A6CE11E008D6CD0 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297C242A6CE11E008D6CD0 /* PersistenceController.swift */; };
 		092B74DB2A66372400723890 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 092B74DA2A66372400723890 /* Preview Assets.xcassets */; };
 		092B74E52A66372400723890 /* EnviroamerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B74E42A66372400723890 /* EnviroamerTests.swift */; };
 		092B74EF2A66372400723890 /* EnviroamerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B74EE2A66372400723890 /* EnviroamerUITests.swift */; };
@@ -75,17 +96,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09297B7D2A683389008D6CD0 /* CalculateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateScreen.swift; sourceTree = "<group>"; };
-		09297B7F2A6833E7008D6CD0 /* CalculateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewModel.swift; sourceTree = "<group>"; };
-		09297B832A6834FB008D6CD0 /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
-		09297B852A684016008D6CD0 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
-		09297B892A68DB85008D6CD0 /* TripScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripScreen.swift; sourceTree = "<group>"; };
-		09297B8B2A68DB98008D6CD0 /* WishlistScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistScreen.swift; sourceTree = "<group>"; };
+		09297B8F2A6981A5008D6CD0 /* TourismViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourismViewModel.swift; sourceTree = "<group>"; };
+		09297B902A6981A5008D6CD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		09297B912A6981A6008D6CD0 /* EnviroamerApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnviroamerApp.swift; sourceTree = "<group>"; };
+		09297B922A6981A6008D6CD0 /* Enviroamer.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Enviroamer.entitlements; sourceTree = "<group>"; };
+		09297B932A6981A6008D6CD0 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		09297B962A6981A6008D6CD0 /* ExtensionColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
+		09297B972A6981A6008D6CD0 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		09297B982A6981A6008D6CD0 /* CustomCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCorner.swift; sourceTree = "<group>"; };
+		09297B9B2A6981A6008D6CD0 /* CalculateScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateScreen.swift; sourceTree = "<group>"; };
+		09297B9C2A6981A6008D6CD0 /* CalculateViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateViewModel.swift; sourceTree = "<group>"; };
+		09297B9F2A6981A6008D6CD0 /* ItemContentHorizontal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemContentHorizontal.swift; sourceTree = "<group>"; };
+		09297BA02A6981A6008D6CD0 /* ItemContentVertical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemContentVertical.swift; sourceTree = "<group>"; };
+		09297BA12A6981A6008D6CD0 /* ExploreScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreScreen.swift; sourceTree = "<group>"; };
+		09297BA22A6981A6008D6CD0 /* UpcomIngTripsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomIngTripsScreen.swift; sourceTree = "<group>"; };
+		09297BA42A6981A6008D6CD0 /* MapScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
+		09297BA62A6981A6008D6CD0 /* TripScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripScreen.swift; sourceTree = "<group>"; };
+		09297BA72A6981A6008D6CD0 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		09297BA92A6981A6008D6CD0 /* TripCardScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCardScreen.swift; sourceTree = "<group>"; };
+		09297BAB2A6981A6008D6CD0 /* CarbonContentTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarbonContentTrip.swift; sourceTree = "<group>"; };
+		09297BAC2A6981A6008D6CD0 /* ContentTripCardScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentTripCardScreen.swift; sourceTree = "<group>"; };
+		09297BAD2A6981A6008D6CD0 /* ActivityOffsetContentTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityOffsetContentTrip.swift; sourceTree = "<group>"; };
+		09297BAE2A6981A6008D6CD0 /* ItemImageCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemImageCard.swift; sourceTree = "<group>"; };
+		09297BAF2A6981A6008D6CD0 /* DestinationContentTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationContentTrip.swift; sourceTree = "<group>"; };
+		09297BB02A6981A6008D6CD0 /* TransportationContentTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportationContentTrip.swift; sourceTree = "<group>"; };
+		09297BB22A6981A6008D6CD0 /* WishlistScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistScreen.swift; sourceTree = "<group>"; };
+		09297BB42A6981A6008D6CD0 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		09297BB52A6981A6008D6CD0 /* OffsetActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffsetActivity.swift; sourceTree = "<group>"; };
+		09297BB62A6981A6008D6CD0 /* Tourism.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tourism.swift; sourceTree = "<group>"; };
+		09297BB82A6981A6008D6CD0 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		09297C192A6CDCC0008D6CD0 /* TravelPlannerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TravelPlannerModel.xcdatamodel; sourceTree = "<group>"; };
+		09297C242A6CE11E008D6CD0 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		092B74CF2A66372300723890 /* Enviroamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enviroamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		092B74D22A66372300723890 /* EnviroamerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviroamerApp.swift; sourceTree = "<group>"; };
-		092B74D42A66372300723890 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		092B74D62A66372400723890 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		092B74D82A66372400723890 /* Enviroamer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Enviroamer.entitlements; sourceTree = "<group>"; };
 		092B74DA2A66372400723890 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		092B74E02A66372400723890 /* EnviroamerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnviroamerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		092B74E42A66372400723890 /* EnviroamerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviroamerTests.swift; sourceTree = "<group>"; };
@@ -155,24 +197,84 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09297B7C2A683351008D6CD0 /* Calculate */ = {
+		09297B8E2A6981A5008D6CD0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				09297B7D2A683389008D6CD0 /* CalculateScreen.swift */,
-				09297B7F2A6833E7008D6CD0 /* CalculateViewModel.swift */,
+				09297B8F2A6981A5008D6CD0 /* TourismViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		09297B942A6981A6008D6CD0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				09297B952A6981A6008D6CD0 /* Components */,
+				09297B992A6981A6008D6CD0 /* Screen */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		09297B952A6981A6008D6CD0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				09297B962A6981A6008D6CD0 /* ExtensionColor.swift */,
+				09297B972A6981A6008D6CD0 /* CardView.swift */,
+				09297B982A6981A6008D6CD0 /* CustomCorner.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		09297B992A6981A6008D6CD0 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				09297B9A2A6981A6008D6CD0 /* Calculate */,
+				09297B9D2A6981A6008D6CD0 /* Explore */,
+				09297BA32A6981A6008D6CD0 /* Map */,
+				09297BA52A6981A6008D6CD0 /* Trip */,
+				09297BA72A6981A6008D6CD0 /* HomeScreen.swift */,
+				09297BA82A6981A6008D6CD0 /* TripCard */,
+				09297BB12A6981A6008D6CD0 /* Wishlist */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		09297B9A2A6981A6008D6CD0 /* Calculate */ = {
+			isa = PBXGroup;
+			children = (
+				09297B9B2A6981A6008D6CD0 /* CalculateScreen.swift */,
+				09297B9C2A6981A6008D6CD0 /* CalculateViewModel.swift */,
 			);
 			path = Calculate;
 			sourceTree = "<group>";
 		};
-		09297B812A6834E6008D6CD0 /* Map */ = {
+		09297B9D2A6981A6008D6CD0 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
-				09297B832A6834FB008D6CD0 /* MapScreen.swift */,
+				09297B9E2A6981A6008D6CD0 /* Components */,
+				09297BA12A6981A6008D6CD0 /* ExploreScreen.swift */,
+				09297BA22A6981A6008D6CD0 /* UpcomIngTripsScreen.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		09297B9E2A6981A6008D6CD0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				09297B9F2A6981A6008D6CD0 /* ItemContentHorizontal.swift */,
+				09297BA02A6981A6008D6CD0 /* ItemContentVertical.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		09297BA32A6981A6008D6CD0 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				09297BA42A6981A6008D6CD0 /* MapScreen.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
 		};
-		09297B872A68DB0B008D6CD0 /* Trip */ = {
+		09297BA52A6981A6008D6CD0 /* Trip */ = {
 			isa = PBXGroup;
 			children = (
 				09297B892A68DB85008D6CD0 /* TripScreen.swift */,
@@ -182,7 +284,7 @@
 			path = Trip;
 			sourceTree = "<group>";
 		};
-		09297B882A68DB17008D6CD0 /* Wishlist */ = {
+		09297BA82A6981A6008D6CD0 /* TripCard */ = {
 			isa = PBXGroup;
 			children = (
 				09297B8B2A68DB98008D6CD0 /* WishlistScreen.swift */,
@@ -192,9 +294,36 @@
 			path = Wishlist;
 			sourceTree = "<group>";
 		};
+		09297BB32A6981A6008D6CD0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				09297BB42A6981A6008D6CD0 /* Location.swift */,
+				09297BB52A6981A6008D6CD0 /* OffsetActivity.swift */,
+				09297BB62A6981A6008D6CD0 /* Tourism.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		09297BB72A6981A6008D6CD0 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				09297BB82A6981A6008D6CD0 /* data.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		09297C232A6CE104008D6CD0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				09297C242A6CE11E008D6CD0 /* PersistenceController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		092B74C62A66372300723890 = {
 			isa = PBXGroup;
 			children = (
+				09297C182A6CDCC0008D6CD0 /* TravelPlannerModel.xcdatamodeld */,
 				092B74D12A66372300723890 /* Enviroamer */,
 				092B74E32A66372400723890 /* EnviroamerTests */,
 				092B74ED2A66372400723890 /* EnviroamerUITests */,
@@ -215,16 +344,15 @@
 		092B74D12A66372300723890 /* Enviroamer */ = {
 			isa = PBXGroup;
 			children = (
-				573C402D2A6BDA6200B12D5E /* Info.plist */,
-				573C40242A6BD94100B12D5E /* Font */,
-				57559DBD2A68F48400A1A476 /* Resource */,
-				57559DBC2A68F44700A1A476 /* View */,
-				57559DBB2A68F43600A1A476 /* ViewModel */,
-				092B75092A663D7400723890 /* Model */,
-				092B74D22A66372300723890 /* EnviroamerApp.swift */,
-				092B74D42A66372300723890 /* ContentView.swift */,
-				092B74D62A66372400723890 /* Assets.xcassets */,
-				092B74D82A66372400723890 /* Enviroamer.entitlements */,
+				09297C232A6CE104008D6CD0 /* Controller */,
+				09297B902A6981A5008D6CD0 /* Assets.xcassets */,
+				09297B932A6981A6008D6CD0 /* ContentView.swift */,
+				09297B922A6981A6008D6CD0 /* Enviroamer.entitlements */,
+				09297B912A6981A6008D6CD0 /* EnviroamerApp.swift */,
+				09297BB32A6981A6008D6CD0 /* Model */,
+				09297BB72A6981A6008D6CD0 /* Resource */,
+				09297B942A6981A6008D6CD0 /* View */,
+				09297B8E2A6981A5008D6CD0 /* ViewModel */,
 				092B74D92A66372400723890 /* Preview Content */,
 			);
 			path = Enviroamer;
@@ -468,6 +596,7 @@
 				TargetAttributes = {
 					092B74CE2A66372300723890 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 					092B74DF2A66372400723890 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -507,6 +636,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09297BBA2A6981A6008D6CD0 /* Assets.xcassets in Resources */,
+				09297BD42A6981A6008D6CD0 /* data.json in Resources */,
 				092B74DB2A66372400723890 /* Preview Assets.xcassets in Resources */,
 				573C402A2A6BDA0700B12D5E /* SF-Pro-Rounded-Medium.otf in Resources */,
 				573C40292A6BDA0700B12D5E /* SF-Pro-Rounded-Regular.otf in Resources */,
@@ -538,43 +669,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57559DD72A69225000A1A476 /* ActivityOffsetContentTrip.swift in Sources */,
-				573C401D2A6B918600B12D5E /* ContactViewModel.swift in Sources */,
-				09297B842A6834FB008D6CD0 /* MapScreen.swift in Sources */,
-				57559DC32A69183800A1A476 /* OffsetActivity.swift in Sources */,
-				573C401B2A6B893F00B12D5E /* ModalDescOffset.swift in Sources */,
-				5704EDE12A6C62CD0044EEC0 /* TripsWishListScreen.swift in Sources */,
-				092B74D52A66372300723890 /* ContentView.swift in Sources */,
-				57559DE52A696F1900A1A476 /* ItemDestinationActivity.swift in Sources */,
-				57559DE92A69CC4F00A1A476 /* ActivityOffsetScreen.swift in Sources */,
-				5704EDE32A6C62E10044EEC0 /* DestinationWishListScreen.swift in Sources */,
-				57559DD52A69220100A1A476 /* DestinationContentTrip.swift in Sources */,
-				57559DD32A6921EE00A1A476 /* CarbonContentTrip.swift in Sources */,
-				5704EDE52A6C62FB0044EEC0 /* UpcomingTripsScreen.swift in Sources */,
-				57559DED2A6A977A00A1A476 /* ModalSheetDescription.swift in Sources */,
-				57559DEF2A6A978C00A1A476 /* ModalSheetActivities.swift in Sources */,
-				57559DEB2A6A412500A1A476 /* ItemImageDestination.swift in Sources */,
-				09297B8A2A68DB86008D6CD0 /* TripScreen.swift in Sources */,
-				092B74D32A66372300723890 /* EnviroamerApp.swift in Sources */,
-				57559DD92A69226B00A1A476 /* TransportationContentTrip.swift in Sources */,
-				092B75042A66389C00723890 /* HomeScreen.swift in Sources */,
-				09297B7E2A683389008D6CD0 /* CalculateScreen.swift in Sources */,
-				57559DC12A69182700A1A476 /* Location.swift in Sources */,
-				57559DCD2A691D0600A1A476 /* CustomCorner.swift in Sources */,
-				09297B8C2A68DB98008D6CD0 /* WishlistScreen.swift in Sources */,
-				57559DCB2A691CC500A1A476 /* ItemContentHorizontal.swift in Sources */,
-				5704EDE72A6C630B0044EEC0 /* PastTripScreen.swift in Sources */,
-				57559DCF2A6921AB00A1A476 /* TripCardScreen.swift in Sources */,
-				09297B802A6833E7008D6CD0 /* CalculateViewModel.swift in Sources */,
-				57559DC52A6918A700A1A476 /* TourismViewModel.swift in Sources */,
-				57559DE32A69488900A1A476 /* ExtensionColor.swift in Sources */,
-				57559DC92A691CB500A1A476 /* ItemContentVertical.swift in Sources */,
-				0950A19F2A6793720062628E /* UpcomIngTripsScreen.swift in Sources */,
-				57559DC72A691C9600A1A476 /* ExploreScreen.swift in Sources */,
-				57559DE12A69265200A1A476 /* ItemImageCard.swift in Sources */,
-				57559DE72A69CC4100A1A476 /* DestinationScreen.swift in Sources */,
-				092B75082A663CBE00723890 /* CardView.swift in Sources */,
-				57559DBF2A69181600A1A476 /* Tourism.swift in Sources */,
+				09297BB92A6981A6008D6CD0 /* TourismViewModel.swift in Sources */,
+				09297BD22A6981A6008D6CD0 /* OffsetActivity.swift in Sources */,
+				09297BCA2A6981A6008D6CD0 /* CarbonContentTrip.swift in Sources */,
+				09297BCD2A6981A6008D6CD0 /* ItemImageCard.swift in Sources */,
+				09297BC42A6981A6008D6CD0 /* ExploreScreen.swift in Sources */,
+				09297BC22A6981A6008D6CD0 /* ItemContentHorizontal.swift in Sources */,
+				09297BC62A6981A6008D6CD0 /* MapScreen.swift in Sources */,
+				09297C252A6CE11E008D6CD0 /* PersistenceController.swift in Sources */,
+				09297BC32A6981A6008D6CD0 /* ItemContentVertical.swift in Sources */,
+				09297BCB2A6981A6008D6CD0 /* ContentTripCardScreen.swift in Sources */,
+				09297BC52A6981A6008D6CD0 /* UpcomIngTripsScreen.swift in Sources */,
+				09297BBB2A6981A6008D6CD0 /* EnviroamerApp.swift in Sources */,
+				09297BD12A6981A6008D6CD0 /* Location.swift in Sources */,
+				09297BBC2A6981A6008D6CD0 /* ContentView.swift in Sources */,
+				09297BC92A6981A6008D6CD0 /* TripCardScreen.swift in Sources */,
+				09297BC02A6981A6008D6CD0 /* CalculateScreen.swift in Sources */,
+				09297BBF2A6981A6008D6CD0 /* CustomCorner.swift in Sources */,
+				09297BCE2A6981A6008D6CD0 /* DestinationContentTrip.swift in Sources */,
+				09297BC12A6981A6008D6CD0 /* CalculateViewModel.swift in Sources */,
+				09297BC82A6981A6008D6CD0 /* HomeScreen.swift in Sources */,
+				09297BBD2A6981A6008D6CD0 /* ExtensionColor.swift in Sources */,
+				09297BC72A6981A6008D6CD0 /* TripScreen.swift in Sources */,
+				09297C1A2A6CDCC0008D6CD0 /* TravelPlannerModel.xcdatamodeld in Sources */,
+				09297BBE2A6981A6008D6CD0 /* CardView.swift in Sources */,
+				09297BCF2A6981A6008D6CD0 /* TransportationContentTrip.swift in Sources */,
+				09297BD02A6981A6008D6CD0 /* WishlistScreen.swift in Sources */,
+				09297BCC2A6981A6008D6CD0 /* ActivityOffsetContentTrip.swift in Sources */,
+				09297BD32A6981A6008D6CD0 /* Tourism.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,6 +847,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Enviroamer/Enviroamer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -755,6 +878,7 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -765,6 +889,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Enviroamer/Enviroamer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -931,24 +1056,18 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		573C401E2A6B987200B12D5E /* XCRemoteSwiftPackageReference "SlidingTabView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/QuynhNguyen/SlidingTabView.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
+/* Begin XCVersionGroup section */
+		09297C182A6CDCC0008D6CD0 /* TravelPlannerModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				09297C192A6CDCC0008D6CD0 /* TravelPlannerModel.xcdatamodel */,
+			);
+			currentVersion = 09297C192A6CDCC0008D6CD0 /* TravelPlannerModel.xcdatamodel */;
+			path = TravelPlannerModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
 		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		573C401F2A6B987200B12D5E /* SlidingTabView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 573C401E2A6B987200B12D5E /* XCRemoteSwiftPackageReference "SlidingTabView" */;
-			productName = SlidingTabView;
-		};
-/* End XCSwiftPackageProductDependency section */
+/* End XCVersionGroup section */
 	};
 	rootObject = 092B74C72A66372300723890 /* Project object */;
 }

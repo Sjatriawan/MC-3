@@ -20,9 +20,6 @@ struct TravelPlannerStepView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Button("Location"){
-                    
-                }
                 if currentStep == 1 {
                     Form {
                         // Step 1: Current Location
@@ -64,12 +61,6 @@ struct TravelPlannerStepView: View {
                             Text("\(viewModel.daysOfTravel) days")
                         }
                     }
-                    
-            
-                        // Step 4: Days of Travel
-                       
-                        
-                        
                     
                     
                 } else if currentStep == 3 {
@@ -136,9 +127,10 @@ struct TravelPlannerStepView: View {
 
 
 
+
 struct TravelPlannerView: View {
     @StateObject private var viewModel = TravelPlannerViewModel()
-    
+
     var body: some View {
         NavigationView {
             Form {
@@ -162,7 +154,7 @@ struct TravelPlannerView: View {
                     }
                     .pickerStyle(MenuPickerStyle())
                 }
-                
+
                 Section(header: Text("Trip Duration")) {
                     DatePicker("Start Date", selection: $viewModel.startDate, displayedComponents: .date)
                     DatePicker("End Date", selection: $viewModel.endDate, displayedComponents: .date)
@@ -197,9 +189,27 @@ struct TravelPlannerView: View {
                 }
             }
             .navigationBarTitle("Travel Planner")
+            .navigationBarItems(trailing: Button("Save") {
+                viewModel.saveData()
+            })
+            .alert(isPresented: $viewModel.isDataSaved) {
+                            Alert(title: Text("Data Saved"), message: Text("Your trip data has been saved."), dismissButton: .default(Text("OK")) {
+                                viewModel.resetIsDataSaved()
+                            })
+                        }
         }
     }
 }
+
+struct ProvinceDetailView: View {
+    var province: Province
+    
+    var body: some View {
+        // Add the details of the selected province here
+        Text(province.namaProvinsi)
+    }
+}
+
 
 
 class ProvinceDetailViewModel: ObservableObject {
@@ -211,28 +221,165 @@ class ProvinceDetailViewModel: ObservableObject {
 }
 
 
-struct ProvinceDetailView: View {
-    @StateObject private var viewModel: ProvinceDetailViewModel
-    
-    init(province: Province) {
-        _viewModel = StateObject(wrappedValue: ProvinceDetailViewModel(province: province))
-    }
-    
-    var body: some View {
-        VStack {
-            Text(viewModel.province.namaProvinsi)
-                .font(.title)
-            // Add more details about the province here, such as tourist attractions, images, etc.
-        }
-        .navigationBarTitle(viewModel.province.namaProvinsi)
-    }
-}
+
 
 
 
 
 struct CalculateScreen_Previews: PreviewProvider {
     static var previews: some View {
-        TravelPlannerView()
+        TravelPlannerStepView()
+    }
+}
+
+
+struct StepTwo: View {
+    @StateObject private var viewModel = TravelPlannerViewModel()
+    @State private var currentStep: Int = 1
+    @StateObject private var locationManager = LocationManager()
+    @State private var selectedProvinceIndex = 0
+    @StateObject var SViewModel = ModernSegmentedPickerViewModel(options: ["Walk", "Bicycle", "Bus", "Motorcycle", "Ship", "Plane", "Train"])
+
+
+
+    var body: some View{
+        VStack(alignment: .leading){
+            HStack{
+                Text("\(viewModel.totalCarbonEmissions, specifier: "%.2f") grams CO2")
+                Image(systemName: "info.circle").foregroundColor(.green)
+            }
+            
+            Divider().padding()
+            Text("Where to")
+            HStack{
+                Image("Pin Point Location Icon")
+                .frame(width: 15, height: 21)
+                .background(Color(red: 0.25, green: 0.55, blue: 0.25))
+                if let location = viewModel.locationManager.lastKnownLocation {
+                    Text("Latitude: \(location.coordinate.latitude), Longitude: \(location.coordinate.longitude)")
+                } else {
+                    Text("Location not available")
+                }
+            }.frame(width:340, height: 30, alignment: .leading).padding()
+            .overlay(
+                RoundedRectangle(cornerRadius: 12)
+                .inset(by: 0.5)
+                .stroke(Color(red: 0.82, green: 0.82, blue: 0.82), lineWidth: 1)
+            )
+            
+            
+            Section(header: Text(".")) {
+                                Picker("Select a Province", selection: $selectedProvinceIndex) {
+                                    ForEach(viewModel.provinces.indices, id: \.self) { index in
+                                        Text(viewModel.provinces[index].namaProvinsi).tag(index)
+                                    }
+                                }.frame(width:340, height: 30, alignment: .leading).padding()
+                                .pickerStyle(MenuPickerStyle())
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 12)
+                                    .inset(by: 0.5)
+                                    .stroke(Color(red: 0.82, green: 0.82, blue: 0.82), lineWidth: 1)
+                                )
+
+                               
+                            }
+            
+            Divider()
+            
+            HStack{
+                Section(header: Text("When")) {
+                    DatePicker("", selection: $viewModel.startDate, displayedComponents: .date)
+                    DatePicker("-", selection: $viewModel.endDate, displayedComponents: .date)
+                }
+            }.frame(width:340, height: 30, alignment: .leading).padding()
+            .overlay(
+                RoundedRectangle(cornerRadius: 12)
+                .inset(by: 0.5)
+                .stroke(Color(red: 0.82, green: 0.82, blue: 0.82), lineWidth: 1)
+            )
+            
+            Text("How will you get there?")
+            ModernSegmentedPicker(viewModel: SViewModel)
+                        Text("Selected Option: \(SViewModel.selectedOption)")
+                
+            
+        }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading).padding()
+    }
+}
+
+struct ModernSegmentedPicker: View {
+    @ObservedObject var viewModel: ModernSegmentedPickerViewModel
+    
+    var body: some View {
+        VStack(spacing: 2) {
+            HStack(spacing: 2) {
+                ForEach(viewModel.options[0..<3], id: \.self) { option in
+                    outlineButton(for: option)
+                }
+            }
+            
+            HStack(spacing: 2) {
+                ForEach(viewModel.options[3..<6], id: \.self) { option in
+                    outlineButton(for: option)
+                }
+            }
+            
+            HStack(spacing: 2) {
+                ForEach(viewModel.options[6..<viewModel.options.count], id: \.self) { option in
+                    outlineButton(for: option)
+                }
+            }
+        }
+        .frame(height: 100)
+    }
+    
+    @ViewBuilder
+    private func outlineButton(for option: String) -> some View {
+        OutlineButton(action: {
+            viewModel.selectedOption = option
+        }) {
+            HStack {
+                Image(systemName: viewModel.selectedOption == option ? "checkmark.circle.fill" : "circle")
+                    .foregroundColor(.white)
+                    .font(.system(size: 18))
+                    .frame(width: 30)
+                
+                Text(option)
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity)
+            }
+            .padding()
+            .background(viewModel.selectedOption == option ? Color.green : Color.gray)
+            .cornerRadius(8)
+        }
+    }
+}
+
+struct OutlineButton<Content: View>: View {
+    var action: () -> Void
+    var content: () -> Content
+    
+    var body: some View {
+        Button(action: action) {
+            content()
+        }
+    }
+}
+
+
+class ModernSegmentedPickerViewModel: ObservableObject {
+    @Published var selectedOption: String = ""
+    let options: [String]
+    
+    init(options: [String]) {
+        self.options = options
+    }
+}
+
+
+
+struct StepView_Previews: PreviewProvider {
+    static var previews: some View {
+        StepTwo()
     }
 }
