@@ -15,12 +15,106 @@ struct UpcomingTripsScreen: View {
         NavigationStack {
             VStack{
                 if upcomingTripsItems.isEmpty{
-                    EmptyUpcomingTrips()
+                    TripScreenList()
                 } else {
                     ItemUpcomingTrips(location: modelWisata.tourisms[0])
                 }
             }
         }
+    }
+}
+
+struct TripScreenList: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Trip.startDate, ascending: true)],
+        animation: .default)
+    private var trips: FetchedResults<Trip>
+
+    var body: some View {
+        ScrollView(showsIndicators: false){
+            LazyVStack {
+                ForEach(trips, id: \.self) { trip in
+                    CardViewList(trip: trip)
+                        .frame(width: 322, height: 270)
+                }
+            }
+            .padding()
+        }
+    }
+}
+
+
+
+struct CardViewList: View {
+    let trip: Trip
+
+    var body: some View {
+        ZStack(alignment: .bottomLeading) {
+            AsyncImage(url: URL(string: trip.imageKota ?? "")) { phase in
+                switch phase {
+                case .empty:
+                    ProgressView()
+                case .success(let image):
+                    image
+                        .resizable()
+                        .frame(width: 322, height: 230)
+                        .scaledToFit()
+                        
+                case .failure:
+                    // Placeholder view for failed loading
+                    Color.gray
+                @unknown default:
+                    // Placeholder view for unknown cases
+                    Color.gray
+                }
+            }
+            .cornerRadius(20)
+
+            Rectangle()
+                .frame(height: 75)
+                .foregroundColor(.black)
+                .opacity(0.4)
+                .blur(radius: 8)
+            
+            VStack(alignment: .leading, spacing: 8) {
+                Text("\(trip.provinceName ?? "")")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                Text("\(formattedDate(date: trip.startDate)) - \(formattedDate(date: trip.endDate))")
+                    .font(.subheadline)
+                    .foregroundColor(.white)
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 8)
+        }
+        .cornerRadius(20)
+        .padding(.horizontal, 16)
+        .padding(.vertical, 8)
+    }
+    
+    private func formattedDate(date: Date?) -> String {
+        if let date = date {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            return dateFormatter.string(from: date)
+        }
+        return ""
+    }
+}
+
+
+struct CardScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        // Create a sample Trip for preview
+        let trip = Trip(context: PersistenceController.shared.container.viewContext)
+        trip.provinceName = "Jawa Barat"
+        trip.imageKota = "https://example.com/sample_image.jpg"
+        trip.startDate = Date()
+        trip.endDate = Date().addingTimeInterval(86400) // Adding one day to the start date
+
+        return CardViewList(trip: trip)
+           
     }
 }
 
@@ -68,17 +162,17 @@ struct EmptyUpcomingTrips : View {
 
 struct ItemUpcomingTrips : View{
     var location : Location
-
+    
     var body : some View {
         AsyncImage(url: URL(string: location.imageKota)) { Image in
             Image
                 .resizable()
-         
-                
+            
+            
         } placeholder: {
             Image("placeholder")
                 .resizable()
- 
+            
         }
         .aspectRatio(contentMode: .fill)
         .frame(width: 342, height: 205)
@@ -101,14 +195,14 @@ struct ItemUpcomingTrips : View{
                             Text("6 Jul - 14 Jul")
                                 .foregroundColor(Color("black800"))
                                 .font(.custom("SFProRounded-Regular", size: 15))
-                           
+                            
                         }
                         Spacer()
                         
                         Image("delete")
                     }
                     .padding(.horizontal,24)
-        
+                    
                     
                 }
             }

@@ -14,7 +14,11 @@ struct ExploreScreen: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24){
-                    searchBar
+                    NavigationLink {
+                                           MapScreen()
+                                       } label: {
+                                           searchBar
+                                       }
                     Text("Explore New Place")
                     ScrollView(.horizontal) {
                         HStack (spacing: 12){

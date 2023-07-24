@@ -5,17 +5,23 @@
 //  Created by M Yogi Satriawan on 19/07/23.
 //
 
-import SwiftUI
-import MapKit
+import Foundation
 import CoreLocation
+import SwiftUI
+import CoreData
 
 class TravelPlannerViewModel: ObservableObject {
     @Published var locationManager = LocationManager()
     @Published var currentLocation: String = ""
     @Published var selectedProvinceIndex: Int = 0
     
+
     @Published var startDate = Date()
     @Published var endDate = Date()
+    @Published var isDataSaved: Bool = false
+    
+    @Published var selectedProvinceImageURL: URL?
+
     
     @Published var transportationMethod = "Walk"
     @Published var hotelStarRating = "1 Star"
@@ -28,11 +34,10 @@ class TravelPlannerViewModel: ObservableObject {
         provinces[selectedProvinceIndex]
     }
     
-    
-    
     var daysOfTravel: Int {
         Calendar.current.dateComponents([.day], from: startDate, to: endDate).day ?? 0
     }
+    
     
     var distanceToProvince: String {
         if let userLocation = locationManager.lastKnownLocation {
@@ -43,6 +48,18 @@ class TravelPlannerViewModel: ObservableObject {
         }
     }
     
+    func updateSelectedProvinceImageURL() {
+        if selectedProvinceIndex >= 0 && selectedProvinceIndex < provinces.count {
+            let selectedProvince = provinces[selectedProvinceIndex]
+            selectedProvinceImageURL = URL(string: selectedProvince.imageKota)
+        } else {
+            selectedProvinceImageURL = nil
+        }
+    }
+
+
+
+    
     func calculateDistance(from start: CLLocationCoordinate2D, to end: CLLocationCoordinate2D) -> String {
         let startLocation = CLLocation(latitude: start.latitude, longitude: start.longitude)
         let endLocation = CLLocation(latitude: end.latitude, longitude: end.longitude)
@@ -52,8 +69,7 @@ class TravelPlannerViewModel: ObservableObject {
         
         return String(format: "%.2f km", distanceInKilometers)
     }
-    
-    
+
     let carbonEmissionsPerKilometer: [String: Double] = [
         "Walk": 0,
         "Bicycle": 0,
@@ -100,11 +116,42 @@ class TravelPlannerViewModel: ObservableObject {
         return totalTransportationCarbon + totalHotelCarbon
     }
     
+    // Core Data context
+    private let context = PersistenceController.shared.container.viewContext
+
+    // Save the input data to Core Data
+    func saveData() {
+        let newTrip = Trip(context: context)
+        newTrip.startDate = startDate
+        newTrip.endDate = endDate
+        newTrip.transportationMethod = transportationMethod
+        newTrip.hotelStarRating = hotelStarRating
+        newTrip.distanceToProvince = distanceToProvince
+        newTrip.totalCarbonEmissions = totalCarbonEmissions
+        newTrip.provinceName = provinces[selectedProvinceIndex].namaProvinsi
+        newTrip.imageKota = provinces[selectedProvinceIndex].imageKota 
+
+        PersistenceController.shared.save()
+        isDataSaved = true
+    }
+
+    func resetIsDataSaved() {
+            isDataSaved = false
+        }
     
-    // Rest of the functions and properties for carbon emissions calculation
-    
+    // Fetch the saved data from Core Data
+    func fetchSavedTrips() -> [Trip] {
+        let fetchRequest: NSFetchRequest<Trip> = Trip.fetchRequest()
+        do {
+            return try context.fetch(fetchRequest)
+        } catch {
+            print("Error fetching data: \(error)")
+            return []
+        }
+    }
+
     private func loadProvincesFromJSON() -> [Province] {
-        if let url = Bundle.main.url(forResource: "data", withExtension: "json") {
+        if let url = Bundle.main.url(forResource: "map", withExtension: "json") {
             do {
                 let jsonData = try Data(contentsOf: url)
                 return try JSONDecoder().decode([Province].self, from: jsonData)

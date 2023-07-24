@@ -1,6 +1,6 @@
 [
     {
-        "id" : 1 ,
+        "idProvinsi" : 1 ,
         "namaProvinsi" : "Jawa Barat",
         "listWisata"  :  [
             {
@@ -175,7 +175,7 @@
     },
 
     {
-        "id" : 2,
+        "idProvinsi" : 2,
         "namaProvinsi" : "Bali",
         "listWisata"  :  [
             {
@@ -363,7 +363,7 @@
     },
 
     {
-        "id" : 3 ,
+        "idProvinsi" : 3 ,
         "namaProvinsi" : "Kepulauan Riau",
         "listWisata"  :  [
             {
@@ -529,7 +529,7 @@
     },
 
     {
-        "id" : 4 ,
+        "idProvinsi" : 4 ,
         "namaProvinsi" : "Nusa Tenggara Barat",
         "listWisata"  :  [
             {

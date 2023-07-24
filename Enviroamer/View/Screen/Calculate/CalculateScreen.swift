@@ -15,7 +15,7 @@ struct TravelPlannerStepView: View {
     @StateObject private var viewModel = TravelPlannerViewModel()
     @State private var currentStep: Int = 1
     @StateObject private var locationManager = LocationManager()
-
+    
     
     var body: some View {
         NavigationView {
@@ -33,22 +33,22 @@ struct TravelPlannerStepView: View {
                                 Text("Location not available")
                             }
                             
-                          
-                                // Step 2: Select a Province
-                                Section {
-                                    Picker("Select a Province", selection: $viewModel.selectedProvinceIndex) {
-                                        ForEach(viewModel.provinces.indices, id: \.self) { index in
-                                            Text(viewModel.provinces[index].namaProvinsi).tag(index)
-                                        }
+                            
+                            // Step 2: Select a Province
+                            Section {
+                                Picker("Select a Province", selection: $viewModel.selectedProvinceIndex) {
+                                    ForEach(viewModel.provinces.indices, id: \.self) { index in
+                                        Text(viewModel.provinces[index].namaProvinsi).tag(index)
                                     }
-                                    .pickerStyle(MenuPickerStyle())
                                 }
-                               
-                                    // Step 5: Distance to Province
-                                    Section(header: Text("Distance to Province")) {
-                                        Text(viewModel.distanceToProvince)
-                                    }
-                                
+                                .pickerStyle(MenuPickerStyle())
+                            }
+                            
+                            // Step 5: Distance to Province
+                            Section(header: Text("Distance to Province")) {
+                                Text(viewModel.distanceToProvince)
+                            }
+                            
                             
                         }
                     }
@@ -65,11 +65,11 @@ struct TravelPlannerStepView: View {
                         }
                     }
                     
-            
-                        // Step 4: Days of Travel
-                       
-                        
-                        
+                    
+                    // Step 4: Days of Travel
+                    
+                    
+                    
                     
                     
                 } else if currentStep == 3 {
@@ -106,33 +106,34 @@ struct TravelPlannerStepView: View {
                         Text("Plan Your Trip")
                     }
                 } else{
-                    }
-            
-            HStack {
-                Button("Previous") {
-                    if currentStep > 1 {
-                        currentStep -= 1
-                    }
                 }
-                .disabled(currentStep == 1)
                 
-                Spacer()
-                
-                Button("Next") {
-                    if currentStep < 5 {
-                        currentStep += 1
+                HStack {
+                    Button("Previous") {
+                        if currentStep > 1 {
+                            currentStep -= 1
+                        }
                     }
+                    .disabled(currentStep == 1)
+                    
+                    Spacer()
+                    
+                    Button("Next") {
+                        if currentStep < 5 {
+                            currentStep += 1
+                        }
+                    }
+                    .disabled(currentStep == 5)
                 }
-                .disabled(currentStep == 5)
+                .padding()
             }
-            .padding()
-            }
-        .navigationBarTitle("\(viewModel.totalCarbonEmissions, specifier: "%.2f") grams CO2")
+            .navigationBarTitle("\(viewModel.totalCarbonEmissions, specifier: "%.2f") grams CO2")
         }
- 
+        
+    }
+    
 }
-   
-}
+
 
 
 
@@ -153,6 +154,22 @@ struct TravelPlannerView: View {
                         Text("Location not available")
                     }
                 }
+                
+                Section(header: Text("Province Image")) {
+                    if let imageURL = viewModel.selectedProvinceImageURL {
+                        AsyncImage(url: imageURL) { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        .frame(height: 200) // Adjust the image frame as needed
+                    } else {
+                        Text("Image not available")
+                    }
+                }
+
                 
                 Section(header: Text("Select a Province")) {
                     Picker("Select a Province", selection: $viewModel.selectedProvinceIndex) {
@@ -197,9 +214,18 @@ struct TravelPlannerView: View {
                 }
             }
             .navigationBarTitle("Travel Planner")
+            .navigationBarItems(trailing: Button("Save") {
+                viewModel.saveData()
+            })
+            .alert(isPresented: $viewModel.isDataSaved) {
+                Alert(title: Text("Data Saved"), message: Text("Your trip data has been saved."), dismissButton: .default(Text("OK")) {
+                    viewModel.resetIsDataSaved()
+                })
+            }
         }
     }
 }
+
 
 
 class ProvinceDetailViewModel: ObservableObject {
@@ -222,7 +248,6 @@ struct ProvinceDetailView: View {
         VStack {
             Text(viewModel.province.namaProvinsi)
                 .font(.title)
-            // Add more details about the province here, such as tourist attractions, images, etc.
         }
         .navigationBarTitle(viewModel.province.namaProvinsi)
     }

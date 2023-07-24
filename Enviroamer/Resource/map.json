@@ -1,0 +1,515 @@
+[
+    {
+        "idProvinsi" : 1 ,
+        "namaProvinsi" : "Jawa Barat",
+        "listWisata"  :  [
+            {
+                   "id" : 1,
+                   "nama" :  "Desa wisata taraju  (Taraju tourist village)",
+                   "coordinateWisata" : {
+                    "latitude" : -8.519245,
+                    "longitude" : 115.260630
+                    } ,
+                    "isWishlistDestination" : false,
+                   "lokasi" : "Taraju Village, Taraju, Tasikmalaya, West Java, Indonesia, 45573",
+                   "waktuOperasional" : "09.00 - 18.00",
+                   "deskripsi" : "Taraju is the name of a tourist village which is the pride of Tasikmalaya. The Taraju Tourism Village area has an area of 543.2 Ha and is located in the west of Tasikmalaya Regency. The area is at an altitude of 900 meters above sea level. About 55% of this village area is rice fields while the rest is dry land.\nNature in Taraju Village is still very beautiful and well maintained. Visitors can easily find stretches of tea gardens in this village. Apart from that, this place has many rice field tours, waterfalls, and rivers. There is also a tour package for Taraju Village featuring cultural arts performances from the village.",
+                  "image" : ["https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/taraju1.png?alt=media&token=14f6ab1f-7d8a-452e-9d66-d7ce5f38a6cc",
+                  "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/taraju2.png?alt=media&token=a29aa3f7-d5b8-4974-ba39-d8ed09ce2d8d"] ,
+                  "kegiatan" : [ "1.Tour around the village of Taraju.\nVisitors can visit tea plantations, coffee, and so on. As well as conducting educational tours on how to pick tea / coffee and process it with local residents. In addition to education about tea and coffee, there is education about agriculture (Ngawuluku).",
+                    "2.Down the river.\nThe river flow activity in Taraju is also known as papalidan. Visitors will wade through the river using buoy tires. Complete with a life jacket and helmet to protect the head. Because in the river there are many rocks that are quite large.",
+                    "3.Camping.\nCamping in Taraju Village is an exciting activity for nature lovers. Here tourists can choose their own panorama that is right for the location to set up a tent. You can set up a tent in the expanse of a tea garden. Or you can also set up a tent in a pine forest area.",
+                    "4.Lumping horse show. \nThe Taraju Village Lumping Horse is shown to entertain tourists. Visitors can watch the thrilling attractions exhibited by lumping horse dancers.",
+                    "5.Poetry Flying Show.\nFlying Sajak is a dance art with members of a number of people wearing Sundanese traditional clothes. The dancers play tambourine music and dogs to accompany the dance. In addition, the dancers will recite verses in Arabic and Sundanese. Visitors will be treated to this beautiful dance at Cafe Barkop while enjoying the sunset.",
+                    "6.Creative Tourism Blessings of Tina Runtah.\nThrough this creative tour, visitors will be invited to process household waste in Taraju Village. Then the waste will be processed into items of artistic value and useful."],
+                  "transportasiWisata" : ["Motorcycle" , "Car", "Bus" ]
+            },
+            
+            {
+                "id" : 2,
+                "nama" :  "Desa Wisata Guranteng  (Guranteng Tourism Village)",
+                "coordinateWisata" : {
+                 "latitude" : -7.084244,
+                 "longitude" : 108.186432
+                 } ,
+                 "isWishlistDestination" : false,
+                "lokasi" : "Guranteng village, Pagerageung sub-district, Tasikmalaya district, West Java, Indonesia, 45573",
+                "waktuOperasional" : "08.00 - 17.00",
+                "deskripsi" : "Guranteng Tourism Village is an integration of many destinations or tourism potentials in the Guranteng Village area, both destinations that are already running well such as the Parung Nature Forum and Pasir Kirisik, as well as those that are still under development such as Kampung Sapi Tourism, Pasir Jeungjing Camping Ground, Agrotourism Mount Jugul, Cultural Tourism of Pencak Silat and Wayang Golek, Embung Desa Tourism, Point 0 KM Citanduy, Paragliding Pasir Gowong, Rafting and others.\nEach destination has its own uniqueness and advantages that can be enjoyed according to the needs of tourists.",
+               "image" : ["https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/guranteng1.png?alt=media&token=24ce6b49-1ffe-4953-afa5-fae4bbe97d6f",
+               "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/guranteng2.png?alt=media&token=2b64e624-a808-40b2-8748-e2d71b3c4e72"] ,
+               "kegiatan" : [ "1.Parung Natural Park.\nParung natural tourism is a tourist attraction that offers natural and beautiful views with views of green hills and rice fields. Here there is a replica of an artificial tourist village. As the name suggests, Parung nature rides also provide a variety of games that can be enjoyed with the family. This educational tour includes child-friendly tours, suitable for learning while playing and can help children grow and develop.",
+                 "2. Pasir Kirisik Natural Tourism.\nIts name is Pasir Kirisik, but this place is not a desert or a sandy beach. This tourist object is a natural tourist attraction in the highlands. Of course, the air around is so cool and the atmosphere is so beautiful. Plus the scenery there is also so enchanting. Furthermore, tourists can see the hills around it. Because of its location in the highlands, when tourists look down, a stretch of green trees completes the landscape.",
+                 "3. Cow Village Tour.\nKampung Sapi tourism is a mainstay tour because Guranteng Village has a dairy farm that is managed by the community directly, the only area that has a dairy farm in Tasikmalaya, even in East Priangan besides Garut. Here tourists will learn about how to raise dairy cattle.",
+                 "4. Pencak Silat and wayang golek culture.\nCultural tourism of pencak silat and wayang golek, at certain moments, pencak silat and wayang golek are usually performed by the people of Guranteng village, pencak silat is equipped with accompaniment, wayang golek is also very famous and quite legendary with its mastermind brother Aki Apid Sunandar. Tourists can also learn about this local culture with the local community ",
+                 "5. Jangihe Hill.\nEnjoy the natural tourism of the Jangihe hill in the Guranteng Tourism Village.",
+                 "6. Paragliding Pasir Gowong.\nEnjoy the gowong sand paragliding tour in the Guranteng Tourism Village.",
+                 "7. Camping Pasir Jeungjing.\nJeungjing Sand Camping Ground is a hill located in Guranteng Village, with an altitude of more than 1200 meters above sea level, has very beautiful views, you can see 3 mountains at once, namely Mount Galunggung, Mount Syawal and Mount Ciremai. Currently, Pasir Jeungjing is being managed for a location for planting grass used for cattle feed with an area of more than 10 hectares.",
+                 "8. Mount Jugul Agro Tourism.\nMount Jugul Agrotourism is a 10-hectare hill where red ginger has been planted, villas, gazebos for meetings and toilets are available, the view from Mount Jugul is almost 360 degrees, you can see in various directions. Tourists can also learn about the planting and management of red ginger/plants planted on Mount Jugul"],
+               "transportasiWisata" : ["Motorcycle" , "Car", "Bus" ]
+            },
+
+            {
+                "id" : 3,
+                "nama" :  "Desa Wisata Cibuntu (Cibuntu Tourism Village)",
+                "coordinateWisata" : {
+                 "latitude" : -6.846227,
+                 "longitude" : 108.424177
+                 } ,
+                 "isWishlistDestination" : false,
+                "lokasi" : "Cibuntu Tourism Village is located in Pasawahan District, Kuningan Regency, West Java.",
+                "waktuOperasional" : "08.00 - 16.00",
+                "deskripsi": "The specialty of the Cibuntu Tourism Village is its soothing natural atmosphere, combined with the togetherness of local residents in protecting the environment.Nowadays, cool and cool places are the choice of workaholics who want to relax and heal, refresh for a while.\nNot only famous for its natural beauty, this tourist village is also known as one of the tourist villages that often makes achievements, including being ranked fifth as the best ASEAN tourism village for homestays in 2016 and won second place as the best tourism village in the prestigious Community award. Based Tourism (CBT) in 2017 by the Indonesian Ministry of Tourism and Creative Economy.",
+               "image" : ["https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/cibuntu1.png?alt=media&token=0c79f46e-33ec-4017-9183-5e2c1b4b3760",
+               "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/cibuntu2.png?alt=media&token=49c50391-539b-4392-a915-e8c03bc33d0f"] ,
+               "kegiatan" : [
+                 "Ciremai mountain tracking.\nWhen you first come to Cibuntu Tourism Village, Pesona Friends will be greeted with a beautiful background in the form of a panoramic view of Mount Ciremai. After gazing at the beauty of the landscape of Mount Ciremai, it's time to breathe fresh air at the foot of the mountain while jogging or cycling.",
+                 "Gongseng Waterfall.\nGongseng Waterfall is included in one of the famous visit lists in the Cibuntu Tourism Village. Besides being beautiful, right below the waterfall which reaches 20-25 meters in height, there is a pool that visitors can use for swimming or just playing in the water. To get here, you only need to go through a trekking route for 5 minutes from the parking lot.",
+                 "Sheep village.\nIt is called Kampung Domba, because in this area there are sheep farms. There are more than 60 sheep and goat pens here.\nIn this perfect destination for educational tours with children, Pesona Friends can interact and feed their sheep and goats. In addition, visitors will also be explained about how to raise sheep/goats",
+                 "Exploring historic sites.\nAnother exciting thing that visitors can also find in this Cibuntu Tourism Village is to see first hand cultural heritage sites from ancient times. There is the Bujal Dayeuh Site which is an ancient relic in the form of a Stone Grave Box which was found in 1967 and contains a hand ax. Then there are also other objects such as kelenting and hand-held axes from the Saurip Kidul Site colored with chicken liver which were found in 1972. Apart from these 2 things, there are also Hulu Dayeuh, Birit Dayeuh, and the Cikahuripan Site.",
+                 "Cibuntu Creative Center.\nCibuntu Tourism Village has a Cibuntu Creative Economy Center which sells many unique creative economy products, ranging from flutes, angklung, various earthenware products such as barrels, teapots and other cooking utensils, as well as various miniature vehicles, such as trucks, planes and cars made of wood. Visitors can also have the opportunity to see how it is made. So you can add new experiences and insights, here!"
+                ],
+               "transportasiWisata" : ["Motorcycle" , "Car", "Bus" ]
+            }
+        ],
+        "isWishlist" : false ,
+        "isAddTrip" : false ,
+        "isFinishTrip" : false,
+        "coordinateKota" : {
+            "latitude" : -7.062332,
+            "longitude" : 107.614805
+        } ,
+        "imageKota" : "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/jabar.png?alt=media&token=2cb7a8a6-8e1e-4624-879c-bdf84284edb4",
+        "tranportasiProvinsi" : ["Motorcycle" , "Car", "Bus", "Walk", "Bicycle", "Train", "Ship", "Airplane" ],
+        "kegiatanOffset" : [
+            {
+                "id" : 1 ,
+                "namaAktivitas" : "Ocean cleaning and waste management",
+                "company" : "Divers Clean Action",
+                "deskripsiKegiatan" : "We initiated a platform to gather citizen science mapping tools with LIPI (now BRIN) named marinedebris.id since 2017 with the aim to create appropriate programs based on primary data. This is because we believe anybody can contribute in helping policy-makers and other stakeholders decide what is the best solution in preventing and combating marine debris for a cleaner ocean.\nDCA is always keen to provide awareness raising and training regarding marine debris and how to solve the problem. Taking roles as speakers and trainers in seminars, workshops, conferences, instructing clean.\nWe cannot combat marine debris alone, and in order to succeed we need communities, especially the ones living by bodies of water, to take action. This can be achieved by empowering them through raising their awareness and provide impactful action against marine debris for them to do in their daily lives.\nWe help and boost private sectors to do real sustainable efforts with its business core on combating marine debris.",
+                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/offset-jabar-dca.png?alt=media&token=fb948e3f-1a00-4b25-9942-e252b72da25e",
+                "alamat" : "Jl. Papandayan, Mampang, Kec. Pancoran Mas, Kota Depok, Jawa Barat 16433" ,
+                "noTelp" : "+6285155086232",
+                "email" : "contact@diverscleanaction.org",
+                "website" : "https://www.diverscleanaction.org" ,
+                "instagram" : "https://www.instagram.com/diverscleanaction/"
+            },
+
+            {
+                "id" : 2 ,
+                "namaAktivitas" :  "Zero Waste",
+                "company" : "Yaksa Pelestari Bumi Berkelanjutan (YPBB) Bandung",
+                "deskripsiKegiatan" : "Founded in 1993, YPBB is a non-profit and non-governmental organization, which has been dedicated to helping people achieve a high quality of life for humanity, for the current generation and especially for our children and grandchildren through a lifestyle in harmony with nature. YPBB has been known for its leadership on organic living issues, especially with its main campaign, Zero Waste.\nYPBB promotes the best innovations for an organic lifestyle and helps people adopt this lifestyle effectively through educational programs, group support, community organizing, as well as technology and infrastructure support. YPBB was developed with the awareness that in order to realize a strategic vision and mission for human life in the future, in addition to strong ideals YPBB also requires a solid, efficient and properly designed organization. YPBB was developed as a community-based organization with a professional, transparent and efficient support system.",
+                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/offset-jabar-ypbb.png?alt=media&token=b57d8f19-3c80-4c5a-9382-0ffeecdc4721",
+                "alamat" : "Jl. Batik Uwit No. 1 Kelurahan Sukaluyu, Kecamatan Cibeuying Kaler, Bandung 40123 Jawa Barat 16433" ,
+                "noTelp" : "0811-2237-900",
+                "email" : "ypbb@ypbb.or.id",
+                "website" : "https://ypbb.web.id/" ,
+                "instagram" : "https://www.instagram.com/ypbbbandung/"
+            },
+
+            {
+                "id" : 3 ,
+                "namaAktivitas" :  "EcoRanger",
+                "company" : "Greeneration Foundation",
+                "deskripsiKegiatan" : "Greeneration Foundation is a foundation engaged in the field of EcoRanger is an extraordinary team in Indonesian tourism destinations that builds sustainable tourism. We solve the problem of waste in tourist destinations by developing educational, entrepreneurial, mentoring, organizational and empowering competencies. Support us to maintain the charm of Indonesia's strategic tourist destinations!.\nWe aspire to build local community awareness to solve the waste problem in the national tourism area. We work with the community through systematic, effective and sustainable programs.",
+                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/offset-jabar-greeneration.png?alt=media&token=2cbddd5c-28bb-454e-82fd-5d41ee9e7633",
+                "alamat" : "Jl. Cikutra Baru V No.36, Neglasari, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40124" ,
+                "noTelp" : "022 20544245",
+                "email" : "info@greeneration.org",
+                "website" : "https://demo.greeneration.org" ,
+                "instagram" : "https://www.instagram.com/greenerationid/"
+            }
+        ]
+    },
+
+    {
+        "idProvinsi" : 2,
+        "namaProvinsi" : "Bali",
+        "listWisata"  :  [
+            {
+                   "id" : 1,
+                   "nama" :  "Subak Sembung Ecotourism ",
+                   "coordinateWisata" : {
+                    "latitude" :  -8.613614,
+                    "longitude" : 115.214048
+                    } ,
+                    "isWishlistDestination" : false,
+                   "lokasi" : "96P7+GJ7, Jl. Ahmad Yani Utara, Peguyangan, Kec. Denpasar Utara, Kota Denpasar, Bali 80239",
+                   "waktuOperasional" : "06.00 - 19.00",
+                   "deskripsi" : "Discover the charm of Subak Sembung Ecotourism, a hidden gem in Denpasar's Peguyangan area. Immerse yourself in the stunning 20-hectare landscape of lush rice fields, offering a serene retreat from the city. Enjoy a leisurely walk or refreshing jog, embracing the tranquility of a charming village atmosphere.\nLace up your sneakers, hop on a bicycle, or embark on an educational adventure by exploring the diverse flora, or simply relax in the breathtaking scenery that this eco-friendly sanctuary has to offer. Subak Sembung Ecotourism is a haven for nature enthusiasts, providing an eco-friendly getaway that promotes environmental preservation. Escape the hustle and bustle and discover the perfect blend of nature's beauty and sustainable tourism at Subak Sembung Ecotourism.",
+                    "image" : [
+                        "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/subak-bali.png?alt=media&token=7dead558-a978-48e1-b393-1951ac731e2a",
+                        "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/subak-bali2.png?alt=media&token=30654a48-ea5e-4cb1-a834-7ccf567ca935"] ,
+                    "kegiatan" : [
+                         "Enjoy natural beauty: Experience the stunning natural landscapes, including the panoramic views of subak (rice terraces) and the nearby waterfalls. Take in the picturesque scenery and immerse yourself in the tranquility of nature.",
+                          "Witness cultural rituals: Observe the cultural art and rituals performed by the local farmers who practice subak. Gain insight into the traditional customs and practices that are an integral part of the local culture. Please note that this is only happen in specific day according to Balinese calendar.",
+                          "Explore the subak track: Engage in cycling activities, following the designated subak track. Interact with the local community and gain firsthand experience by descending into the subak area, participating in activities like rice planting and more.",
+                          "Purchase fresh produce: Take the opportunity to buy locally harvested vegetables and other produce. Support the local economy and savor the flavors of freshly grown food.",
+                          "Contribute to sustainable tourism: Participate in other tour packages offered by the attraction's management, supporting the development of sustainable tourism practices. Purchase souvenirs and handicrafts, fostering the local community's livelihoods.",
+                          "Learn about local culture and flora: Enrich your knowledge by learning about the Subak Sembung culture, including the names of plants encountered during the journey. Understand the principles of eco-tourism and engage in social interactions with the friendly local community."
+                        ],
+                    "transportasiWisata" : ["Bicycle" , "Car", "Bus" , "Motorcycle"]
+            },
+            
+            {
+                "id" : 2,
+                "nama" :  "Kampoeng Kepiting Mangrove Ecotourism",
+                "coordinateWisata" : {
+                 "latitude" :-8.744104 ,
+                 "longitude" : 115.183210
+                 } ,
+                 "isWishlistDestination" : false,
+                "lokasi" : "Jl. Bypass Ngurah Rai, Tuban, Kec. Kuta, Kabupaten Badung, Bali",
+                "waktuOperasional" : "10.00 - 22.00",
+                "deskripsi" : "Experience the thrill of crab-catching in Kampoeng Kepiting. Afterward, ou can either tie them up and take them to the kitchen or try your hand at cooking them yourself. Take a scenic boat ride with local fishermen and explore the enchanting mangrove forest.\nLocated in Tuban, Bali, Kampoeng Kepiting was originally a vibrant community of crab and fish catchers who relied on the surrounding mangrove forest. However, to ensure the sustainable population of crabs, the resourceful farmers transitioned to crab and fish cultivation, establishing the remarkable Kampoeng Kepiting Bali Ecotourism. Support the fisherman community while taking in the fascinating mangrove ecology and the beauty of nature. Enjoy tasty seafood while taking in the welcoming atmosphere of the community. Kampoeng Kepiting offers an unforgettable adventure that combines nature,cuisine, and cultural immersion",
+                "image" : [
+                    "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/kepiting-bali.png?alt=media&token=c966e68c-b039-4dd1-9caf-042a4895b497",
+                    "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/kepiting-bali2.png?alt=media&token=ba30a6b2-18d6-4745-9460-0514cad03fa7"] ,
+                "kegiatan" : [
+                     "Canoe tour to clean mangroves.\nTake a canoe tour to explore the mangrove forest and participate in cleaning activities to preserve the mangrove ecosystem.",
+                     "Mangrove tour with a traditional boat.\nExperience a mangrove tour on a traditional fishing boat owned by local fishermen, allowing you to navigate through the mangrove forest.",
+                     "Canoe fishing in the mangroves.\nGo fishing in the mangrove area while riding a canoe, combining leisure and angling in the serene mangrove surroundings.",
+                     "Fishing in the mangroves with a traditional boat.\nEngage in a fishing excursion using a traditional fishing boat, guided by local fishermen who will share their knowledge and techniques.",
+                     "Crab seed release tour.\nJoin a tour that involves releasing crab seedlings into the mangrove forest, contributing to the conservation and restoration efforts.",
+                     "Crab farms and mangrove tours.\nExplore crab farms and venture through the mangrove forest, witnessing the fascinating process of crab cultivation and learning about the unique ecosystem.",
+                     "Mangrove educational tours.\nGain valuable insights into the mangrove ecosystem through informative tours, learning about its importance and the conservation efforts in place.",
+                     "Mangrove seedling creation package.\nParticipate in a hands-on activity where tourists can create their own mangrove seedlings, promoting environmental awareness and engagement.",
+                     "Mangrove tree planting package.\nContribute to the preservation of the mangrove forest by taking part in tree planting activities, actively participating in habitat restoration.",
+                     "Mangrove fruit processing package.\nDiscover the versatility of mangrove plants by engaging in activities that involve processing and creating various products using mangrove fruits."
+                    ],
+                "transportasiWisata" : ["Bicycle" , "Car", "Bus" , "Motorcycle" ]
+            },
+
+            {
+                "id" : 3,
+                "nama" :  "Ubud Monkey Forest",
+                "coordinateWisata" : {
+                "latitude" : -8.519245,
+                "longitude" : 115.260630
+                } ,
+                 "isWishlistDestination" : false,
+                "lokasi" : "Jl. Monkey Forest, Ubud, Kecamatan Ubud, Kabupaten Gianyar, Bali 80571",
+                "waktuOperasional" : "08.30 - 17.00",
+                "deskripsi" : "Visit the mesmerizing Ubud Monkey Forest in Padangtegal village. Located near the heart of Ubud, this expansive 10-hectare forest provides an enchanting opportunity to interact with a large population of monkeys. Take a leisurely stroll along the forest trails, revealing stunning ravines and gentle flowing streams.The forest is well-equipped with amenities such as conservation areas, galleries, and a convenient canteen for refreshments.\nImmerse yourself in the tranquil atmosphere, surrounded by ancient trees and sacred sites that exude a sense of calmness. Discover the cultural significance of the Ubud Monkey Forest as you witness its beauty and engage with the lively monkeys. A visit to this captivating destination promises cherished memories of your time in Bali.",
+                "image" : [
+                    "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/monkey-bali.png?alt=media&token=c2a9a9f8-2866-4e1a-94a3-20b8553e1440",
+                    "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/monkey-bali2.png?alt=media&token=fc28b001-97dc-4737-8d5d-85358e5248b8"] ,
+                "kegiatan" : [
+                    "Monkey Encounters.\nObserve the Balinese long-tailed monkeys living freely in different groups within the forest. Capture memorable moments as they engage in various activities, such as swinging from trees and relaxing in temple buildings. Be cautious while taking photographs, as mischievous monkeys may try to interact with your camera.",
+                    "Explore the Forest.\nWander through the vast 30.8-acre forest, immersing yourself in its natural beauty. Take around 1.5-2 hours to observe the monkeys and enjoy the cool shade provided by the forest canopy. Even though the area outside the route is very beautiful as if it has a natural river flow, stay on the designated paths is highly recommended to ensure personal safety, as monkeys may become aggressive outside of these areas.",
+                    "Witness Sacred Trees.\nDiscover over 100 tree species, many of which are considered sacred. Observe locals as they offer prayers and offerings to these revered trees, symbolizing the deep spiritual connection between nature and culture.",
+                    "Visit Temples.\nEncounter the ancient temples nestled within the forest. Enjoy the playful sight of monkeys roaming around the temple grounds, adding a touch of charm to the experience. Access to the larger temples is recommended, while smaller ones should be observed from a distance."
+                ],
+                "transportasiWisata" : ["Bicycle" , "Car", "Bus" , "Motorcycle", "Walking" ]
+            }
+            
+        ],
+        "isWishlist" : false ,
+        "isAddTrip" : false ,
+        "isFinishTrip" : false,
+        "coordinateKota" : {
+            "latitude" : -8.409043,
+            "longitude" : 115.184915
+        } ,
+        "imageKota" : "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/bali.png?alt=media&token=0d8ecb86-02d4-4d5e-bb16-99d2146048e8",
+        "tranportasiProvinsi" : [
+            "Airplane", "Ship" , "Bicycle" , "Car", "Bus" , "Motorcycle", "Walking"
+        ],
+        "kegiatanOffset" : [
+            {
+                "id" : 1 ,
+                "namaAktivitas" : "Beach Cleanups",
+                "company" : "The ZeroWaste Center by R.O.L.E. Foundation",
+                "deskripsiKegiatan" : "Monthly Beach Cleanups to Create Awareness.\nAround 80% of all waste in the ocean comes from land and thus, from us consumers. Currently, Indonesia is number 2 in the list of most marine polluting countries in the world. Every year Indonesia produces 6.8 tons of plastic waste, of which 61% is not collected and disposed of safely, of which 40% ends up in the ocean.\nR.O.L.E. Foundation organizes monthly beach cleanups in the south area of Bali. After cleaning the beaches, the collected waste is weighted and brought to the ZeroWaste Center, where it’s cleaned and separated according to the type of plastic and whether it can be recycled or not. The aim is to bring as least as possible to the landfill.\nBy doing beach cleanups, R.O.L.E. Foundation aims to create awareness about alternative ways of dealing with waste, so that the environment in Bali can be improved. We share this knowledge with local communities, local governments and beach cleaners.",
+                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/offset-bali-clean-up.png?alt=media&token=3da9b940-b586-4be5-a5ad-45c1197ec5aa",
+                "alamat" : "JI. Bongantik, No. 101Nusa Dua, Bali, Indonesia" ,
+                "noTelp" : "+62 361 477 1657 ",
+                "email" : "info@rolefoundation.org",
+                "website" : "https://zerowastecenter.org/beach-cleanups/" ,
+                "instagram" : "https://www.instagram.com/zerowastecenterbyrole/"
+            },
+
+            {
+                "id" : 2 ,
+                "namaAktivitas" : "Zero Waste Specialist Training",
+                "company" : "The ZeroWaste Center by R.O.L.E. Foundation",
+                "deskripsiKegiatan" : "ZeroWaste Training is a program developed by R.O.L.E. Foundation to train local people or company staff to become a ZeroWaste Specialist with knowledge about waste management, permaculture, composting and other zero waste practices.\nThe aim is to have every type of waste become more valuable and less waste send to the landfill. Company staff can apply the knowledge in their office, and individuals can apply their gained knowledge into their household practices, or share it with community members to improve their environment’s sustainability.",
+                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/offset-bali-waste.png?alt=media&token=1dab8076-60bf-49a1-855b-08ceaac895ec",
+                "alamat" : "JI. Bongantik, No. 101Nusa Dua, Bali, Indonesia" ,
+                "noTelp" : "+62 361 477 1657 ",
+                "email" : "info@rolefoundation.org",
+                "website" : "https://zerowastecenter.org/beach-cleanups/" ,
+                "instagram" : "https://www.instagram.com/zerowastecenterbyrole/"
+            },
+
+            {
+                "id" : 3 ,
+                "namaAktivitas" : "Revitalize mangrove ",
+                "company" : "Mangrove Care Forum Bali",
+                "deskripsiKegiatan" : "The Bali Mangrove Care Forum (FPMB), was formed with the aim of protecting, preserving, rehabilitating, replanting and educating, as a joint effort to save mangroves in Bali and support government programs in fighting climate change.\nThe mangrove forest under the care of The Mangrove Care Forum Bali is located in the Ngurah Rai Grand Forest Park, a 1,373.5 hectare mangrove forest at the Benoa Bay Area in Bali. The mangrove forest suffers from severe pollution and misuse, & debris and rubbish from nearby villages. Deforestation of trees and littering its grounds are a common sight. The focus of the Mangrove Care Forum Bali is to involve the communities surrounding the mangrove and enlist regular help to clean up and create a safe environment for plants and marine life to thrive. A further goal is to prevent further abrasion of coastline and to regrow the affected areas to lush mangrove vegetation.",
+                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/offset-bali-fcm.png?alt=media&token=919abfb5-1c95-4b5c-8f83-242319b1e0e3",
+                "alamat" : "Denpasar, Pulau Bali, Indonesia" ,
+                "noTelp" : "-",
+                "email" : "-",
+                "website" : "http://www.mangrovecareforum.com" ,
+                "instagram" : "https://www.instagram.com/mangrovecareforum/"
+            }
+        ]
+    },
+
+    {
+        "idProvinsi" : 3 ,
+        "namaProvinsi" : "Kepulauan Riau",
+        "listWisata"  :  [
+            {
+                   "id" : 1,
+                   "nama" :  "Desa Wisata Ekang",
+                   "coordinateWisata" : {
+                    "latitude" :1.08330 ,
+                    "longitude" : 104.36304
+                    } ,
+                     "isWishlistDestination" : false,
+                   "lokasi" : "Desa Ekang Anculai, Teluk Sebong, Bintan, Kepulauan Riau",
+                   "waktuOperasional" : "09.00 - 18.00",
+                   "deskripsi" : "Desa Wisata Ekang (Ekang Tourism Village) is one of the best examples of tourism villages in Indonesia. It is a community-based tourism which was inaugurated since March 2018. The potential of this village is fostered by the government so it is can be more useful, and can preserve or maintain its natural environment, customs, and culture. Ekang Tourism Village is located in an alternative route from Tanjung Pinang City to Lagoi tourist area.\nThe area of this village expands around 13 hectares on patterned land and a rubber forest area which is now used for various kinds of outdoor activities. Some of the attractions existed in this village environment such as premium tents, playgrounds, camp cabins, culinary tours and some fun, eco-friendly, and education-based activities to be enjoyed with friends and family.",
+                    "image" : [
+                        "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/ekang1.png?alt=media&token=8defee74-a943-4423-988e-dc50f96c0e53",
+                        "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/ekang2.png?alt=media&token=2b240b30-a134-4089-919c-b8212a6a523c"
+                    ] ,
+                    "kegiatan" : [
+                        "Ekang Mangrove Tour.\nVisitors can enjoy the natural beauty of mangrove forests and learn various knowledge about mangrove plants and their benefits. Beside, there are various types of animals around them. By the presence of well-maintained condition of mangrove forest ecosystem, visitors can enjoy the tour for approximately 3 hours.",
+                        "Eduagroecotourism.\nAgriculture educational tour will introduce visitors how to plant, maintain, harvest, and market the agricultural products. Several types of agriculture can be found in Ekang Tourism Village, namely corn, coconut, long beans, spinach, and orchid cultivation. Visitors can directly practice it.",
+                        "Glamping.\nThis village has a nice inn with super complete facilities, called D'Bamboo Kamp. This inn carries an eco-lodge concept filled with green nuances from the trees. Visitors can choose the type of inn according to their interest, between glamping type with wooden nuances or floating tents located around the lake.",
+                        "Horseriding.\nVisitors can learn how to ride a horse.",
+                        "Bikeriding.\nVisitors can cycle to enjoy this ecotourism area."
+                    ],
+                    "transportasiWisata" : ["Car" , "Motorcycle", "Bus" ]
+            },
+            
+            {
+                "id" : 2,
+                "nama" :  "Desa Wisata Pengudang, Teluk Sebong, Bintan",
+                "coordinateWisata" : {
+                 "latitude" : 1.16818,
+                 "longitude" : 104.49742
+                 } ,
+                 "isWishlistDestination" : false,
+                "lokasi" : "Desa Pengudang, Teluk Sebong, Bintan, Kepulauan Riau",
+                "waktuOperasional" : "09.00 - 19.30",
+                "deskripsi" : "Desa Wisata Pengudang (Pengudang Tourism Village) is one of the Coastal Malay Villages that becomes one of the main ecotourism destinations in Bintan Island. The distance taken to reach the location of this village is about 40 km from Tanjung Pinang City, Riau Archipelago Province. The temperature during the day ranges from 30-32 celsius and at night between 29-30 celsius. Rainfall around February-August is quite low and high around September-January.\nThis village is one of the community-based Seagrass Conservation Areas. This area has an important role in providing habitat for a variety of fish species, especially those that are still in the juvenile stage. Pengudang Village offers marine beauty such as mangrove tours and exploration of the natural beauty under the sea.",
+                "image" : [
+                    "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/pengudang1.png?alt=media&token=efc35ffb-1671-4b06-8f48-c39c29d3d97e",
+                    "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/pengudang2.png?alt=media&token=cf61dacd-688e-446c-be91-485b81756941"] ,
+                "kegiatan" : [
+                    "Mangrove Tour.\nBy boarding a speedboat, visitors can walk along the stretch of mangrove forest and enjoy the natural beauty in it. Mangrove forests grow in tidal areas (especially protected beaches, lagoons, river mouths) which are inundated at high tide and free of inundation at low tide. Several types of mangroves found in this village are such as Rhizophora, Bruguiera, and Xylocarpus.",
+                    " Mangrove Fireflies.\nAt night, visitors can explore the mangrove forest surrounded by fireflies. The presence of fireflies at night indicates that the mangrove forest is still in a good condition.",
+                    "Snorkeling in Pengudang Beach and Batu Junjung Beach.\nBatu Junjung Beach is a natural and uninhabited beach that is identical with boulders of granite. Apart from exploring the area around the coastline, visitors can also enjoy the natural beauty under the sea with coral reefs and various types of colorful fishes at Pengudang Beach by snorkeling that will be guided by a team of local tour guides."
+                ],
+                "transportasiWisata" : ["Car" , "Motorcycle", "Bus" ]
+            },
+
+            {
+                "id" : 3,
+                "nama" :  "Wisata Alam Mangrove Pandang Tak Jemu",
+                "coordinateWisata" : {
+                "latitude" : 1.17334,
+                "longitude" : 104.07099
+                } ,
+                 "isWishlistDestination" : false,
+                "lokasi" : "Desa Wisata Kampung Tua Bakau Serip Pantai, Nongsa, Batam, Kepulauan Riau",
+                "waktuOperasional" : "07.00 - 18.00",
+                "deskripsi" : "Wisata Alam Mangrove Pandang Tak Jemu (Pandang Tak Jemu Mangrove Nature Tourism) is located about 45 minutes from the center of Batam City with an area of approximately 7 hectares. This tourist spot is also near Makam Nong Isa (Tomb of Nong Isa Tomb) and Teluk Mata Ikan. The village where this tour is located is one of the oldest villages in Batam and was the first center of government of the Old Malay Kingdom. This tourist spot is considered as a local community-based tourism.\nApart from mangroves, this tour also has beautiful white sand beaches along the sea coast of Nongsa area with the view directly facing Singapore and Malaysia. Some of the natural tourism potentials are mangrove conservation, flora and fauna diversity, educational tours, and beach tourism. ",
+                "image" : [
+                    "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/pandangTakjemu1.png?alt=media&token=1efa18fa-e341-4c1c-bde1-c484fcd763c3",
+                    "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/pandangTakJemu2.png?alt=media&token=de53ef7b-f0d5-4045-b091-35fd67cea07a"] ,
+                "kegiatan" : [
+                    "Wisata edukasi mangrove.\nVisitors can walk along the wooden bridge in the mangrove forest. Some of the oldest mangrove trees that are tens to hundreds years old are located in this tourist spot. They are located in the border of three countries. ",
+                    "Aktivitas luar ruangan lainnya.\nApart from enjoying the beauty of mangrove forests, this ecotourism area can also be used for camping, barbecue, outbound, fishing, and many more outdoor activities."],
+                "transportasiWisata" : ["Car" , "Motorcycle", "Bus" ]
+            }
+            
+         ],
+        "isWishlist" : false ,
+        "isAddTrip" : false ,
+        "isFinishTrip" : false,
+        "coordinateKota" : {
+            "latitude" : 1.136704,
+            "longitude" : 104.425753
+        } ,
+        "imageKota" : "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/kepri.png?alt=media&token=e0c83efc-9b07-4685-8975-87ea312360b0",
+        "tranportasiProvinsi" : [ "Car" , "Motorcycle", "Bus","Ship", "Airplane"],
+        "kegiatanOffset" : [
+            {
+                "id" : 1 ,
+                "namaAktivitas" : "Sea Turtles Conservation",
+                "company" : "Ecology Foundation",
+                "deskripsiKegiatan" : "The Ecology Foundation is a non-governmental organization who envisions an environmentally-educated and independent Indonesian community with a flourishing and diverse ecosystem. In order to empower the conservation and protection of Riau Archipelago, the foundation has missions to: \n 1.preserve marine or coastal areas, island environment, and local wildlife; and \n2.grow community activities, and action as a forum decision-making.\nOne of several ways that anyone can support their missions is by making a donation to preserve endangered species of sea turtle. There is only one in every thousand turtle eggs lain that will make it to adulthood. By doing it, people will:\n1.help the foundation to supervise operational;\n2.support communication and documentation tools;\n3.provide artifical rescue nests; and\n4.educate and socialize communities awareness.",
+                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/offset-kepri-turtle.png?alt=media&token=693de66b-4b01-4b76-ac48-4cc88fd1585c",
+                "alamat" : "Jl. Basuki Rahmat No.09, Tanjungpinang, Kepulauan Riau, Indonesia" ,
+                "noTelp" : "+62812-6715-1393",
+                "email" : "ecologyfoundation@ecology.or.id",
+                "website" : "https://en.ecology.or.id/joinus" ,
+                "instagram" : "https://www.instagram.com/yayasan.ecology/"
+            },
+
+            {
+                "id" : 2 ,
+                "namaAktivitas" : "Establishing a Seven Clean Seas (SCS) Materials Recovery Facility (MRF) in Batam and Strengthening Recycling Efforts",
+                "company" : "Seven Clean Seas",
+                "deskripsiKegiatan" : "Seven Clean Seas is a community of individuals and organisation that commits to challenge the status quo, get involved, and clean the seas. The community’s goal is to remove plastic waste that pollute coastal communal and river environment as well as tp work with local communities to collect and manage it.\nMRF is established to properly manage waste they collect from their sites. It also enables more and better recycling of the collected waste or other end-of-life opportunities (waste to energy) rather than sending it to landfill. Beside, it becomes education space for local community engagement and educational activities. It also welcomes international visitors or companies who want to learn about their projects.\nAnyone make a donation that will support their mission to keep oceans clean and healthy. For further action, SCS also welcome some kind of involvement from public. ",
+                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/offset-kepri-scs.png?alt=media&token=8c5bb7ac-24ed-4979-8fa2-40452b0e30dc",
+                "alamat" : "Unit 02-01, 68 Circular Rd, Singapore" ,
+                "noTelp" : "+6592727953",
+                "email" : "hello@sevencleanseas.com",
+                "website" : "https://www.sevencleanseas.com/projects/batam" ,
+                "instagram" : "https://www.instagram.com/sevencleanseas/"
+            },
+
+            {
+                "id" : 3 ,
+                "namaAktivitas" : "Tree Planting",
+                "company" : "Ecology Foundation",
+                "deskripsiKegiatan" : "The Ecology Foundation is a non-governmental organization who envisions an environmentally-educated and independent Indonesian community with a flourishing and diverse ecosystem. In order to empower the conservation and protection of Riau Archipelago, the foundation has missions to:\n1.preserve marine or coastal areas, island environment, and local wildlife; and\n2.grow community activities, and action as a forum decision-making\nOne of several ways that anyone can support their missions is by making a donation to plant tree. Tree planting is a simple way to reduce carbon in atmosphere and protect coasts. The foundation will reforest critical coastal land to give rich ecosystems a change to recover. By doing it, people will:\n1.support foundation to work with local community groups to plant and supply plants from local nursery; and\n2.be one step closer to help protect environment. ",
+                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/offset-kepri-tree.png?alt=media&token=570ad731-fa55-48e9-bc77-df44253a3eab",
+                "alamat" : "Jl. Basuki Rahmat No.09, Tanjungpinang, Kepulauan Riau, Indonesia" ,
+                "noTelp" : "+62812-6715-1393",
+                "email" : "ecologyfoundation@ecology.or.id",
+                "website" : " https://en.ecology.or.id/joinus" ,
+                "instagram" : "https://www.instagram.com/yayasan.ecology/"
+            }
+        ]
+    },
+
+    {
+        "idProvinsi" : 4 ,
+        "namaProvinsi" : "Nusa Tenggara Barat",
+        "listWisata"  :  [
+            {
+                   "id" : 1,
+                   "nama" :  "Desa Wisata Bilebante (Bilebante Tourism Village)",
+                   "coordinateWisata" : {
+                    "latitude" : -8.617964,
+                    "longitude" : 116.192067
+                    } ,
+                      "isWishlistDestination" : false,
+                   "lokasi" : "Bilebante, Pringgarata, Central Lombok Regency, West Nusa Tenggara",
+                   "waktuOperasional" : "07.00 - 18.00",
+                   "deskripsi" : "Bilebante Village, Central Lombok Regency, West Nusa Tenggara is one of the villages that has successfully developed a tourism village. Bilebante Village has presented its natural beauty and still has a lot of rice fields. It also offers several facilities for visitors who want to enjoy the typical rural natural beauty. Thus, Bilebante Village is also called a green tourism village.\nFor visitors who want to stay overnight, the Bilebante Green Tourism Village has homestay facilities available. In addition, there are other facilities such as a camping ground, swimming pool, fishing market, bicycle path, as well as a training center for seaweed processing SMEs.",
+                    "image" : [
+                        "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/bilebante1.png?alt=media&token=e9df005a-f611-4f5f-81a2-d157db8619bc",
+                        "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/bilebante2.png?alt=media&token=d237c07e-bb10-4c51-918f-ff4d999a3b84"] ,
+                    "kegiatan" : [
+                         "Try a variety of exciting outdoor activities at the Fishing Market.\nVisitors can take part in fishing activities in the ponds that have been provided and uniquely, the fishing rods can be directly processed into fish-based dishes. Apart from that, visitors can also approach small snack stalls made of bamboo or cross-legged with a variety of cheap and very Indonesian food.",
+                         "Exploring the village while cycling.\nVisitors can feel the cool atmosphere of the village while pedaling their bicycles from residential areas, riverbanks, rice fields, vegetable and fruit gardens, Lime Bridge and the oldest temple in Central Lombok, namely the Lingkar Kelud Temple. During the trip, you can enjoy a coffee break and see firsthand the rice planting process carried out by the Bilebante Community and stop by the local industrial area which produces coconut sticks for satay, not to forget the 'kekere' (a typical local hat made of woven sticks). coconut).",
+                         "Stop by the herbal garden while studying health.\nThe fertile land of Bilebante Village grows a variety of herbal plants which are very good for health. Well, the planting and breeding of this herb garden was carried out by the village youths. Visitors will be guided to learn about the health of these herbal plants. In addition to learning about herbs, visitors can do spa treatments. It is perfect for relaxing your body and beautifying yourself. The place for the massage is according to request, it can be in an air-conditioned room or outdoors such as secluded and on the edge of a rice field",
+                         "See firsthand the cultivation of seaweed in the rice fields.\nIf we usually know that seaweed cultivation is on the beach, how about in the village? Yes, there is seaweed cultivation in the rice fields of Bilebante village. Later, the seaweed harvest is used as raw material for making pancakes. And it is this seafood product that advances the wheels of the village economy. Here visitors also learn how to cultivate seaweed and process it into a food product that can increase MSMEs.",
+                         "Taste authentic local culinary.\nVisitors can find typical Indonesian snacks such as green banana ice, various porridge, seaweed pancakes, klepon, lupis, mule gati, secang, plecing kangkung, to racing rice. Of course, the ingredients for the dishes are all natural and from village plantations. Plus, there are also superior herbal drink products, namely lemongrass tea or sherbet."
+                        
+                        ],
+                    "transportasiWisata" : ["Car" , "Motorcycle", "Bus" ,"Walking" ]
+            },
+            
+            {
+                "id" : 2,
+                "nama" :  "Taman Nasional Gunung Rinjani (Mount Rinjani National Park)",
+                "coordinateWisata" : {
+                 "latitude" :-8.424849,
+                 "longitude" :  116.395856
+                 } ,
+                 "isWishlistDestination" : false,
+                "lokasi" : "Leneng, Praya, Central Lombok Regency, West Nusa Tenggara",
+                "waktuOperasional" : "06.00 - 16.00",
+                "deskripsi" : "Mount Rinjani National Park (abbreviated as TNGR) is one of the national parks in Indonesia. It is located on Mount Rinjani, Lombok Island, West Nusa Tenggara. Mount Rinjani National Park was designated as a national park in 1990. The existing ecosystem includes tropical rain forest, montane and sub-alpine rain forest. Mount Rinjani National Park has high biodiversity. The area is used as a place of research and a source of germplasm collection. Mount Rinjani National Park is also a natural and educational tourism spot.",
+                "image" : [
+                    "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/rinjani1.png?alt=media&token=e65e6e60-8b02-48f3-a61b-7139f6ea9a17",
+                    "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/rinjani2.png?alt=media&token=80eaabf0-6dac-4537-936c-ae1813023682"
+                    ] ,
+                "kegiatan" : [
+                    "Mount Rinjani National Park Agency (BTNGR) Conducted a clean up activity which was held from 8 to 10 July 2023. In this activity BTNGR collaborated with the Rinjani Circle Tourism Forum as a partner.",
+                    "Garbage Care and Wildlife Conservation Campaign With this activity, it is hoped that the community, especially the younger generation and road users, can care more about always keeping the surroundings clean so that destinations and also clean tourist villages are created to support the realization of the NTB Zero Waste program. and don't feed wild animals around or in the forest area indiscriminately so as not to change the original behavior of the animals and the preservation of animals in the Rinjani area is maintained.",
+                    "Ecotourism Development Training Activities in the scope of TNRTThe aim of this activity is to increase the capacity of human resources for tourism practitioners and the quality of visitor services that are safe and comfortable in the framework of world-class climbing.",
+                    "Actions of NTFPs User Groups in the Context of Restoring Forest Ecosystems",
+                    "together with community groups who use Non-Timber Forest Products (NTFPs) to carry out concrete actions in the framework of restoring forest ecosystems in the Tetebatu Environment Area, Joben Resort SPTN region II TNGR."
+                ],
+                "transportasiWisata" : ["Car" , "Motorcycle", "Bus" ,"Walking"]
+            },
+
+            {
+                "id" : 3,
+                "nama" :  "Ekowisata Lembar Selatan (South Sheet Ecotourism)",
+                "coordinateWisata" : {
+                "latitude" :-8.720702,
+                "longitude" : 116.062072
+                } ,
+               "isWishlistDestination" : false,
+                "lokasi" : "Lembar Selatan, Lembar, West Lombok Regency, West Nusa Tenggara",
+                "waktuOperasional" : "08.00 - 20.00",
+                "deskripsi" : "The South Sheet Village has a tourist area called South Sheet Ecotourism (ELS) which covers four hamlets namely, Cemare, Puyahan, Pesanggaran and Sepakat. The ELS area consists of coastal areas, sacred tomb areas and mangrove forest areas.",
+                "image" : [
+                    "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/els1.png?alt=media&token=721ccbd4-2963-4a15-bd36-08ad431702f9",
+                    "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/els2.png?alt=media&token=a792571b-6eae-4ed4-a7a3-125b1483893c"] ,
+                "kegiatan" : [
+                    "Religious Tourism [Sacred MaQom].\nMaqom Keramat is located in Cemare Hamlet, Lembar Selatan Village, its location in the middle of the sea is one of its attractions. The sacred maqom is the maqam of Sheikh Alwi al-Bagdadi who is one of the propagators of Islam on the island of Lombok.To get to this sacred maqam, you have to use a fishing boat. The view of this maqom is also amazing because behind it passenger ships often go back and forth to the island of Bali. even the view behind Maqom can also be seen from international cruise ships when they lean on the Gili Mas harbor area.",
+                    "Cemare Beach Tourism.\nThe Cemara Beach area stretches long enough and grows pine trees along the coast. Usually, more tourists come to this location in the afternoon, especially to enjoy the sunset or sunset while enjoying culinary snacks from stalls available on the beach.",
+                    "Nature Tourism [Mangrove Cruise].\nMangrove Cruise or Mangrove Forest Exploration is a tour package to explore the mangrove forest area in the South Sheet Ecotourism area, with an area of around 60 ha of mangrove forest. The scenery is so beautiful and cool. occasionally seen birds are looking for fish. besides that we can see fishermen looking for fish and shellfish traditionally.",
+                    "CampingGround.\nApart from marine tourism, ELS also provides camping tours..\nThe latest in Sheet Selatan has also opened a beachside glamping location called Beach Camp Lombok which offers the sensation of camping with very adequate facilities such as clean water facilities, bathrooms, toilets, places of worship, restaurants, bonfires, and wifi access.",
+                    "Educational Tourism.\nMangrove ecotourism is a tourism activity that provides education to tourists to preserve nature and community culture to become an attraction in maintaining the survival of mangrove ecosystems which have a lot of potential and benefits with the beauty of nature and its environment. Tourists are also invited to plant mangroves together."
+                ],
+                "transportasiWisata" : ["Car" , "Motorcycle", "Bus" ,"Walking"]
+            }
+            
+        ],
+        "isWishlist" : false ,
+        "isAddTrip" : false ,
+        "isFinishTrip" : false,
+        "coordinateKota" : {
+            "latitude" :-8.630750 ,
+            "longitude" : 117.434306
+        } ,
+        "imageKota" : "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/ntb.png?alt=media&token=19340123-c1ed-4653-9173-78c1ff34586b",
+        "tranportasiProvinsi" : [
+            "Airplane", "Ship" , "Bicycle" , "Car", "Bus" , "Motorcycle", "Walking"
+        ],
+        "kegiatanOffset" : [
+            {
+                "id" : 1 ,
+                "namaAktivitas" : "Debris-Free Friday",
+                "company" : "Gili Eco Trust",
+                "deskripsiKegiatan" : "The Gili Eco Trust is a non-profit organisation based in the Gili Islands in Indonesia which aims to protect environment and to create sustainable islands for everyone to enjoy. It has grown and expanded its activities from marine conservation to waste management and sustainable eco-tourism.\nEvery Friday afternoon, the organisation usually has one activity called Debris-Free Friday. It was created to bring divers from different shops together and now sponsored by more than forty businesses in Trawangan for the last seven years. Everyone can join it by cleaning up plastic and marine debris that pollute the environment. Each year, tourists, divers, and local communities have collected around 7.000 kg of marine debris from this activity.\nBy joining this, people can learn waste strategies and adopt it to newly found beach clean techniques to help sift and sort through plastics. They make sure to continue to recycle up to 70% of the trash found on the beach.",
+                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/offset-ntb-1.png?alt=media&token=3c1b5ff1-9620-48b2-98d1-cb991f7609d2",
+                "alamat" : "Jl. Ikan Hiu, Gili Indah, Pemenang, Lombok Utara, Nusa Tenggara Barat, Indonesia" ,
+                "noTelp" : "+62 8133 960 0553",
+                "email" : "info@giliecotrust.com",
+                "website" : "https://giliecotrust.com/debris-free-friday/" ,
+                "instagram" : "https://www.instagram.com/giliecotrust/"
+            },
+
+            {
+                "id" : 2 ,
+                "namaAktivitas" : "Volunteer",
+                "company" : "Gili Eco Trust",
+                "deskripsiKegiatan" : "The Gili Eco Trust is a non-profit organisation based in the Gili Islands in Indonesia which aims to protect environment and to create sustainable islands for everyone to enjoy. It has grown and expanded its activities from marine conservation to waste management and sustainable eco-tourism.\nThe organisation open volunteer opportunity for anyone who is passionate and motivated to become eco-warrior on their daily environmental missions. If they are fascinated about Biorocks and want to learn more about incredible reef restoration technique, there will be two weeks intensive programme to build and sink their own artificial coral reefs. There are also several available positions in their green team among helping out the local staff in the recycling centre, to additional beach cleans, the green team continues to collect data and research trends in tourism, solid waste, events planning and communications.\nThe volunteering activities is open only for full-time volunteers/interns who stay for a minimum of two months because they will be properly trained and inducted before independently undertake tasks.",
+                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/offset-ntb-2.png?alt=media&token=53fabd71-831a-4a92-bd2a-84879f2cb971",
+                "alamat" : "Jl. Ikan Hiu, Gili Indah, Pemenang, Lombok Utara, Nusa Tenggara Barat, Indonesia" ,
+                "noTelp" : "+62 8133 960 0553",
+                "email" : "info@giliecotrust.com",
+                "website" : "https://giliecotrust.com/debris-free-friday/" ,
+                "instagram" : "https://www.instagram.com/giliecotrust/"
+            },
+
+            {
+                "id" : 3,
+                "namaAktivitas" : "Zero Waste Gift Shop",
+                "company" : "Gili Eco Trust",
+                "deskripsiKegiatan" : "The Gili Eco Trust is a non-profit organisation based in the Gili Islands in Indonesia which aims to protect environment and to create sustainable islands for everyone to enjoy. It has grown and expanded its activities from marine conservation to waste management and sustainable eco-tourism.\nThe organisation headquarters double up as an eco-friendly gift shop and plastic-free store. Tourist can take a look at their homemade, unique jewellery, upcycled from glass bottles found on the island. There is a range of travel items to help individuals move around as plastic-free as possible. Tourists can buy reusable tote bag, metal reusable straw, bamboo travel cutlery or grocery produce bags.\nRecently, the organisation showcase local and artisan products handmade in Lombok like handmade soaps, shampoo bars, and many more. By doing this, tourists can support some brilliant social enterprised they partnered with. Beside, there is also second-hand clothes rail from the donation from people who left island after shopping too much, along with an extensive book swap shop for holiday reads.",
+                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-ilb.appspot.com/o/offset-ntb-3.png?alt=media&token=0c377c62-af49-4816-bf48-66337618443f",
+                "alamat" : "Jl. Ikan Hiu, Gili Indah, Pemenang, Lombok Utara, Nusa Tenggara Barat, Indonesia" ,
+                "noTelp" : "+62 8133 960 0553",
+                "email" : "info@giliecotrust.com",
+                "website" : "https://giliecotrust.com/debris-free-friday/" ,
+                "instagram" : "https://www.instagram.com/giliecotrust/"
+            }
+        ]
+    }
+]
