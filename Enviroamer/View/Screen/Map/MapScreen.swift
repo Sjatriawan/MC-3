@@ -174,19 +174,12 @@ struct MapScreen: View {
 
     }
 
-    func createAlert(for annotation: MKPointAnnotation) -> Alert {
-        let distanceString = distanceFromCurrentLocation(to: annotation.coordinate)
-        let alertTitle = annotation.title ?? "Unknown Location"
-        let message = "Distance from Current Location: \(distanceString)"
-
-        return Alert(title: Text(alertTitle), message: Text(message), dismissButton: .default(Text("OK")))
-    }
-    
     func createCardView(for annotation: MKPointAnnotation) -> some View {
         let distanceString = distanceFromCurrentLocation(to: annotation.coordinate)
         let title = annotation.title ?? "Unknown Location"
         let message = "Distance from Current Location: \(distanceString)"
         let image = ""
+        let id = annotation
 
         return CardViewPr(title: title, message: message, image: image)
     }

@@ -64,14 +64,6 @@ struct TravelPlannerStepView: View {
                             Text("\(viewModel.daysOfTravel) days")
                         }
                     }
-                    
-                    
-                    // Step 4: Days of Travel
-                    
-                    
-                    
-                    
-                    
                 } else if currentStep == 3 {
                     Form {
                         // Step 6: Transportation Method
@@ -139,37 +131,125 @@ struct TravelPlannerStepView: View {
 
 struct TravelPlannerView: View {
     @StateObject private var viewModel = TravelPlannerViewModel()
+    @State private var isExpanded = false
+    
     
     var body: some View {
         NavigationView {
-            Form {
-                Section(header: Text("Carbon Emissions")) {
+            VStack{
+                HStack{
                     Text("\(viewModel.totalCarbonEmissions, specifier: "%.2f") grams CO2")
+                    Image(systemName: "info.circle").foregroundColor(.green)
                 }
-                
-                Section(header: Text("Current Location")) {
+                Divider().background(.black).padding()
+                VStack(alignment: .leading){
+                    Text("Where to?")
                     if let location = viewModel.locationManager.lastKnownLocation {
                         Text("Latitude: \(location.coordinate.latitude), Longitude: \(location.coordinate.longitude)")
+                            .frame(height: 51)
+                            .padding(.leading)
+                            .padding(.trailing)
+                            .cornerRadius(12)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .inset(by: 0.5)
+                                    .stroke(Color(red: 0.82, green: 0.82, blue: 0.82), lineWidth: 1)
+                            )
+                        
                     } else {
                         Text("Location not available")
+                            .frame(height: 51)
+                            .padding(.leading)
+                            .padding(.trailing)
+                            .cornerRadius(12)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .inset(by: 0.5)
+                                    .stroke(Color(red: 0.82, green: 0.82, blue: 0.82), lineWidth: 1)
+                            )
+                        
+                    }
+                    
+                    
+                    
+                }.frame(maxWidth: .infinity, alignment: .leading).padding()
+                
+                
+                //
+                Picker("Select a Province", selection: $viewModel.selectedProvinceIndex) {
+                    ForEach(viewModel.provinces.indices, id: \.self) { index in
+                        Text(viewModel.provinces[index].namaProvinsi).tag(index)
                     }
                 }
-                
-                Section(header: Text("Province Image")) {
-                    if let imageURL = viewModel.selectedProvinceImageURL {
-                        AsyncImage(url: imageURL) { image in
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                        } placeholder: {
-                            ProgressView()
-                        }
-                        .frame(height: 200) // Adjust the image frame as needed
-                    } else {
-                        Text("Image not available")
+                .pickerStyle(.segmented)
+                .padding()
+                //
+             
+                Button(action: {
+                                withAnimation {
+                                    isExpanded.toggle()
+                                }
+                            }) {
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke(Color(red: 0.82, green: 0.82, blue: 0.82), lineWidth: 1)
+                                    .frame(width: 324, height: 51, alignment: .leading)
+                                    .overlay(
+                                        VStack(alignment: .leading){
+                                            HStack {
+                                                Text("When")
+                                            }
+                                           
+                                        }
+                                        .padding(.horizontal)
+                                    
+                                    )
+                            }
+                            .contentShape(Rectangle())
+                if isExpanded {
+                    Section{
+                        DatePicker("Start Date", selection: $viewModel.startDate, displayedComponents: .date)
+                        DatePicker("End Date", selection: $viewModel.endDate, displayedComponents: .date)
                     }
+                    .padding(.horizontal)
+                }
+                           
+                     Spacer()
+         
+                //
+                Button {
+                    
+                } label: {
+                    HStack(alignment: .center, spacing: 10){
+                        Text("Save").foregroundColor(.white)
+                    }.padding(.horizontal, 24)
+                        .padding(.vertical, 12)
+                        .background(Color(red: 0.25, green: 0.55, blue: 0.25))
+                        .cornerRadius(10)
                 }
 
+            }.padding()
+            Form {
+                
+                
+                Section(header: Text("Current Location")) {
+                    
+                }
+                
+                //                Section(header: Text("Province Image")) {
+                //                    if let imageURL = viewModel.selectedProvinceImageURL {
+                //                        AsyncImage(url: imageURL) { image in
+                //                            image
+                //                                .resizable()
+                //                                .aspectRatio(contentMode: .fit)
+                //                        } placeholder: {
+                //                            ProgressView()
+                //                        }
+                //                        .frame(height: 200) // Adjust the image frame as needed
+                //                    } else {
+                //                        Text("Image not available")
+                //                    }
+                //                }.hidden()
+                
                 
                 Section(header: Text("Select a Province")) {
                     Picker("Select a Province", selection: $viewModel.selectedProvinceIndex) {
@@ -180,10 +260,7 @@ struct TravelPlannerView: View {
                     .pickerStyle(MenuPickerStyle())
                 }
                 
-                Section(header: Text("Trip Duration")) {
-                    DatePicker("Start Date", selection: $viewModel.startDate, displayedComponents: .date)
-                    DatePicker("End Date", selection: $viewModel.endDate, displayedComponents: .date)
-                }
+                
                 
                 Section(header: Text("Days of Travel")) {
                     Text("\(viewModel.daysOfTravel) days")
@@ -213,7 +290,8 @@ struct TravelPlannerView: View {
                     Text("Plan Your Trip")
                 }
             }
-            .navigationBarTitle("Travel Planner")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitle("Plan your trip")
             .navigationBarItems(trailing: Button("Save") {
                 viewModel.saveData()
             })
