@@ -108,8 +108,7 @@ struct ItemImageOffset: View {
               
                
         } placeholder: {
-            Image("placeholder")
-                .resizable()
+           ShimmerView()
         }
         .aspectRatio( contentMode: .fill)
         .frame(width : 342,height : 400)

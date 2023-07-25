@@ -15,6 +15,15 @@ struct WishlistScreen: View {
     var body: some View {
         NavigationStack{
             VStack{
+                HStack{
+                    Text("Wishlists")
+                        .font(.custom("SFProRounded-Bold", size: 28))
+                        .foregroundColor(Color("black800"))
+                    Spacer()
+                   
+                    
+                }
+                .padding(.bottom, 13)
                 SlidingTabView(selection: $selectedTab, tabs: ["Trips", "Destinations" , ], font: Font.custom("SFProRounded-Bold", size: 20),
                                activeAccentColor: Color("black800"), selectionBarColor: Color("black800")
                 )
@@ -27,7 +36,7 @@ struct WishlistScreen: View {
                
             }
             .padding(24)
-            .navigationTitle(Text("WishLists"))
+           
            
         }
         

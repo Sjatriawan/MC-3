@@ -19,49 +19,74 @@ struct MapAnnotationItem: Identifiable {
 }
 
 struct CardViewPr: View {
-    let title: String
-    let message: String
-    let image:String
-//    coba untuk move ke screen baru
-    let id : Int
+    let location: Location
     
     var body: some View {
-        HStack{
-            ZStack{
-                Text(title)
-                    .font(.title)
-            }
-            Spacer()
-            VStack{
-                NavigationLink(destination: TravelPlannerView()) {
-                    Text("Add trip")
-                        .foregroundColor(.white)
-                        .frame(width: 150, height: 44)
-                        .background(Color.green)
-                        .cornerRadius(12)
-                        .shadow(radius: 8)
+        ZStack{
+            Color("neutral200")
+            HStack{
+                AsyncImage(url: URL(string: location.imageKota)) { Image in
+                    Image
+                        .resizable()
+                    
+                } placeholder: {
+                    ShimmerView()
                 }
-                
-                
-                NavigationLink {
-                    TripCardScreen(idProvinsi: id)
-                } label: {
-                    Text("See more")
-                        .foregroundColor(.green)
-                        .frame(width: 150, height: 44)
-                        .background(.white)
-                        .cornerRadius(12)
-                        .overlay(
+                .frame(width: 172, height: 186)
+                .overlay{
+                    VStack {
+                        Spacer()
+                        ZStack{
                             RoundedRectangle(cornerRadius: 12)
-                                .inset(by: 0.5)
-                                .stroke(Color(red: 0.25, green: 0.55, blue: 0.25), lineWidth: 1)
-                        )
+                                .foregroundColor(.clear)
+                                .frame(height: 75)
+                                .background(Color(red: 0.04, green: 0.17, blue: 0.2).opacity(0.6))
+                                .clipShape(CustomCorner(radius: 12, corners: [.bottomLeft]))
+                            
+                            Text(location.namaProvinsi)
+                                .foregroundColor(Color.white)
+                                .font(.system(size: 20 , weight:.bold, design: .rounded ))
+                                
+                               
+
+                            
+                        }
+                    }
                 }
+                
+                Spacer()
+                
+                VStack{
+                    NavigationLink(destination: TravelPlannerView()) {
+                        Text("Add trip")
+                            .foregroundColor(.white)
+                            .frame(width: 150, height: 44)
+                            .background(Color("green600"))
+                            .cornerRadius(12)
+                    }
+    
+    
+                    NavigationLink {
+                        TripCardScreen(location: location)
+                    } label: {
+                        Text("See more")
+                            .foregroundColor(Color("green600"))
+                            .frame(width: 150, height: 44)
+                            .background(.white)
+                            .cornerRadius(12)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .inset(by: 0.5)
+                                    .stroke(Color("green600"), lineWidth: 1)
+                            )
+                    }
+                }
+                
+                Spacer()
+
             }
         }
-        .padding()
-        .frame(maxWidth: .infinity, maxHeight: 200)
-        .background(Color.white)
+        .frame(width: .infinity, height: 186)
         .cornerRadius(12)
         .padding()
     }
@@ -73,7 +98,7 @@ struct MapScreen: View {
     @StateObject private var locationManager = LocationManager()
     @State private var annotations: [MapAnnotationItem] = []
     @State private var selectedAnnotation: MapAnnotationItem? = nil
-//     add this data
+    //     add this data
     @EnvironmentObject private var modelWisata : TourismViewModel
     var body: some View {
         NavigationView{
@@ -132,11 +157,10 @@ struct MapScreen: View {
         
         return Alert(title: Text(alertTitle), message: Text(message), dismissButton: .default(Text("OK")))
     }
-//     tambah code ini
+    //     tambah code ini
     func getLocationObject(for annotation: MKPointAnnotation) -> Location? {
         guard let idString = annotation.title,
-              let id = Int(idString),
-              let location = modelWisata.tourisms.first(where: { $0.idProvinsi == id }) else {
+              let location = modelWisata.tourisms.first(where: { $0.namaProvinsi == idString }) else {
             // Handle the scenario where the Location object is not found or the idProvinsi is not valid
             return nil
         }
@@ -145,17 +169,13 @@ struct MapScreen: View {
     
     func createCardView(for annotation: MKPointAnnotation) -> some View {
         let distanceString = distanceFromCurrentLocation(to: annotation.coordinate)
-        let title = annotation.title ?? "Unknown Location"
-        let message = "Distance from Current Location: \(distanceString)"
-        let image = ""
-
-        if let location = getLocationObject(for: annotation) {
-               let id = location.idProvinsi
-               return CardViewPr(title: title, message: message, image: image, id: id)
-           } else {
-               // Return a default CardViewPr if the location is not found
-               return CardViewPr(title: title, message: message, image: image, id: -1)
-           }
+        return Group {
+            if let location = getLocationObject(for: annotation) {
+                CardViewPr(location: location)
+            } else {
+                Text("An error occurred")
+            }
+        }
     }
     
     

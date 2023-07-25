@@ -13,24 +13,24 @@ struct TripCardScreen: View {
     @EnvironmentObject var modelWisata : TourismViewModel
     @State private var selectedIndex = 0
     
-    let idProvinsi  : Int
+    let location: Location
     
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 32){
-                    ItemImageCard(location: modelWisata.tourisms[idProvinsi])
+                    ItemImageCard(location: location)
                     
                    TabBarView(selectedIndex: $selectedIndex)
                     
                     if selectedIndex == 0 {
                         CarbonContentTrip()
                     } else if selectedIndex == 1 {
-                        DestinationContentTrip(idProvinsi: idProvinsi)
+                        DestinationContentTrip(idProvinsi: location.idProvinsi)
                     } else if selectedIndex == 2 {
-                        ActivityOffsetContentTrip(idProvinsi: idProvinsi)
+                        ActivityOffsetContentTrip(idProvinsi: location.idProvinsi)
                     } else if selectedIndex == 3 {
-                        TransportationContentTrip(idProvinsi: idProvinsi)
+                        TransportationContentTrip(idProvinsi: location.idProvinsi)
                     } else {
                         Text("")
                     }
@@ -38,6 +38,7 @@ struct TripCardScreen: View {
                 }
                 .padding(.horizontal, 24)
             }
+            .navigationTitle(location.namaProvinsi)
         }
         .toolbar(.hidden, for: .tabBar)
 
@@ -99,7 +100,7 @@ struct TripCardScreen: View {
 
 struct TripCardScreen_Previews: PreviewProvider {
     static var previews: some View {
-        TripCardScreen(idProvinsi: 2)
+        TripCardScreen(location: TourismViewModel().tourisms[0])
             .environmentObject(TourismViewModel())
 
     }

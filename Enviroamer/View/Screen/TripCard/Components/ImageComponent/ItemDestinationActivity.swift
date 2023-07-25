@@ -17,8 +17,7 @@ struct ItemDestinationActivity: View {
          
                 
         } placeholder: {
-            Image("placeholder")
-                .resizable()
+           ShimmerView()
  
         }
         .aspectRatio(contentMode: .fill)

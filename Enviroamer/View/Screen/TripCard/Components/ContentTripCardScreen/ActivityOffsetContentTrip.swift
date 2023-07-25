@@ -11,7 +11,7 @@ struct ActivityOffsetContentTrip: View {
     @EnvironmentObject var modelWisata : TourismViewModel
     let idProvinsi : Int
     var body: some View {
-        let data = self.modelWisata.tourisms[idProvinsi].kegiatanOffset
+        let data = self.modelWisata.tourisms[idProvinsi - 1 ].kegiatanOffset
 
         NavigationStack {
             VStack(alignment: .leading, spacing: 32){
@@ -46,7 +46,7 @@ struct ActivityOffsetContentTrip: View {
 
 struct ActivityOffsetContentTrip_Previews: PreviewProvider {
     static var previews: some View {
-        ActivityOffsetContentTrip(idProvinsi: 0)
+        ActivityOffsetContentTrip(idProvinsi: 1)
             .environmentObject(TourismViewModel())
     }
 }
