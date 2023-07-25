@@ -60,6 +60,7 @@
 		57559DEB2A6A412500A1A476 /* ItemImageDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DEA2A6A412500A1A476 /* ItemImageDestination.swift */; };
 		57559DED2A6A977A00A1A476 /* ModalSheetDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DEC2A6A977A00A1A476 /* ModalSheetDescription.swift */; };
 		57559DEF2A6A978C00A1A476 /* ModalSheetActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DEE2A6A978C00A1A476 /* ModalSheetActivities.swift */; };
+		57FAF1972A6F6EF8001DE034 /* ShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FAF1962A6F6EF8001DE034 /* ShimmerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,7 @@
 		57559DEA2A6A412500A1A476 /* ItemImageDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImageDestination.swift; sourceTree = "<group>"; };
 		57559DEC2A6A977A00A1A476 /* ModalSheetDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSheetDescription.swift; sourceTree = "<group>"; };
 		57559DEE2A6A978C00A1A476 /* ModalSheetActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSheetActivities.swift; sourceTree = "<group>"; };
+		57FAF1962A6F6EF8001DE034 /* ShimmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +290,7 @@
 				092B75072A663CBE00723890 /* CardView.swift */,
 				57559DCC2A691D0600A1A476 /* CustomCorner.swift */,
 				57559DE22A69488900A1A476 /* ExtensionColor.swift */,
+				57FAF1962A6F6EF8001DE034 /* ShimmerView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -586,6 +589,7 @@
 				57559DD92A69226B00A1A476 /* TransportationContentTrip.swift in Sources */,
 				092B75042A66389C00723890 /* HomeScreen.swift in Sources */,
 				09297B7E2A683389008D6CD0 /* CalculateScreen.swift in Sources */,
+				57FAF1972A6F6EF8001DE034 /* ShimmerView.swift in Sources */,
 				57559DC12A69182700A1A476 /* Location.swift in Sources */,
 				57559DCD2A691D0600A1A476 /* CustomCorner.swift in Sources */,
 				09297B8C2A68DB98008D6CD0 /* WishlistScreen.swift in Sources */,

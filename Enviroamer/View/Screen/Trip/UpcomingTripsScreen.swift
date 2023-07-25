@@ -8,17 +8,14 @@
 import SwiftUI
 
 struct UpcomingTripsScreen: View {
-    @State private var upcomingTripsItems : [Location] = []
+    @State private var upcomingTripsItems : [Trips] = []
     @EnvironmentObject var modelWisata : TourismViewModel
     
     var body: some View {
         NavigationStack {
             VStack{
-                if upcomingTripsItems.isEmpty{
                     TripScreenList()
-                } else {
-                    ItemUpcomingTrips(location: modelWisata.tourisms[0])
-                }
+
             }
         }
     }
@@ -33,13 +30,21 @@ struct TripScreenList: View {
 
     var body: some View {
         ScrollView(showsIndicators: false){
-            LazyVStack {
-                ForEach(trips, id: \.self) { trip in
-                    CardViewList(trip: trip)
-                        .frame(width: 322, height: 270)
+            if trips.isEmpty {
+                EmptyUpcomingTrips()
+            } else {
+                LazyVStack {
+                    ForEach(trips, id: \.self) { trip in
+                        NavigationLink(destination: {
+//                            TripCardScreen(idProvinsi: trip.provinceName)
+                        }, label: {
+                            CardViewList(trip: trip)
+                                .frame(width: 322, height: 270)
+                        })
+                    }
                 }
+    //            .padding()
             }
-            .padding()
         }
     }
 }
@@ -54,7 +59,8 @@ struct CardViewList: View {
             AsyncImage(url: URL(string: trip.imageKota ?? "")) { phase in
                 switch phase {
                 case .empty:
-                    ProgressView()
+                   ShimmerView()
+                        .frame(width: 322, height: 230)
                 case .success(let image):
                     image
                         .resizable()
@@ -69,7 +75,7 @@ struct CardViewList: View {
                     Color.gray
                 }
             }
-            .cornerRadius(20)
+            .cornerRadius(12)
 
             Rectangle()
                 .frame(height: 75)
@@ -88,8 +94,8 @@ struct CardViewList: View {
             .padding(.horizontal, 16)
             .padding(.vertical, 8)
         }
-        .cornerRadius(20)
-        .padding(.horizontal, 16)
+        .cornerRadius(12)
+//        .padding(.horizontal, 16)
         .padding(.vertical, 8)
     }
     
@@ -130,32 +136,33 @@ struct UpcomingTripsScreen_Previews: PreviewProvider {
 
 struct EmptyUpcomingTrips : View {
     var body : some View {
-        VStack(spacing: 12){
-            Spacer()
-            Image("travel-ilutration")
-            Text("No trip plan yet")
-                .foregroundColor(Color("black800"))
-                .font(.custom("SFProRounded-Bold", size: 20))
-            Text("Create your trip!\nBe mindful to our environment while strolling around.")
-                .multilineTextAlignment(.center)
-                .foregroundColor(Color("black800"))
-                .font(.custom("SFProRounded-Regular", size: 14))
-            Button {
-                
-            } label: {
-                Text("Create a Trip")
-                    .foregroundColor(.white)
-                    .frame(width: 156, height: 56)
-                    .font(.custom("SFProRounded-Semibold", size: 17))
-                    .background(Color("green600"))
+        NavigationStack {
+            VStack(spacing: 12){
+                Spacer()
+                Image("travel-ilutration")
+                Text("No trip plan yet")
+                    .foregroundColor(Color("black800"))
+                    .font(.custom("SFProRounded-Bold", size: 20))
+                Text("Create your trip!\nBe mindful to our environment while strolling around.")
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(Color("black800"))
+                    .font(.custom("SFProRounded-Regular", size: 14))
+                NavigationLink(destination: {
+                    TravelPlannerView()
+                }, label: {
+                    Text("Create a Trip")
+                        .foregroundColor(.white)
+                        .frame(width: 156, height: 56)
+                        .font(.custom("SFProRounded-Semibold", size: 17))
+                        .background(Color("green600"))
                     .cornerRadius(12)
+                })
+                Spacer()
+                Spacer()
+                
+                
                 
             }
-            Spacer()
-            Spacer()
-            
-            
-            
         }
     }
 }
@@ -188,7 +195,7 @@ struct ItemUpcomingTrips : View{
                     
                     HStack {
                         VStack {
-                            Text(location.namaProvinsi!)
+                            Text(location.namaProvinsi)
                                 .foregroundColor(Color("black800"))
                                 .font(.custom("SFProRounded-Semibold", size: 17))
                             

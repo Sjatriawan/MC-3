@@ -16,7 +16,7 @@ struct ModalSheetActivities: View {
         let titleActivity = destinasi.judulKegiatan
         ScrollView {
             VStack(alignment: .leading, spacing: 32){
-                Text("Activities in \(destinasi.nama!)")
+                Text("Activities in \(destinasi.nama)")
                     .foregroundColor(Color("black800"))
                     .font(.custom("SFProRounded-Bold", size: 20))
                 

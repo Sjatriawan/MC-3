@@ -13,14 +13,14 @@ import CoreLocation
 struct Tourism : Codable, Identifiable, Hashable {
 
 
-    var id : Int?
-    var nama : String?
+    var id : Int
+    var nama : String
     var isWishlistDestination : Bool
-    var lokasi : String?
-    var waktuOperasional : String?
-    var deskripsiSingkat : String?
+    var lokasi : String
+    var waktuOperasional : String
+    var deskripsiSingkat : String
     var deskripsi :[ String]
-    var image : [String]?
+    var image : [String]
     var judulKegiatan : [String]
     var kegiatan : [String]
     var transportasiWisata : [String]

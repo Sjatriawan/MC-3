@@ -9,35 +9,38 @@ import SwiftUI
 
 struct ExploreScreen: View {
     @EnvironmentObject var modelWisata : TourismViewModel
+    let idProvinsi : Int = 1
     
     var body: some View {
+        let data = self.modelWisata.tourisms[idProvinsi].listWisata
+        let dataOffset = self.modelWisata.tourisms[idProvinsi].kegiatanOffset
         NavigationStack {
-            ScrollView {
+            ScrollView (showsIndicators: false){
                 VStack(alignment: .leading, spacing: 24){
                     NavigationLink {
-                                           MapScreen()
+                        MapScreen()
                                        } label: {
                                            searchBar
                                        }
                     Text("Explore New Place")
                     ScrollView(.horizontal) {
                         HStack (spacing: 12){
-                            ForEach(modelWisata.tourisms[0].listWisata){ item in
+                            ForEach(data.indices){ item in
                                 NavigationLink(destination: {
-                                    TripCardScreen()
+                                    DestinationScreen(destinasi: data[item])
                                 }, label: {
-                                    ItemContentVertical(tourism: item)
+                                    ItemContentVertical(tourism: data[item])
                                 })
                             }
                         }
                     }
-                    Text("Activities Around You")
+                    Text("Events to join")
                     
-                    ForEach(modelWisata.tourisms[1].kegiatanOffset){ item in
+                    ForEach(dataOffset.indices){ item in
                         NavigationLink(destination: {
-                            TripCardScreen()
+                            ActivityOffsetScreen(activityOffset: dataOffset[item])
                         }, label: {
-                            ItemContentHorizontal(activity: item)
+                            ItemContentHorizontal(activity: dataOffset[item])
                         })
                         
                     }
@@ -92,6 +95,9 @@ var searchBar : some View {
     )
     
 }
+
+
+
 
 
 

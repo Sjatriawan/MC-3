@@ -95,7 +95,7 @@ struct ItemTripFavorite : View {
                 }
                 .padding(.trailing, 18)
                 
-                Text(location.namaProvinsi!)
+                Text(location.namaProvinsi)
                     .font(.custom("SFProRounded-Semibold", size: 16))
                     .foregroundColor(Color("black800"))
                 Spacer()

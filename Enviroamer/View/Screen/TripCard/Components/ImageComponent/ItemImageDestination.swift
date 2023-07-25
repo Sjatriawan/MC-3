@@ -15,7 +15,7 @@ struct ItemImageDestination: View {
     var body: some View {
         ZStack {
             TabView (selection: $selectedIndex){
-                ForEach(destination.image!, id: \.self) { imageName in
+                ForEach(destination.image, id: \.self) { imageName in
                     AsyncImage(url: URL(string: imageName)) { Image in
                         Image
                             .resizable()
@@ -48,7 +48,7 @@ struct ItemImageDestination: View {
                     
                     VStack {
                         HStack(spacing: 5){
-                            ForEach(destination.image!.indices, id: \.self) { content in
+                            ForEach(destination.image.indices, id: \.self) { content in
                                 Capsule()
                                     .foregroundColor( content == selectedIndex ? Color("green600") : .white)
                                     .frame(width: 19 , height: 3)
@@ -58,12 +58,12 @@ struct ItemImageDestination: View {
                         
                         HStack {
                             VStack(alignment: .leading, spacing: 6){
-                                Text(destination.nama!)
+                                Text(destination.nama)
                                     .font(.custom("SFProRounded-Bold", size: 20))
                                     .foregroundColor(.white)
                                     .lineLimit(1)
                                 
-                                Text(destination.deskripsiSingkat!)
+                                Text(destination.deskripsiSingkat)
                                     .font(.custom("SFProRounded-Regular", size: 14))
                                     .lineLimit(2)
                                     .foregroundColor(.white)

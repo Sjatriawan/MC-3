@@ -24,6 +24,7 @@ extension Trips {
     @NSManaged public var totalCarbonEmissions: Double
     @NSManaged public var provinceName: String?
     @NSManaged public var imageKota: String?
+//    nyoba tambah ini ya
 
 }
 

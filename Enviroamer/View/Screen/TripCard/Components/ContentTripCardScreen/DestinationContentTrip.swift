@@ -10,10 +10,10 @@ import SwiftUI
 struct DestinationContentTrip: View {
     @EnvironmentObject var modelWisata : TourismViewModel
     
-    
+    let idProvinsi : Int
     
     var body: some View {
-        var data = self.modelWisata.tourisms[0].listWisata
+        let data = self.modelWisata.tourisms[idProvinsi].listWisata
         
         NavigationStack {
             VStack(alignment: .leading, spacing: 32){
@@ -34,8 +34,8 @@ struct DestinationContentTrip: View {
                         DestinationScreen(destinasi: data[index])
                     }, label: {
                         ItemDestinationActivity(
-                            urlString: data[index].image![0],
-                            title: data[index].nama!
+                            urlString: data[index].image[0],
+                            title: data[index].nama
                         )
                     })
                     .accentColor(.black)
@@ -50,7 +50,7 @@ struct DestinationContentTrip: View {
 
 struct DestinationContentTrip_Previews: PreviewProvider {
     static var previews: some View {
-        DestinationContentTrip()
+        DestinationContentTrip(idProvinsi: 0)
             .environmentObject(TourismViewModel())
     }
 }

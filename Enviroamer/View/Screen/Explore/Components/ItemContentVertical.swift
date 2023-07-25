@@ -8,55 +8,61 @@
 import SwiftUI
 
 // file ini adalah component costum untuk content di explore screen yang vertical scroll 
+
 struct ItemContentVertical: View {
     var tourism : Tourism
     var body : some View {
-        AsyncImage(url: URL(string: tourism.image![0])) { Image in
-            Image
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 208, height: 242)
-        } placeholder: {
-            Image("placeholder")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 208, height: 242)
+        AsyncImage(url: URL(string: tourism.image[0])) { Image in
+            switch Image{
+            case .empty:
+                ShimmerView()
+                    .frame(width: 156, height: 237)
+
+            case .success(let image) :
+                image
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 156, height: 237)
+                    
+            case .failure:
+                Color.gray
+            @unknown default :
+                Color.gray
+            }
         }
+        .cornerRadius(12)
         .overlay{
-            VStack {
+            VStack{
                 Spacer()
                 ZStack{
-                    Image("gradientVertical")
+                    Rectangle()
+                        .frame(width: 156,height: 75)
+                        .foregroundColor(.black)
+                        .opacity(0.4)
+                        .blur(radius: 8)
                     
                     VStack(alignment: .leading){
-                        Text(tourism.nama!)
-                            .font(.custom("SFProRounded-Semibold", size: 20))
-                            .padding(.horizontal)
-                            .multilineTextAlignment(.leading)
+                        Text(tourism.nama)
                             .lineLimit(2)
+                            .font(.custom("SFProRounded-Semibold", size: 20))
+                            .multilineTextAlignment(.leading)
                             .foregroundColor(.white)
                         
                         HStack{
                             Image("pin_location")
                                 .frame(width: 10 , height: 15)
-                            Text(tourism.lokasi!)
+                            Text(tourism.lokasi)
                                 .font(.custom("SFProRounded-Regular", size: 13))
                                 .lineLimit(1)
                                 .foregroundColor(.white)
                         }
-                        .padding(.horizontal)
-                        
+
                     }
                     .padding()
-                    
-                    
-                    
                 }
+                
             }
-            
         }
-        .frame(width: 156, height: 237)
-        .cornerRadius(12)
     }
 }
 

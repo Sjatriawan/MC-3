@@ -9,9 +9,10 @@ import SwiftUI
 
 struct TransportationContentTrip: View {
     @EnvironmentObject var modelWisata : TourismViewModel
-
+    let idProvinsi : Int
+    
     var body: some View {
-        var data = modelWisata.tourisms[0].tranportasiProvinsi
+        let data = modelWisata.tourisms[idProvinsi].tranportasiProvinsi
         VStack(alignment: .leading, spacing: 32){
             VStack(alignment: .leading, spacing: 6){
                 Text("Get around the city")
@@ -65,7 +66,7 @@ struct TransportationContentTrip: View {
 
 struct TransportationContentTrip_Previews: PreviewProvider {
     static var previews: some View {
-        TransportationContentTrip()
+        TransportationContentTrip(idProvinsi: 0)
             .environmentObject(TourismViewModel())
     }
 }

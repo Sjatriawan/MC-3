@@ -26,11 +26,11 @@ class TravelPlannerViewModel: ObservableObject {
     @Published var transportationMethod = "Walk"
     @Published var hotelStarRating = "1 Star"
     
-    internal var provinces: [Province] {
+    internal var provinces: [Location] {
         loadProvincesFromJSON()
     }
     
-    var selectedProvince: Province {
+    var selectedProvince: Location {
         provinces[selectedProvinceIndex]
     }
     
@@ -150,11 +150,11 @@ class TravelPlannerViewModel: ObservableObject {
         }
     }
 
-    private func loadProvincesFromJSON() -> [Province] {
-        if let url = Bundle.main.url(forResource: "map", withExtension: "json") {
+    private func loadProvincesFromJSON() -> [Location] {
+        if let url = Bundle.main.url(forResource: "data", withExtension: "json") {
             do {
                 let jsonData = try Data(contentsOf: url)
-                return try JSONDecoder().decode([Province].self, from: jsonData)
+                return try JSONDecoder().decode([Location].self, from: jsonData)
             } catch {
                 print("Error decoding JSON: \(error)")
             }
