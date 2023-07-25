@@ -4,10 +4,43 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Enviroamer 1.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>Enviroamer.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>EnviroamerWidgetExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>092B74CE2A66372300723890</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>092B74DF2A66372400723890</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>092B74E92A66372400723890</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>09CF53EA2A6FA0CF00F79C95</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
