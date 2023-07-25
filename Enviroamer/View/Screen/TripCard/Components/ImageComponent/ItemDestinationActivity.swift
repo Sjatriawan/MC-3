@@ -38,6 +38,8 @@ struct ItemDestinationActivity: View {
                             .foregroundColor(Color("black800"))
                             .font(.custom("SFProRounded-Semibold", size: 17))
                             .padding(.leading,20)
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(2)
                         Spacer()
                     }
         

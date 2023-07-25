@@ -13,7 +13,7 @@ struct ModalSheetDescription: View {
     var body: some View {
         let description = destinasi.deskripsi
         VStack(alignment: .leading,spacing: 32){
-            Text("About \(destinasi.nama!)")
+            Text("About \(destinasi.nama)")
                 .font(.custom("SFProRounded-Bold", size: 20))
                 .foregroundColor(Color("black800"))
             

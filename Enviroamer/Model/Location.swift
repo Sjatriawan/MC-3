@@ -13,8 +13,8 @@ import CoreLocation
 struct Location : Codable,Identifiable, Hashable {
     
     
-    var id : Int?
-    var namaProvinsi : String?
+    var idProvinsi : Int
+    var namaProvinsi : String
     var listWisata : [Tourism]
     var isWishlist : Bool
     var isAddTrip : Bool
@@ -35,6 +35,16 @@ struct Location : Codable,Identifiable, Hashable {
         var longitude : Double
     }
     
+    var id: Int {
+        return idProvinsi
+    }
 
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(idProvinsi)
+    }
+    
+    static func == (lhs: Location, rhs: Location) -> Bool {
+        return lhs.idProvinsi == rhs.idProvinsi
+    }
 
 }

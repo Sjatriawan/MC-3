@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeScreen: View {
     @State private var selectionTab = 0
-   
     
     var body: some View {
         TabView(selection: $selectionTab) {

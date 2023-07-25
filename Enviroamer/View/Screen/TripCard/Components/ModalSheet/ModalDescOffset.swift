@@ -12,7 +12,7 @@ struct ModalDescOffset: View {
     
     var body: some View {
         VStack(alignment: .leading,spacing: 32){
-            Text("About \(activityOffset.namaAktivitas!)")
+            Text("About \(activityOffset.namaAktivitas)")
                 .font(.custom("SFProRounded-Bold", size: 20))
                 .foregroundColor(Color("black800"))
             

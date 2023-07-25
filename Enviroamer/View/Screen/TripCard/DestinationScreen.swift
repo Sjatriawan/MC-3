@@ -24,7 +24,7 @@ struct DestinationScreen: View {
                 ItemImageDestination(destination: destinasi)
                 //                deskripsi
                 VStack(alignment: .leading, spacing: 8){
-                    Text("About \(destinasi.nama!)")
+                    Text("About \(destinasi.nama)")
                         .font(.custom("SFProRounded-Bold", size: 20))
                         .foregroundColor(Color("black800"))
                     
@@ -53,7 +53,7 @@ struct DestinationScreen: View {
                             Image("location")
                             Spacer()
                         }
-                        Text(destinasi.lokasi!)
+                        Text(destinasi.lokasi)
                             .font(.custom("SFProRounded-Regular", size: 16))
                             .foregroundColor(Color("black800"))
                         
@@ -64,7 +64,7 @@ struct DestinationScreen: View {
                         VStack {
                             Image("time")
                         }
-                        Text(destinasi.waktuOperasional!)
+                        Text(destinasi.waktuOperasional)
                             .font(.custom("SFProRounded-Regular", size: 16))
                             .foregroundColor(Color("black800"))
                         
@@ -170,7 +170,7 @@ struct DestinationScreen: View {
                     .presentationCornerRadius(10)
             })
             .padding(.horizontal,24)
-            .navigationTitle(Text(destinasi.nama!))
+            .navigationTitle(Text(destinasi.nama))
             .navigationBarTitleDisplayMode(.inline)
         }
         .toolbar(.hidden, for: .tabBar)

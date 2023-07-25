@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ActivityOffsetContentTrip: View {
     @EnvironmentObject var modelWisata : TourismViewModel
-
+    let idProvinsi : Int
     var body: some View {
-        let data = self.modelWisata.tourisms[0].kegiatanOffset
+        let data = self.modelWisata.tourisms[idProvinsi].kegiatanOffset
 
         NavigationStack {
             VStack(alignment: .leading, spacing: 32){
@@ -31,8 +31,8 @@ struct ActivityOffsetContentTrip: View {
                         ActivityOffsetScreen(activityOffset: data[index])
                     }, label: {
                         ItemDestinationActivity(
-                            urlString: data[index].fotoKegiatan!,
-                            title: data[index].namaAktivitas!
+                            urlString: data[index].fotoKegiatan,
+                            title: data[index].namaAktivitas
                         )
                     })
                     .accentColor(.black)
@@ -46,7 +46,7 @@ struct ActivityOffsetContentTrip: View {
 
 struct ActivityOffsetContentTrip_Previews: PreviewProvider {
     static var previews: some View {
-        ActivityOffsetContentTrip()
+        ActivityOffsetContentTrip(idProvinsi: 0)
             .environmentObject(TourismViewModel())
     }
 }

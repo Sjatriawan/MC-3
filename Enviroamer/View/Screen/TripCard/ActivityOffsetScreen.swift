@@ -46,16 +46,16 @@ struct ActivityOffsetScreen: View {
                         .font(.custom("SFProRounded-Semibold", size: 16))
                     HStack(spacing: 17){
                         ItemContact(image: "website") {
-                            contactOffset.openSafari(url: activityOffset.website!)
+                            contactOffset.openSafari(url: activityOffset.website)
                         }
                         ItemContact(image: "email") {
-                            contactOffset.openEmailApp(url: activityOffset.email!)
+                            contactOffset.openEmailApp(url: activityOffset.email)
                         }
                         ItemContact(image: "call") {
-                            contactOffset.openPhoneApp(url: activityOffset.noTelp!)
+                            contactOffset.openPhoneApp(url: activityOffset.noTelp)
                         }
                         ItemContact(image: "instagram") {
-                            contactOffset.openInstagram(url: activityOffset.instagram!)
+                            contactOffset.openInstagram(url: activityOffset.instagram)
                         }
                     }
                 }
@@ -66,7 +66,7 @@ struct ActivityOffsetScreen: View {
                     .presentationCornerRadius(10)
             })
             .padding(.horizontal,24)
-            .navigationTitle(Text(activityOffset.namaAktivitas!))
+            .navigationTitle(Text(activityOffset.namaAktivitas))
             .navigationBarTitleDisplayMode(.inline)
         }
         .toolbar(.hidden, for: .tabBar)
@@ -102,7 +102,7 @@ struct ItemImageOffset: View {
     var offset : OffsetActivity
     
     var body: some View {
-        AsyncImage(url: URL(string: offset.fotoKegiatan!)) { Image in
+        AsyncImage(url: URL(string: offset.fotoKegiatan)) { Image in
             Image
                 .resizable()
               
@@ -127,12 +127,12 @@ struct ItemImageOffset: View {
                     
                     HStack {
                         VStack(alignment: .leading, spacing: 6){
-                            Text(offset.namaAktivitas!)
+                            Text(offset.namaAktivitas)
                                 .font(.custom("SFProRounded-Bold", size: 20))
                                 .foregroundColor(.white)
                                 .lineLimit(2)
                             
-                            Text(offset.company!)
+                            Text(offset.company)
                                 .font(.custom("SFProRounded-Regular", size: 16))
                                 .lineLimit(2)
                                 .foregroundColor(.white)

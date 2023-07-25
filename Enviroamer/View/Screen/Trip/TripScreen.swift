@@ -30,14 +30,8 @@ struct TripScreen: View {
             }
             .padding(24)
             .navigationTitle(Text("Trips"))
-            .navigationBarItems(trailing: Button(action: {
-                
-            }, label: {
-                Image(systemName: "plus.circle.fill")
-                    .foregroundColor(Color("green600"))
-                    .font(.system(size: 30))
-                    .padding(.top,90)
-            }))
+            
+            
             
             
         }

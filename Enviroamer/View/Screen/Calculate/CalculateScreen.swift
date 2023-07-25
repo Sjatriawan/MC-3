@@ -229,9 +229,9 @@ struct TravelPlannerView: View {
 
 
 class ProvinceDetailViewModel: ObservableObject {
-    let province: Province
+    let province: Location
     
-    init(province: Province) {
+    init(province: Location) {
         self.province = province
     }
 }
@@ -240,7 +240,7 @@ class ProvinceDetailViewModel: ObservableObject {
 struct ProvinceDetailView: View {
     @StateObject private var viewModel: ProvinceDetailViewModel
     
-    init(province: Province) {
+    init(province: Location) {
         _viewModel = StateObject(wrappedValue: ProvinceDetailViewModel(province: province))
     }
     

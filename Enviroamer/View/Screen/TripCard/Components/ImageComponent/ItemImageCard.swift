@@ -36,7 +36,7 @@ struct ItemImageCard: View {
                     
                     HStack {
                         VStack(alignment: .leading, spacing: 6){
-                            Text(location.namaProvinsi!)
+                            Text(location.namaProvinsi)
                                 .font(.custom("SFProRounded-Bold", size: 20))
                                 .foregroundColor(.white)
                             Text("13 Nov - 15 Nov")
