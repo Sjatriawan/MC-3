@@ -16,8 +16,9 @@ struct ItemImageCard: View {
                 .resizable()
                
         } placeholder: {
-            Image("placeholder")
-                .resizable()
+            ShimmerView()
+                .frame(width : 342 , height : 400)
+
            
         }
         .aspectRatio( contentMode: .fill)
@@ -37,14 +38,13 @@ struct ItemImageCard: View {
                     HStack {
                         VStack(alignment: .leading, spacing: 6){
                             Text(location.namaProvinsi)
-                                .font(.custom("SFProRounded-Bold", size: 20))
+                                .font(.system(size: 20, weight: .bold, design: .rounded))
                                 .foregroundColor(.white)
                             Text("13 Nov - 15 Nov")
                                 .font(.custom("SFProRounded-Regular", size: 16))
                                 .foregroundColor(.white)
                         }
-//                        .padding(.vertical, 16)
-//                        .padding(.horizontal, 24)
+
                         
                         Spacer()
                         
@@ -72,8 +72,4 @@ struct ItemImageCard: View {
     }
 }
 
-//struct ItemImageCard_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ItemImageCard()
-//    }
-//}
+

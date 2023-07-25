@@ -36,7 +36,7 @@ struct TripScreenList: View {
                 LazyVStack {
                     ForEach(trips, id: \.self) { trip in
                         NavigationLink(destination: {
-//                            TripCardScreen(idProvinsi: trip.provinceName)
+//                            TripCardScreen(location: trip)
                         }, label: {
                             CardViewList(trip: trip)
                                 .frame(width: 322, height: 270)

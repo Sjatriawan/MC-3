@@ -11,9 +11,10 @@ struct DestinationContentTrip: View {
     @EnvironmentObject var modelWisata : TourismViewModel
     
     let idProvinsi : Int
+//    let tourism : Tourism
     
     var body: some View {
-        let data = self.modelWisata.tourisms[idProvinsi].listWisata
+        let data = self.modelWisata.tourisms[idProvinsi - 1].listWisata
         
         NavigationStack {
             VStack(alignment: .leading, spacing: 32){
@@ -50,7 +51,7 @@ struct DestinationContentTrip: View {
 
 struct DestinationContentTrip_Previews: PreviewProvider {
     static var previews: some View {
-        DestinationContentTrip(idProvinsi: 0)
+        DestinationContentTrip(idProvinsi: 1)
             .environmentObject(TourismViewModel())
     }
 }

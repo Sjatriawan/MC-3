@@ -12,7 +12,7 @@ struct TransportationContentTrip: View {
     let idProvinsi : Int
     
     var body: some View {
-        let data = modelWisata.tourisms[idProvinsi].tranportasiProvinsi
+        let data = modelWisata.tourisms[idProvinsi - 1].tranportasiProvinsi
         VStack(alignment: .leading, spacing: 32){
             VStack(alignment: .leading, spacing: 6){
                 Text("Get around the city")
@@ -66,7 +66,7 @@ struct TransportationContentTrip: View {
 
 struct TransportationContentTrip_Previews: PreviewProvider {
     static var previews: some View {
-        TransportationContentTrip(idProvinsi: 0)
+        TransportationContentTrip(idProvinsi: 1)
             .environmentObject(TourismViewModel())
     }
 }

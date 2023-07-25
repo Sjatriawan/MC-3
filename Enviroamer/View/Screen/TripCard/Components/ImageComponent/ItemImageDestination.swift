@@ -20,8 +20,8 @@ struct ItemImageDestination: View {
                         Image
                             .resizable()
                     } placeholder: {
-                        Image("placeholder")
-                            .resizable()
+                        ShimmerView()
+                        
                     }
                 }
             }
