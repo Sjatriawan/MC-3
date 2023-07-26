@@ -130,7 +130,8 @@ class TravelPlannerViewModel: ObservableObject {
         newTrip.totalCarbonEmissions = totalCarbonEmissions
         newTrip.provinceName = provinces[selectedProvinceIndex].namaProvinsi
         newTrip.imageKota = provinces[selectedProvinceIndex].imageKota 
-
+        newTrip.idProvince = Int64(provinces[selectedProvinceIndex].idProvinsi)
+        
         PersistenceController.shared.save()
         isDataSaved = true
     }

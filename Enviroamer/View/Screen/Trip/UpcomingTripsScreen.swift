@@ -15,7 +15,6 @@ struct UpcomingTripsScreen: View {
         NavigationStack {
             VStack{
                     TripScreenList()
-
             }
         }
     }
@@ -28,15 +27,26 @@ struct TripScreenList: View {
         animation: .default)
     private var trips: FetchedResults<Trip>
 
+    @EnvironmentObject var modelWisata : TourismViewModel
+    
     var body: some View {
         ScrollView(showsIndicators: false){
             if trips.isEmpty {
                 EmptyUpcomingTrips()
             } else {
                 LazyVStack {
-                    ForEach(trips, id: \.self) { trip in
+                    ForEach(trips) { trip in
                         NavigationLink(destination: {
-//                            TripCardScreen(location: trip)
+                            
+                            let location = modelWisata.tourisms.first { location in
+                                location.idProvinsi == Int(trip.idProvince)
+                            }
+                            
+                            if let location {
+                                TripCardScreen(location: location)
+                            } else {
+                                Text("Location not found")
+                            }
                         }, label: {
                             CardViewList(trip: trip)
                                 .frame(width: 322, height: 270)

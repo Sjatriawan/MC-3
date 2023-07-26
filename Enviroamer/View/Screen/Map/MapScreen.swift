@@ -146,6 +146,7 @@ struct MapScreen: View {
                 }
                 
             }
+            .toolbar(.hidden, for: .tabBar)
         }
         
     }

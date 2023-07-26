@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ItemImageCard: View {
     var location : Location
-    @State private var isFavorite = false
+    @StateObject private var favVm = FavoritesViewModel()
+    
+//    @State private var isFavorite = false
     var body : some View {
         AsyncImage(url: URL(string: location.imageKota)) { Image in
             Image
@@ -48,18 +50,11 @@ struct ItemImageCard: View {
                         
                         Spacer()
                         
-                        Button {
-                            isFavorite.toggle()
-                        } label: {
-                            !isFavorite ? Image(systemName: "heart")
-                                              .foregroundColor(Color("grey100"))
-                                             
-                            : Image(systemName: "heart.fill")
-                                .foregroundColor(Color("red600"))
-                              
-                        }
-                        .font(.system(size: 24))
-                        .padding(.bottom, 24)
+                        Image(systemName: favVm.isFavorite(location) ? "heart.fill" : "heart")
+                            .foregroundColor(favVm.isFavorite(location) ? Color("red600") : Color("grey100"))
+                            .onTapGesture {
+                                favVm.addToFavorites(location)
+                            }
                         
                     }
                     .padding(.horizontal, 16)

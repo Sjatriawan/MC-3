@@ -29,7 +29,7 @@ struct ExploreScreen: View {
                                 NavigationLink(destination: {
                                     DestinationScreen(destinasi: data[item])
                                 }, label: {
-                                    ItemContentVertical(tourism: data[item])
+                                   ItemContentVertical(tourism: data[item])
                                 })
                             }
                         }
