@@ -40,15 +40,17 @@ struct ItemContentHorizontal: View {
                     HStack {
                         VStack(alignment: .leading){
                             Text(activity.namaAktivitas)
-                                .font(.custom("SFProRounded-Semibold", size: 20))
+                                .font(.system(size: 20, weight: .semibold, design: .rounded))
                                 .padding(.horizontal)
+                                .multilineTextAlignment(.leading)
+                                .lineLimit(2)
                                 .foregroundColor(.white)
                             
                             HStack{
                                 Image("pin_location")
                                     .frame(width: 10 , height: 15)
                                 Text(activity.company)
-                                    .font(.custom("SFProRounded-Regular", size: 15))
+                                    .font(.system(size: 15, weight: .regular, design: .rounded))
                                     .lineLimit(1)
                                     .foregroundColor(.white)
                             }

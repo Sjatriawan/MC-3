@@ -11,7 +11,7 @@ struct DestinationContentTrip: View {
     @EnvironmentObject var modelWisata : TourismViewModel
     
     let idProvinsi : Int
-//    let tourism : Tourism
+    //    let tourism : Tourism
     
     var body: some View {
         let data = self.modelWisata.tourisms[idProvinsi - 1].listWisata
@@ -21,12 +21,11 @@ struct DestinationContentTrip: View {
                 VStack(alignment: .leading, spacing: 6){
                     Text("Unforgettable adventure")
                         .foregroundColor(Color("black800"))
-                        .font(.custom("SFProRounded-Bold", size: 20))
-                    
+                        .font(.system(size: 20, weight: .bold, design: .rounded))
                     
                     Text("Welcome to the wonderland for eco-conscious tourist. Discover many more interesting places that really suit you!")
                         .foregroundColor(Color("black800"))
-                        .font(.custom("SFProRounded-Regular", size: 16))
+                        .font(.system(size: 16, weight: .regular, design: .rounded)) 
                 }
                 
                 

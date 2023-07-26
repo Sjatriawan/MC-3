@@ -25,22 +25,19 @@ struct DestinationScreen: View {
                 //                deskripsi
                 VStack(alignment: .leading, spacing: 8){
                     Text("About \(destinasi.nama)")
-                        .font(.custom("SFProRounded-Bold", size: 20))
-                        .foregroundColor(Color("black800"))
+                        .font(.system(size: 20, weight: .bold, design: .rounded))                        .foregroundColor(Color("black800"))
                     
                     
                     
                     Text(destinasi.deskripsi[0])
                         .lineLimit(4)
-                        .font(.custom("SFProRounded-Regular", size: 16))
-                        .foregroundColor(Color("black800"))
+                        .font(.system(size: 16, weight: .regular, design: .rounded))                        .foregroundColor(Color("black800"))
                     
                     Button {
                         isShowingModalDesc.toggle()
                     } label: {
                         Text("Read More")
-                            .font(.custom("SFProRounded-Bold", size: 16))
-                            .foregroundColor(Color("green600"))
+                            .font(.system(size: 16, weight: .bold, design: .rounded))                            .foregroundColor(Color("green600"))
                             .underline()
                     }
                     
@@ -54,8 +51,7 @@ struct DestinationScreen: View {
                             Spacer()
                         }
                         Text(destinasi.lokasi)
-                            .font(.custom("SFProRounded-Regular", size: 16))
-                            .foregroundColor(Color("black800"))
+                            .font(.system(size: 16, weight: .regular, design: .rounded))                            .foregroundColor(Color("black800"))
                         
                         
                     }
@@ -65,8 +61,7 @@ struct DestinationScreen: View {
                             Image("time")
                         }
                         Text(destinasi.waktuOperasional)
-                            .font(.custom("SFProRounded-Regular", size: 16))
-                            .foregroundColor(Color("black800"))
+                            .font(.system(size: 16, weight: .regular, design: .rounded))                            .foregroundColor(Color("black800"))
                         
                         
                     }
@@ -77,16 +72,14 @@ struct DestinationScreen: View {
                     HStack{
                         Text("Activities")
                             .foregroundColor(Color("black800"))
-                            .font(.custom("SFProRounded-Bold", size: 20))
-                        
+                            .font(.system(size: 20, weight: .bold, design: .rounded))
                         Spacer()
                         
                         Button {
                             isShowingModalActivities.toggle()
                         } label: {
                             Text("View All")
-                                .font(.custom("SFProRounded-Bold", size: 16))
-                                .foregroundColor(Color("green600"))
+                                .font(.system(size: 16, weight: .bold, design: .rounded))                                .foregroundColor(Color("green600"))
                                 .underline()
                         }
                     }
@@ -96,16 +89,14 @@ struct DestinationScreen: View {
                     HStack{
                         Image("activity")
                         Text(destinasi.judulKegiatan[0])
-                            .font(.custom("SFProRounded-Regular", size: 16))
-                            .foregroundColor(Color("black800"))
+                            .font(.system(size: 16, weight: .regular, design: .rounded))                            .foregroundColor(Color("black800"))
                     }
                     .padding(.bottom,24)
                     
                     HStack{
                         Image("activity")
                         Text(destinasi.judulKegiatan[1])
-                            .font(.custom("SFProRounded-Regular", size: 16))
-                            .foregroundColor(Color("black800"))
+                            .font(.system(size: 16, weight: .regular, design: .rounded))                            .foregroundColor(Color("black800"))
                     }
                     
                     
@@ -123,8 +114,7 @@ struct DestinationScreen: View {
                 VStack(alignment: .leading){
                     Text("How to get there?")
                         .foregroundColor(Color("black800"))
-                        .font(.custom("SFProRounded-Bold", size: 20))
-                        .padding(.bottom,8)
+                        .font(.system(size: 20, weight: .bold, design: .rounded))                        .padding(.bottom,8)
                     
                     VStack{
                         ForEach(Array(zip(data, time)), id: \.0){ transport, times in
@@ -132,12 +122,12 @@ struct DestinationScreen: View {
                                 VStack(alignment: .leading) {
                                     Text(transport)
                                         .foregroundColor(Color("black800"))
-                                        .font(.custom("SFProRounded-Bold", size: 17))
+                                        .font(.system(size: 17, weight: .bold, design: .rounded))
                                         .padding(.bottom , 2)
                                     
                                     Text("\(times) from \(kotaPusat)")
                                         .foregroundColor(Color("black800"))
-                                        .font(.custom("SFProRounded-Regular", size: 14))
+                                        .font(.system(size: 14, weight: .regular, design: .rounded))
                                 }
                                 Spacer()
                                 Image(getIconName(for: transport))
@@ -193,6 +183,7 @@ struct DestinationScreen: View {
 struct DestinationScreen_Previews: PreviewProvider {
     static var previews: some View {
         DestinationScreen(destinasi: TourismViewModel().tourisms[0].listWisata[0])
+            .environmentObject(FavoriteDestinationViewModel())
     }
 }
 

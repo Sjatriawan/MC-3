@@ -13,17 +13,17 @@ struct ModalDescOffset: View {
     var body: some View {
         VStack(alignment: .leading,spacing: 32){
             Text("About \(activityOffset.namaAktivitas)")
-                .font(.custom("SFProRounded-Bold", size: 20))
+                .font(.system(size: 20, weight: .bold, design: .rounded))
                 .foregroundColor(Color("black800"))
             
             Text(activityOffset.deskripsiKegiatan[0])
                 .foregroundColor(Color("black800"))
-                .font(.custom("SFProRounded-Regular", size: 16))
-            
+                .font(.system(size: 16, weight: .regular, design: .rounded))
+
             Text(activityOffset.deskripsiKegiatan[1])
                 .foregroundColor(Color("black800"))
-                .font(.custom("SFProRounded-Regular", size: 16))
-          
+                .font(.system(size: 16, weight: .regular, design: .rounded))
+
         }
         .padding(.top, 70)
         .padding(.bottom, 20)

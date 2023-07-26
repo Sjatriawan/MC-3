@@ -18,13 +18,11 @@ struct ActivityOffsetContentTrip: View {
                 VStack(alignment: .leading, spacing: 6){
                     Text("Neutralize carbon footprint")
                         .foregroundColor(Color("black800"))
-                        .font(.custom("SFProRounded-Bold", size: 20))
-                    
+                        .font(.system(size: 20, weight: .bold, design: .rounded))
                     
                     Text("There will always be many ways to minimize or eliminate environmental impact from travelling by offsetting your carbon footprint")
                         .foregroundColor(Color("black800"))
-                        .font(.custom("SFProRounded-Regular", size: 16))
-                }
+                    .font(.system(size: 16, weight: .regular, design: .rounded))                 }
                 
                 ForEach(data.indices){ index in
                     NavigationLink(destination: {

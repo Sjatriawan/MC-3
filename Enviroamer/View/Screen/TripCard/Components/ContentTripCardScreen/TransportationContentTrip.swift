@@ -17,15 +17,13 @@ struct TransportationContentTrip: View {
             VStack(alignment: .leading, spacing: 6){
                 Text("Get around the city")
                     .foregroundColor(Color("black800"))
-                    .font(.custom("SFProRounded-Bold", size: 20))
-                
+                    .font(.system(size: 20, weight: .bold, design: .rounded))
                 
                 Text("People say \"All roads lead to Rome.\" There are also many different ways to reach the same destination. Rethink how you will go there")
                     .foregroundColor(Color("black800"))
-                    .font(.custom("SFProRounded-Regular", size: 16))
-            }
+                .font(.system(size: 16, weight: .regular, design: .rounded))             }
             
-
+            
             
             ForEach(data, id: \.self){ item in
                 HStack(spacing: 14){
@@ -33,10 +31,9 @@ struct TransportationContentTrip: View {
                         .frame(width: 28)
                     Text(item)
                         .foregroundColor(Color("black800"))
-                        .font(.custom("SFProRounded-Regular", size: 17))
-                }
+                    .font(.system(size: 17, weight: .regular, design: .rounded))                 }
             }
-           
+            
         }
     }
     
@@ -59,7 +56,7 @@ struct TransportationContentTrip: View {
         }
     }
     
-   
+    
 }
 
 

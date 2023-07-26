@@ -17,14 +17,14 @@ struct WishlistScreen: View {
             VStack{
                 HStack{
                     Text("Wishlists")
-                        .font(.custom("SFProRounded-Bold", size: 28))
+                        .font(.system(size: 28, weight: .bold, design: .rounded))
                         .foregroundColor(Color("black800"))
                     Spacer()
                    
                     
                 }
                 .padding(.bottom, 13)
-                SlidingTabView(selection: $selectedTab, tabs: ["Trips", "Destinations" , ], font: Font.custom("SFProRounded-Bold", size: 20),
+                SlidingTabView(selection: $selectedTab, tabs: ["Trips", "Destinations" , ], font: Font.system(size: 20 , weight: .bold, design: .rounded),
                                activeAccentColor: Color("black800"), selectionBarColor: Color("black800")
                 )
                 if selectedTab == 0 {
@@ -49,5 +49,6 @@ struct WishlistScreen_Previews: PreviewProvider {
     static var previews: some View {
         WishlistScreen()
             .environmentObject(TourismViewModel())
+            .environmentObject(FavoritesViewModel())
     }
 }

@@ -8,7 +8,9 @@
         <attribute name="imageKota" optional="YES" attributeType="String"/>
         <attribute name="provinceName" optional="YES" attributeType="String"/>
         <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="totalCarbonAkomodasi" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="totalCarbonEmissions" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="totalCarbonTransport" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="transportationMethod" optional="YES" attributeType="String"/>
     </entity>
 </model>

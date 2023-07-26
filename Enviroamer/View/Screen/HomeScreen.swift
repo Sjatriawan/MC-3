@@ -20,7 +20,7 @@ struct HomeScreen: View {
                         Image(systemName: "magnifyingglass")
                     }
                     Text("Explore")
-                        .font(.custom("SFProRounded-Semibold", size: 13))
+                        .font(.system(size: 13, weight: .semibold, design: .rounded))
 
                 }
                 .tag(0)
@@ -34,7 +34,7 @@ struct HomeScreen: View {
                         Image("trip_notActive")
                     }
                     Text("Trips")
-                        .font(.custom("SFProRounded-Semibold", size: 13))
+                        .font(.system(size: 13, weight: .semibold, design: .rounded))
                 }
                 .tag(1)
             
@@ -46,7 +46,7 @@ struct HomeScreen: View {
                         Image("heartNotActive")
                     }
                     Text("Wishlist")
-                        .font(.custom("SFProRounded-Semibold", size: 13))
+                        .font(.system(size: 13, weight: .semibold, design: .rounded))
                 }
                 .tag(2)
         }

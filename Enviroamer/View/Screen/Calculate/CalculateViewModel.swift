@@ -116,6 +116,28 @@ class TravelPlannerViewModel: ObservableObject {
         return totalTransportationCarbon + totalHotelCarbon
     }
     
+//     data untuk carbon transport
+    var totalCarbonTransport  : Double{
+        let distanceInKilometers = calculateDistanceInKilometers()
+        
+        // Calculate carbon emissions for transportation
+        let transportationCarbonEmissions = carbonEmissionsPerKilometer[transportationMethod] ?? 0
+        let totalTransportationCarbon = distanceInKilometers * transportationCarbonEmissions
+        
+        return totalTransportationCarbon
+    }
+    
+//    data untuk carbon akomodasi
+    var totalCarbonAkomodasi : Double{
+        let nightsOfStay = Calendar.current.dateComponents([.day], from: startDate, to: endDate).day ?? 0
+        let hotelCarbonEmissionsPerNight = carbonEmissionsPerNight[hotelStarRating] ?? 0
+        let totalHotelCarbon = Double(nightsOfStay) * hotelCarbonEmissionsPerNight
+        
+        return totalHotelCarbon
+    }
+    
+    
+    
     // Core Data context
     private let context = PersistenceController.shared.container.viewContext
 
@@ -131,10 +153,18 @@ class TravelPlannerViewModel: ObservableObject {
         newTrip.provinceName = provinces[selectedProvinceIndex].namaProvinsi
         newTrip.imageKota = provinces[selectedProvinceIndex].imageKota 
         newTrip.idProvince = Int64(provinces[selectedProvinceIndex].idProvinsi)
+        newTrip.totalCarbonAkomodasi = totalCarbonAkomodasi
+        newTrip.totalCarbonTransport = totalCarbonTransport
+        
         
         PersistenceController.shared.save()
         isDataSaved = true
     }
+
+    func deleteTrip(_ trip : Trip) {
+        context.delete(trip)
+        PersistenceController.shared.save()
+        }
 
     func resetIsDataSaved() {
             isDataSaved = false

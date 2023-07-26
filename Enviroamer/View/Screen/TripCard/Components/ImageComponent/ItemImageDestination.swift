@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ItemImageDestination: View {
     var destination : Tourism
-    @State private var isFavorite : Bool = false
     @State private var selectedIndex = 0
+    @EnvironmentObject var favoriteItem : FavoriteDestinationViewModel
     
     var body: some View {
         ZStack {
@@ -48,7 +48,7 @@ struct ItemImageDestination: View {
                     
                     VStack {
                         HStack(spacing: 5){
-                            ForEach(destination.image.indices, id: \.self) { content in
+                            ForEach(destination.image.indices , id: \.self) { content in
                                 Capsule()
                                     .foregroundColor( content == selectedIndex ? Color("green600") : .white)
                                     .frame(width: 19 , height: 3)
@@ -59,28 +59,28 @@ struct ItemImageDestination: View {
                         HStack {
                             VStack(alignment: .leading, spacing: 6){
                                 Text(destination.nama)
-                                    .font(.custom("SFProRounded-Bold", size: 20))
+                                    .font(.system(size: 20, weight: .bold, design: .rounded))
                                     .foregroundColor(.white)
                                     .lineLimit(1)
                                 
                                 Text(destination.deskripsiSingkat)
-                                    .font(.custom("SFProRounded-Regular", size: 14))
+                                    .font(.system(size: 14, weight: .regular, design: .rounded))
                                     .lineLimit(2)
                                     .foregroundColor(.white)
                             }
                             
                             Spacer()
                             
-                            Button {
-                                isFavorite.toggle()
-                            } label: {
-                                !isFavorite ? Image(systemName: "heart")
-                                    .foregroundColor(Color("grey100"))
-                                
-                                : Image(systemName: "heart.fill")
-                                    .foregroundColor(Color("red600"))
-                                
-                            }
+                            Image(systemName: favoriteItem.isFavorite(destination) ? "heart.fill" : "heart")
+                                .foregroundColor(favoriteItem.isFavorite(destination) ? Color("red600") : Color("grey100"))
+                                .onTapGesture {
+                                    if favoriteItem.isFavorite(destination) {
+                                        favoriteItem.removeFromFavorites(destination)
+                                    } else {
+                                        favoriteItem.addToFavorites(destination)
+                                    }
+                                    
+                                }
                             .font(.system(size: 24))
                             .padding(.bottom, 24)
                         }
@@ -90,11 +90,6 @@ struct ItemImageDestination: View {
                 }
             }
         }
-        
-        
-        
-        
-        
     }
 }
 
