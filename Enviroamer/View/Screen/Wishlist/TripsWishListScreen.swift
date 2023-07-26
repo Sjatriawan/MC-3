@@ -8,23 +8,33 @@
 import SwiftUI
 
 struct TripsWishListScreen: View {
-    @State private var wishlistItems : [Tourism] = []
     @EnvironmentObject var modelWisata : TourismViewModel
-    @State private var isWislisht : Bool = false
+    @StateObject private var favVm  = FavoritesViewModel()
     
     var body: some View {
         NavigationStack {
             VStack{
-                if wishlistItems.isEmpty{
-                    EmptyWishLishScreen(location: modelWisata.tourisms[0], isWislisht: $isWislisht)
-                   
-                } else {
-                    List(wishlistItems.indices){ item in
-                        ItemTripFavorite(location: modelWisata.tourisms[item], isWislisht: $isWislisht)
-                        
-                    }
-                }
+                                if favVm.favorites.isEmpty{
+                                    EmptyWishLishScreen(location: TourismViewModel().tourisms[0])
+                                } else {
+                                    List{
+                                        ForEach(favVm.favorites, id: \.self ) { item in
+                                            NavigationLink {
+                                                TripCardScreen(location: item)
+                                            } label: {
+                                                ItemTripFavorite(location: item)
+
+                                            }
+                                        }
+                                    }
+                                    .listStyle(.plain)
+                                }
+                
             }
+            .onAppear{
+                favVm.loadFavorites()
+            }
+            
         }
     }
 }
@@ -38,8 +48,7 @@ struct TripsWishListScreen_Previews: PreviewProvider {
 
 struct EmptyWishLishScreen : View{
     var location : Location
-    @Binding var isWislisht : Bool
-
+    
     var body : some View {
         VStack(spacing: 12){
             Spacer()
@@ -51,7 +60,7 @@ struct EmptyWishLishScreen : View{
                 .foregroundColor(Color("black800"))
                 .font(.custom("SFProRounded-Regular", size: 14))
             Button {
-                
+                MapScreen()
             } label: {
                 Text("Explore")
                     .foregroundColor(.white)
@@ -67,10 +76,11 @@ struct EmptyWishLishScreen : View{
                 HStack {
                     Text("Try this out")
                         .foregroundColor(Color("black800"))
-                    .font(.custom("SFProRounded-Bold", size: 17))
+                        .font(.custom("SFProRounded-Bold", size: 17))
                     Spacer()
+                    ItemTripFavorite(location: location)
                 }
-                ItemTripFavorite(location: location, isWislisht: $isWislisht)
+                
             }
             
         }
@@ -78,8 +88,8 @@ struct EmptyWishLishScreen : View{
 }
 
 struct ItemTripFavorite : View {
+    @StateObject private var favVm  = FavoritesViewModel()
     var location : Location
-    @Binding var isWislisht : Bool
     var body : some View {
         ZStack{
             Color("neutral200")
@@ -89,8 +99,7 @@ struct ItemTripFavorite : View {
                         .resizable()
                         .frame(width: 139)
                 } placeholder: {
-                    Image("placeholder")
-                        .resizable()
+                    ShimmerView()
                         .frame(width: 139)
                 }
                 .padding(.trailing, 18)
@@ -100,26 +109,17 @@ struct ItemTripFavorite : View {
                     .foregroundColor(Color("black800"))
                 Spacer()
                 
-                VStack {
-                    Button {
-                        isWislisht.toggle()
-                    } label: {
-                        !isWislisht ? Image(systemName: "heart")
-                                          .foregroundColor(Color("red600"))
-                                         
-                        : Image(systemName: "heart.fill")
-                            .foregroundColor(Color("red600"))
-                          
+                Image(systemName: favVm.isFavorite(location) ? "heart.fill" : "heart")
+                    .foregroundColor(favVm.isFavorite(location) ? Color("red600") : Color("grey100"))
+                    .onTapGesture {
+                        favVm.addToFavorites(location)
                     }
                     .font(.system(size: 24))
+                    .padding(.trailing,16)
+                    .padding(.bottom,40)
                     
-                    Spacer()
-                }
-                .padding(.trailing,16)
-                .padding(.top,10)
-              
-               
-
+                
+                
                 
             }
         }

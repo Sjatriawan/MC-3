@@ -15,7 +15,6 @@ struct UpcomingTripsScreen: View {
         NavigationStack {
             VStack{
                     TripScreenList()
-
             }
         }
     }
@@ -28,15 +27,26 @@ struct TripScreenList: View {
         animation: .default)
     private var trips: FetchedResults<Trip>
 
+    @EnvironmentObject var modelWisata : TourismViewModel
+    
     var body: some View {
         ScrollView(showsIndicators: false){
             if trips.isEmpty {
                 EmptyUpcomingTrips()
             } else {
                 LazyVStack {
-                    ForEach(trips, id: \.self) { trip in
+                    ForEach(trips) { trip in
                         NavigationLink(destination: {
-//                            TripCardScreen(location: trip)
+                            
+                            let location = modelWisata.tourisms.first { location in
+                                location.idProvinsi == Int(trip.idProvince)
+                            }
+                            
+                            if let location {
+                                TripCardScreen(location: location)
+                            } else {
+                                Text("Location not found")
+                            }
                         }, label: {
                             CardViewList(trip: trip)
                                 .frame(width: 322, height: 270)
@@ -49,54 +59,63 @@ struct TripScreenList: View {
     }
 }
 
-
-
 struct CardViewList: View {
     let trip: Trip
+    @State private var image: UIImage? = nil
+    @State private var isImageLoaded = false // Track if the image is successfully loaded
 
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            AsyncImage(url: URL(string: trip.imageKota ?? "")) { phase in
-                switch phase {
-                case .empty:
-                   ShimmerView()
-                        .frame(width: 322, height: 230)
-                case .success(let image):
-                    image
-                        .resizable()
-                        .frame(width: 322, height: 230)
-                        .scaledToFit()
-                        
-                case .failure:
-                    // Placeholder view for failed loading
-                    Color.gray
-                @unknown default:
-                    // Placeholder view for unknown cases
-                    Color.gray
-                }
+            if let image = image {
+                Image(uiImage: image)
+                    .resizable()
+                    .frame(width: 322, height: 230)
+                    .scaledToFit()
+                    .cornerRadius(12)
+                    .onAppear {
+                        isImageLoaded = true // Set the flag to indicate that the image is loaded
+                    }
+            } else {
+                ShimmerView()
+                    .frame(width: 322, height: 230)
+                    .cornerRadius(12)
             }
-            .cornerRadius(12)
-
-            Rectangle()
-                .frame(height: 75)
-                .foregroundColor(.black)
-                .opacity(0.4)
-                .blur(radius: 8)
             
-            VStack(alignment: .leading, spacing: 8) {
-                Text("\(trip.provinceName ?? "")")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                Text("\(formattedDate(date: trip.startDate)) - \(formattedDate(date: trip.endDate))")
-                    .font(.subheadline)
-                    .foregroundColor(.white)
+            if isImageLoaded { // Show the text only when the image is loaded
+                Rectangle()
+                    .frame(height: 60)
+                    .foregroundColor(.black)
+                    .opacity(0.4)
+                    .blur(radius: 4)
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("\(trip.provinceName ?? "")")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                    Text("\(formattedDate(date: trip.startDate)) - \(formattedDate(date: trip.endDate))")
+                        .font(.subheadline)
+                        .foregroundColor(.white)
+                }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 8)
             }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 8)
         }
         .cornerRadius(12)
-//        .padding(.horizontal, 16)
         .padding(.vertical, 8)
+        .onAppear {
+            loadImage()
+        }
+    }
+    
+    private func loadImage() {
+        guard let imageURL = URL(string: trip.imageKota ?? "") else { return }
+        URLSession.shared.dataTask(with: imageURL) { data, response, error in
+            if let data = data, let image = UIImage(data: data) {
+                DispatchQueue.main.async {
+                    self.image = image
+                }
+            }
+        }.resume()
     }
     
     private func formattedDate(date: Date?) -> String {
@@ -108,6 +127,7 @@ struct CardViewList: View {
         return ""
     }
 }
+
 
 
 struct CardScreen_Previews: PreviewProvider {

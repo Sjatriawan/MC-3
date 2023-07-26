@@ -15,7 +15,7 @@ struct ItemContentVertical: View {
         AsyncImage(url: URL(string: tourism.image[0])) { Image in
             switch Image{
             case .empty:
-                ShimmerView()
+                ShimmerViewVertical()
                     .frame(width: 156, height: 237)
 
             case .success(let image) :

@@ -15,6 +15,7 @@ class TravelPlannerViewModel: ObservableObject {
     @Published var currentLocation: String = ""
     @Published var selectedProvinceIndex: Int = 0
     
+    @Published var locationDetails: String = ""
 
     @Published var startDate = Date()
     @Published var endDate = Date()
@@ -103,9 +104,9 @@ class TravelPlannerViewModel: ObservableObject {
     
     // Sample data for carbon emissions (in grams) per night for each hotel star rating
     let carbonEmissionsPerNight: [String: Double] = [
-        "1 Star": 100,
-        "2 Stars": 150,
-        "3 Stars": 200
+        "3 Star": 100,
+        "4 Stars": 150,
+        "5 Stars": 200
     ]
     
     func calculateDistanceInKilometers() -> Double {
@@ -151,7 +152,8 @@ class TravelPlannerViewModel: ObservableObject {
         newTrip.totalCarbonEmissions = totalCarbonEmissions
         newTrip.provinceName = provinces[selectedProvinceIndex].namaProvinsi
         newTrip.imageKota = provinces[selectedProvinceIndex].imageKota 
-
+        newTrip.idProvince = Int64(provinces[selectedProvinceIndex].idProvinsi)
+        
         PersistenceController.shared.save()
         isDataSaved = true
     }
@@ -182,4 +184,25 @@ class TravelPlannerViewModel: ObservableObject {
         }
         return []
     }
+    
+    func reverseGeocodeLocation(_ location: CLLocation) {
+            let geocoder = CLGeocoder()
+            geocoder.reverseGeocodeLocation(location) { placemarks, error in
+                if let error = error {
+                    self.locationDetails = "Reverse geocoding failed with error: \(error.localizedDescription)"
+                    return
+                }
+
+                if let placemark = placemarks?.first {
+                    let province = placemark.administrativeArea ?? ""
+                    let city = placemark.locality ?? ""
+
+                
+                    self.locationDetails = "\(city),\(province)"
+                }
+            }
+        }
+
+    
+    
 }

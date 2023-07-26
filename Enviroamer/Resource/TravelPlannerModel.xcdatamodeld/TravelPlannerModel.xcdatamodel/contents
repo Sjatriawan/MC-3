@@ -4,6 +4,7 @@
         <attribute name="distanceToProvince" optional="YES" attributeType="String"/>
         <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="hotelStarRating" optional="YES" attributeType="String"/>
+        <attribute name="idProvince" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="imageKota" optional="YES" attributeType="String"/>
         <attribute name="provinceName" optional="YES" attributeType="String"/>
         <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>

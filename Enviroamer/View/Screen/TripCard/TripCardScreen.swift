@@ -14,6 +14,7 @@ struct TripCardScreen: View {
     @State private var selectedIndex = 0
     
     let location: Location
+//    let trip : Trip? = nil
     
     var body: some View {
         NavigationStack {

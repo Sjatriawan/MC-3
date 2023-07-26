@@ -23,13 +23,13 @@ struct ExploreScreen: View {
                                            searchBar
                                        }
                     Text("Explore New Place")
-                    ScrollView(.horizontal) {
+                    ScrollView(.horizontal, showsIndicators: false) {
                         HStack (spacing: 12){
                             ForEach(data.indices){ item in
                                 NavigationLink(destination: {
                                     DestinationScreen(destinasi: data[item])
                                 }, label: {
-                                    ItemContentVertical(tourism: data[item])
+                                   ItemContentVertical(tourism: data[item])
                                 })
                             }
                         }

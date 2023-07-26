@@ -21,7 +21,7 @@ struct ItemContentHorizontal: View {
             
                
         } placeholder: {
-            ShimmerView()
+            ShimmerViewVertical()
             
         }
         .frame(width: 342, height: 237)

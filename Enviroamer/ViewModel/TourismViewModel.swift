@@ -35,5 +35,7 @@ final class TourismViewModel : ObservableObject{
    }
     
     
-
+    func loadSpesificCity(idProvinsi:Int)->Location?{
+        return tourisms.first(where: {$0.idProvinsi == idProvinsi})
+    }
 }

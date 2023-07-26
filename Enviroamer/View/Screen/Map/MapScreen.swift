@@ -68,8 +68,7 @@ struct CardViewPr: View {
                             .background(Color("green600"))
                             .cornerRadius(12)
                     }
-                    
-                    
+
                     NavigationLink {
                         TripCardScreen(location: location)
                         
@@ -84,11 +83,6 @@ struct CardViewPr: View {
                                     .inset(by: 0.5)
                                     .stroke(Color("green600"), lineWidth: 1)
                             )
-                    }.onChange(of: viewModel.locationManager.lastKnownLocation) { newLocation in
-                        // Perform reverse geocoding when lastKnownLocation changes
-                        if let location = newLocation {
-                            reverseGeocodeLocation(location)
-                        }
                     }
                     
                 }
@@ -105,22 +99,7 @@ struct CardViewPr: View {
         
     }
     
-    func reverseGeocodeLocation(_ location: CLLocation) {
-            let geocoder = CLGeocoder()
-            geocoder.reverseGeocodeLocation(location) { placemarks, error in
-                if let error = error {
-                    locationDetails = "Reverse geocoding failed with error: \(error.localizedDescription)"
-                    return
-                }
-
-                if let placemark = placemarks?.first {
-                    let province = placemark.administrativeArea ?? ""
-
-                
-                    locationDetails = "provinsi\(province)"
-                }
-            }
-        }
+    
        
 }
 
@@ -179,6 +158,7 @@ struct MapScreen: View {
                 }
                 
             }
+            .toolbar(.hidden, for: .tabBar)
         }
         
     }
