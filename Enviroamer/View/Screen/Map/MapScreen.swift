@@ -20,6 +20,10 @@ struct MapAnnotationItem: Identifiable {
 
 struct CardViewPr: View {
     let location: Location
+    @State private var locationDetails: String = ""
+    @StateObject private var viewModel = TravelPlannerViewModel()
+
+
     
     var body: some View {
         ZStack{
@@ -46,9 +50,9 @@ struct CardViewPr: View {
                             Text(location.namaProvinsi)
                                 .foregroundColor(Color.white)
                                 .font(.system(size: 20 , weight:.bold, design: .rounded ))
-                                
-                               
-
+                            
+                            
+                            
                             
                         }
                     }
@@ -64,10 +68,11 @@ struct CardViewPr: View {
                             .background(Color("green600"))
                             .cornerRadius(12)
                     }
-    
-    
+                    
+                    
                     NavigationLink {
                         TripCardScreen(location: location)
+                        
                     } label: {
                         Text("See more")
                             .foregroundColor(Color("green600"))
@@ -79,17 +84,44 @@ struct CardViewPr: View {
                                     .inset(by: 0.5)
                                     .stroke(Color("green600"), lineWidth: 1)
                             )
+                    }.onChange(of: viewModel.locationManager.lastKnownLocation) { newLocation in
+                        // Perform reverse geocoding when lastKnownLocation changes
+                        if let location = newLocation {
+                            reverseGeocodeLocation(location)
+                        }
                     }
+                    
                 }
                 
                 Spacer()
-
+                
             }
+            
         }
         .frame(width: .infinity, height: 186)
         .cornerRadius(12)
         .padding()
+        
+        
     }
+    
+    func reverseGeocodeLocation(_ location: CLLocation) {
+            let geocoder = CLGeocoder()
+            geocoder.reverseGeocodeLocation(location) { placemarks, error in
+                if let error = error {
+                    locationDetails = "Reverse geocoding failed with error: \(error.localizedDescription)"
+                    return
+                }
+
+                if let placemark = placemarks?.first {
+                    let province = placemark.administrativeArea ?? ""
+
+                
+                    locationDetails = "provinsi\(province)"
+                }
+            }
+        }
+       
 }
 
 
@@ -98,6 +130,7 @@ struct MapScreen: View {
     @StateObject private var locationManager = LocationManager()
     @State private var annotations: [MapAnnotationItem] = []
     @State private var selectedAnnotation: MapAnnotationItem? = nil
+    
     //     add this data
     @EnvironmentObject private var modelWisata : TourismViewModel
     var body: some View {
@@ -234,11 +267,9 @@ struct MapView: UIViewRepresentable {
     func updateUIView(_ uiView: MKMapView, context: Context) {
         uiView.removeAnnotations(uiView.annotations)
         uiView.addAnnotations(annotations.map(\.annotation)) // Extract the annotations from the MapAnnotationItem
-        
-        print("Number of annotations:", annotations.count)
-        print("Selected annotation:", selectedAnnotation?.annotation.title ?? "None")
+   
     }
-    
+   
     class Coordinator: NSObject, MKMapViewDelegate {
         var parent: MapView
         

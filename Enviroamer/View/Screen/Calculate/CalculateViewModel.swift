@@ -33,6 +33,27 @@ class TravelPlannerViewModel: ObservableObject {
     var selectedProvince: Location {
         provinces[selectedProvinceIndex]
     }
+
+    
+    func updateDateRange() {
+           // Add logic to update the endDate when the startDate changes if needed
+           // For simplicity, I'll set the endDate to be one day after the startDate
+           let calendar = Calendar.current
+           endDate = calendar.date(byAdding: .day, value: 1, to: startDate)!
+       }
+       
+       var dateRange: ClosedRange<Date> {
+           startDate...endDate
+       }
+       
+       var dateClosedRange: ClosedRange<Date> {
+           // Customize the available date range as per your requirements
+           let calendar = Calendar.current
+           let minDate = calendar.date(byAdding: .day, value: -365, to: Date())!
+           let maxDate = calendar.date(byAdding: .day, value: 365, to: Date())!
+           return minDate...maxDate
+       }
+ 
     
     var daysOfTravel: Int {
         Calendar.current.dateComponents([.day], from: startDate, to: endDate).day ?? 0
