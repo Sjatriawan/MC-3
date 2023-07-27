@@ -61,6 +61,7 @@
 		57FAF1972A6F6EF8001DE034 /* ShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FAF1962A6F6EF8001DE034 /* ShimmerView.swift */; };
 		57FAF1B82A6FD603001DE034 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FAF1B72A6FD603001DE034 /* FavoritesViewModel.swift */; };
 		57FDCCB42A725A32004DE542 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FDCCB32A725A32004DE542 /* UserViewModel.swift */; };
+		57FDCCB62A72AB6D004DE542 /* ModalSheetCarbon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FDCCB52A72AB6D004DE542 /* ModalSheetCarbon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +159,7 @@
 		57FAF1962A6F6EF8001DE034 /* ShimmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerView.swift; sourceTree = "<group>"; };
 		57FAF1B72A6FD603001DE034 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		57FDCCB32A725A32004DE542 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		57FDCCB52A72AB6D004DE542 /* ModalSheetCarbon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSheetCarbon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 			children = (
 				09297B7D2A683389008D6CD0 /* CalculateScreen.swift */,
 				09297B7F2A6833E7008D6CD0 /* CalculateViewModel.swift */,
+				57FDCCB52A72AB6D004DE542 /* ModalSheetCarbon.swift */,
 			);
 			path = Calculate;
 			sourceTree = "<group>";
@@ -684,6 +687,7 @@
 				57559DC92A691CB500A1A476 /* ItemContentVertical.swift in Sources */,
 				57559DC72A691C9600A1A476 /* ExploreScreen.swift in Sources */,
 				57559DE12A69265200A1A476 /* ItemImageCard.swift in Sources */,
+				57FDCCB62A72AB6D004DE542 /* ModalSheetCarbon.swift in Sources */,
 				57559DE72A69CC4100A1A476 /* DestinationScreen.swift in Sources */,
 				57FDCCB42A725A32004DE542 /* UserViewModel.swift in Sources */,
 				57559DBF2A69181600A1A476 /* Tourism.swift in Sources */,
@@ -857,7 +861,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Enviroamer/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5DW5L865S3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -878,7 +882,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.envio.envio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aria.envio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
@@ -1028,7 +1032,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 86T9R8CK49;
+				DEVELOPMENT_TEAM = 5DW5L865S3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EnviroamerWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = EnviroamerWidget;
@@ -1057,7 +1061,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 86T9R8CK49;
+				DEVELOPMENT_TEAM = 5DW5L865S3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EnviroamerWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = EnviroamerWidget;

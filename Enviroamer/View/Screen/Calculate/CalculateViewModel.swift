@@ -93,18 +93,18 @@ class TravelPlannerViewModel: ObservableObject {
     }
 
     let carbonEmissionsPerKilometer: [String: Double] = [
-        "Walk": 5,
-        "Bicycle": 0,
-        "Bus": 105,
-        "Motorcycle": 103,
-        "Ship": 19,
-        "Plane": 255,
-        "Train": 41
+        "Walk": 5.0,
+        "Bicycle": 0.0,
+        "Bus": 105.0,
+        "Motorcycle": 103.0,
+        "Ship": 19.0,
+        "Plane": 255.0,
+        "Train": 41.0
     ]
     
     let carbonEmissionsPerNight: [String: Double] = [
         "3 stars": 35.600,
-        "4 stars": 71.700 ,
+        "4 stars": 71.700,
         "5 stars": 135.000
     ]
     
@@ -137,7 +137,7 @@ class TravelPlannerViewModel: ObservableObject {
         return totalTransportationCarbon + totalHotelCarbon
     }
     
-    var totalCarbonTransport : Double {
+    var totalCarbonTransportation : Double {
         let distanceInKilometers = calculateDistanceInKilometers()
         
         // Calculate carbon emissions for transportation
@@ -146,7 +146,7 @@ class TravelPlannerViewModel: ObservableObject {
          return totalTransportationCarbon
     }
     
-    var totalCarbonAkomodasi : Double {
+    var totalCarbonAkomodation : Double {
         // Calculate carbon emissions for hotel stays
         let nightsOfStay = Calendar.current.dateComponents([.day], from: startDate, to: endDate).day ?? 0
         let hotelCarbonEmissionsPerNight = carbonEmissionsPerNight[hotelStarRating] ?? 0
@@ -169,8 +169,8 @@ class TravelPlannerViewModel: ObservableObject {
         newTrip.provinceName = provinces[selectedProvinceIndex].namaProvinsi
         newTrip.imageKota = provinces[selectedProvinceIndex].imageKota
         newTrip.idProvince = Int64(provinces[selectedProvinceIndex].idProvinsi)
-        newTrip.totalCarbonAkomodasi = totalCarbonAkomodasi
-        newTrip.totalCarbonTransport = totalCarbonTransport
+        newTrip.totalCarbonAkomodasi = totalCarbonAkomodation
+        newTrip.totalCarbonTransport = totalCarbonTransportation
         
         
         PersistenceController.shared.save()

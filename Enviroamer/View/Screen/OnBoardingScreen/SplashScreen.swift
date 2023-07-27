@@ -24,7 +24,7 @@ struct SplashScreen: View {
                     }
                 } else {
                     ContainerRelativeShape()
-                        .fill(Color("neutral 200"))
+                        .fill(Color("neutral200"))
                         .edgesIgnoringSafeArea(.all)
                         .opacity(shouldShowSplash ? 0 : 1)
                     

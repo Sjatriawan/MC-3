@@ -28,7 +28,8 @@ struct TripsWishListScreen: View {
                             }
                         }
                     }
-                    .listStyle(.plain)
+                    .listStyle(.inset)
+
                 }
                 
             }

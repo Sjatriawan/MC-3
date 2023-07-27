@@ -26,13 +26,13 @@ struct ModalSheetActivities: View {
                             Image("activity")
                             Text(itemTitle)
                                 .foregroundColor(Color("black800"))
-                                .font(.system(size: 16, weight: .bold, design: .rounded))
+                                .font(.system(size: 18, weight: .bold, design: .rounded))
                         }
                        
                             
                             Text(itemActivity)
                             .foregroundColor(Color("black800"))
-                            .font(.system(size: 14, weight: .regular, design: .rounded))
+                            .font(.system(size: 16, weight: .regular, design: .rounded))
                                 .padding(.leading,40)
                         
                     }
