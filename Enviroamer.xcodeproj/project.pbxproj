@@ -60,6 +60,7 @@
 		57559DEF2A6A978C00A1A476 /* ModalSheetActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57559DEE2A6A978C00A1A476 /* ModalSheetActivities.swift */; };
 		57FAF1972A6F6EF8001DE034 /* ShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FAF1962A6F6EF8001DE034 /* ShimmerView.swift */; };
 		57FAF1B82A6FD603001DE034 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FAF1B72A6FD603001DE034 /* FavoritesViewModel.swift */; };
+		57FDCCB42A725A32004DE542 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FDCCB32A725A32004DE542 /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +157,7 @@
 		57559DEE2A6A978C00A1A476 /* ModalSheetActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSheetActivities.swift; sourceTree = "<group>"; };
 		57FAF1962A6F6EF8001DE034 /* ShimmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerView.swift; sourceTree = "<group>"; };
 		57FAF1B72A6FD603001DE034 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		57FDCCB32A725A32004DE542 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,8 +311,8 @@
 		092B75002A6637EC00723890 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				091428ED2A722B3A00B5DA0B /* OnBoardingScreen */,
 				092B75032A66389C00723890 /* HomeScreen.swift */,
+				091428ED2A722B3A00B5DA0B /* OnBoardingScreen */,
 				09297B882A68DB17008D6CD0 /* Wishlist */,
 				09297B872A68DB0B008D6CD0 /* Trip */,
 				09297B812A6834E6008D6CD0 /* Map */,
@@ -417,6 +419,7 @@
 				573C401C2A6B918600B12D5E /* ContactViewModel.swift */,
 				57FAF1B72A6FD603001DE034 /* FavoritesViewModel.swift */,
 				091428EB2A720C9900B5DA0B /* FavoritesDestinationViewModel.swift */,
+				57FDCCB32A725A32004DE542 /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 				57559DC72A691C9600A1A476 /* ExploreScreen.swift in Sources */,
 				57559DE12A69265200A1A476 /* ItemImageCard.swift in Sources */,
 				57559DE72A69CC4100A1A476 /* DestinationScreen.swift in Sources */,
+				57FDCCB42A725A32004DE542 /* UserViewModel.swift in Sources */,
 				57559DBF2A69181600A1A476 /* Tourism.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -853,7 +857,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Enviroamer/Preview Content\"";
-				DEVELOPMENT_TEAM = 86T9R8CK49;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

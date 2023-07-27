@@ -43,6 +43,7 @@ struct TripScreen: View {
                 
                 
             }
+            .navigationBarBackButtonHidden(true)
             .padding(24)
 //            .navigationTitle(Text("Trips"))
         }

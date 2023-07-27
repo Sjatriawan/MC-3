@@ -146,26 +146,38 @@ struct TravelPlannerView: View {
     
     
     
-    
-    
     var body: some View {
         NavigationView {
             ScrollView{
                 VStack{
+                    HStack {
+                        Text("\((viewModel.totalCarbonEmissions / 1_000_000), specifier: "%.2f") tons")
+                            .font(.system(size: 20, weight: .bold, design: .rounded))
+                        Image(systemName: "info.circle")
+                            .foregroundColor(Color("green600"))
+                            .font(.system(size : 28))
+                            
+                    }
+                    
+                    Divider()
+                        .frame(height: 1)
+                        .background(.gray)
+                    
                     VStack(alignment: .leading){
                         HStack{
                             
                             Image("location").frame(width: 20, height: 20).padding(.leading)
                             Text(viewModel.locationDetails)
                                 .foregroundColor(Color("green600"))
-                        }   .frame(width: 324, height: 51, alignment: .leading)
-                            .background(.white)
-                            .cornerRadius(12)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .inset(by: 0.5)
-                                    .stroke(Color("green600"), lineWidth: 1)
-                            )
+                        }
+                        .frame(width: 324, height: 51, alignment: .leading)
+                        .background(.white)
+                        .cornerRadius(12)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 12)
+                                .inset(by: 0.5)
+                                .stroke(Color("green600"), lineWidth: 1)
+                        )
                         VStack{
                             Rectangle()
                                 .foregroundColor(.clear)
@@ -366,9 +378,9 @@ struct TravelPlannerView: View {
                         .padding()
                         
                     }
-                  
-      
-             
+                    
+                    
+                    
                     Button {
                         viewModel.saveData()
                     } label: {
@@ -382,8 +394,8 @@ struct TravelPlannerView: View {
                         Alert(title: Text("Data Saved"), message: Text("Your trip data has been saved."), dismissButton: .default(Text("OK")) {
                             viewModel.resetIsDataSaved()
                             
-                          
-
+                            
+                            
                         })
                     }.blur(radius: !isCalenderExpanded ? 0:5)
                     
@@ -398,7 +410,7 @@ struct TravelPlannerView: View {
                 
             }
         }
-        .navigationBarTitle(Text("\((viewModel.totalCarbonEmissions / 1_000_000), specifier: "%.2f") tons")
+        .navigationBarTitle(Text("Plan Your Trip")
         )
         .padding()
         

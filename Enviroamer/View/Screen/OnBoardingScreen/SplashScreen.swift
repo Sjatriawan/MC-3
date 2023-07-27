@@ -1,9 +1,9 @@
-//
-//  SplashScreen.swift
-//  Enviroamer
-//
-//  Created by M Yogi Satriawan on 27/07/23.
-//
+////
+////  SplashScreen.swift
+////  Enviroamer
+////
+////  Created by M Yogi Satriawan on 27/07/23.
+////
 
 
 import SwiftUI
@@ -12,42 +12,51 @@ struct SplashScreen: View {
 
         @State private var shouldShowSplash = false
         @Environment(\.colorScheme) var colorScheme
-        
+    @StateObject  private var userViewModel = UserViewModel()
+
         var body: some View {
             ZStack{
-                ContainerRelativeShape()
-                    .fill(Color("offWhite"))
-                    .edgesIgnoringSafeArea(.all)
-                    .opacity(shouldShowSplash ? 0 : 1)
-                
-                VStack{
-                    if colorScheme == .dark {
-                        Image("applogo") // Gambar untuk dark mode
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 150)
-//                            .opacity(shouldShowSplash ? 0 : 1)
+                if self.shouldShowSplash {
+                    if userViewModel.currentUserSignIn {
+                        HomeScreen()
                     } else {
-                        Image("applogo") // Gambar untuk light mode
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 150)
-//                            .opacity(shouldShowSplash ? 0 : 1)
+                        OnboardingView()
                     }
-    
-                    Text("Travel consciously, Experience differently")
-                        .multilineTextAlignment(.center)
-                        .font(.system(size: 17, weight: .bold, design: .rounded))
-                        .foregroundColor(Color("green600"))
+                } else {
+                    ContainerRelativeShape()
+                        .fill(Color("neutral 200"))
+                        .edgesIgnoringSafeArea(.all)
+                        .opacity(shouldShowSplash ? 0 : 1)
+                    
+                    VStack{
+                        if colorScheme == .dark {
+                            Image("applogo") // Gambar untuk dark mode
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 150)
+    //                            .opacity(shouldShowSplash ? 0 : 1)
+                        } else {
+                            Image("applogo") // Gambar untuk light mode
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 150)
+    //                            .opacity(shouldShowSplash ? 0 : 1)
+                        }
+        
+                        Text("Travel consciously, Experience differently")
+                            .multilineTextAlignment(.center)
+                            .font(.system(size: 17, weight: .bold, design: .rounded))
+                            .foregroundColor(Color("green600"))
+                    }
+                    .opacity(shouldShowSplash ? 0 : 1)
+                    .padding(.horizontal, 24)
                 }
-                .opacity(shouldShowSplash ? 0 : 1)
-                .padding(.horizontal, 24)
             }
-            
             .onAppear {
-                withAnimation(.easeInOut(duration: 2.5)) {
-                    shouldShowSplash = true // Mengubah nilai shouldShowSplash untuk memicu animasi fade
-                    }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    self.shouldShowSplash = true
+                }
+               
             }
         }
     }
