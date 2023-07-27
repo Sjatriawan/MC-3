@@ -32,7 +32,7 @@ struct TravelPlannerView: View {
             ScrollView{
                 VStack{
                     HStack {
-                        Text("\((viewModel.totalCarbonEmissions / 1_000_000), specifier: "%.2f") Tons CO2e")
+                        Text("\((viewModel.totalCarbonEmissions / 1_000_000), specifier: "%.2f") tonsCO₂e")
                             .font(.system(size: 20, weight : .bold , design: .rounded ))
                         
                         Button {
