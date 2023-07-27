@@ -20,21 +20,18 @@ struct ActivityOffsetScreen: View {
                 VStack(alignment: .leading){
                     Text("Support local community!")
                         .foregroundColor(Color("black800"))
-                        .font(.custom("SFProRounded-Bold", size: 20))
-                        .padding(.bottom,10)
+                        .font(.system(size: 20, weight: .bold, design: .rounded))                        .padding(.bottom,10)
                     
                     Text(activityOffset.deskripsiKegiatan[0])
                         .lineLimit(4)
                         .foregroundColor(Color("black800"))
-                        .font(.custom("SFProRounded-Regular", size: 14))
-                        .padding(.bottom,2)
+                        .font(.system(size: 14, weight: .regular, design: .rounded))                        .padding(.bottom,2)
 
                     Button {
                         isShowingModalDesc.toggle()
                     } label: {
                         Text("Read More")
-                            .font(.custom("SFProRounded-Bold", size: 14))
-                            .foregroundColor(Color("green600"))
+                            .font(.system(size: 14, weight: .bold, design: .rounded))                            .foregroundColor(Color("green600"))
                             .underline()
                     }
                     
@@ -43,7 +40,7 @@ struct ActivityOffsetScreen: View {
                 VStack(alignment: .leading, spacing: 12){
                     Text("Contact")
                         .foregroundColor(Color("black800"))
-                        .font(.custom("SFProRounded-Semibold", size: 16))
+                        .font(.system(size: 16, weight: .semibold, design: .rounded))
                     HStack(spacing: 17){
                         ItemContact(image: "website") {
                             contactOffset.openSafari(url: activityOffset.website)
@@ -127,13 +124,11 @@ struct ItemImageOffset: View {
                     HStack {
                         VStack(alignment: .leading, spacing: 6){
                             Text(offset.namaAktivitas)
-                                .font(.custom("SFProRounded-Bold", size: 20))
-                                .foregroundColor(.white)
+                                .font(.system(size: 20, weight: .bold, design: .rounded))                                .foregroundColor(.white)
                                 .lineLimit(2)
                             
                             Text(offset.company)
-                                .font(.custom("SFProRounded-Regular", size: 16))
-                                .lineLimit(2)
+                                .font(.system(size: 16, weight: .regular, design: .rounded))                                .lineLimit(2)
                                 .foregroundColor(.white)
                         }
                         .padding(.leading, 24)

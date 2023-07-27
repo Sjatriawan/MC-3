@@ -366,7 +366,7 @@ struct TravelPlannerView: View {
                         .padding()
                         
                     }
-                    
+                  
       
              
                     Button {
@@ -381,6 +381,9 @@ struct TravelPlannerView: View {
                     }.alert(isPresented: $viewModel.isDataSaved) {
                         Alert(title: Text("Data Saved"), message: Text("Your trip data has been saved."), dismissButton: .default(Text("OK")) {
                             viewModel.resetIsDataSaved()
+                            
+                          
+
                         })
                     }.blur(radius: !isCalenderExpanded ? 0:5)
                     

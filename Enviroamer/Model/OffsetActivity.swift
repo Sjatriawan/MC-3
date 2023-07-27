@@ -13,7 +13,7 @@ struct OffsetActivity  : Codable , Hashable ,Identifiable {
     var company : String
     var deskripsiKegiatan : [String]
     var fotoKegiatan : String
-    var alamat : String
+    var alamat : String?
     var noTelp : String
     var email : String
     var website : String

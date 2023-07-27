@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ExploreScreen: View {
     @EnvironmentObject var modelWisata : TourismViewModel
-    let idProvinsi : Int = 1
+    let idProvinsi : Int = 2
     
     var body: some View {
         let data = self.modelWisata.tourisms[idProvinsi].listWisata
@@ -46,7 +46,7 @@ struct ExploreScreen: View {
                     }
                     
                 }
-                .font(.custom("SFProRounded-Semibold", size: 28))
+                .font(.system(size: 28, weight: .semibold, design: .rounded))
                 .foregroundColor(Color("black800"))
                  .padding(24)
             }
@@ -70,7 +70,7 @@ var searchBar : some View {
         
         VStack(alignment: .leading){
             Text("Plan Your Trip")
-                .font(.custom("SFProRounded-Regular", size: 17))
+                .font(.system(size: 17, weight: .regular, design: .rounded))
                 .foregroundColor(Color("black800"))
             HStack{
                 Text("Destination •")
@@ -79,7 +79,7 @@ var searchBar : some View {
                 
                 Text("Accommodation")
             }
-            .font(.custom("SFProRounded-Regular", size: 12))
+            .font(.system(size: 12, weight: .regular, design: .rounded))
             .foregroundColor(Color("black800"))
          
         }

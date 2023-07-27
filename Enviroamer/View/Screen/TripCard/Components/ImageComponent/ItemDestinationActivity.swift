@@ -14,8 +14,6 @@ struct ItemDestinationActivity: View {
         AsyncImage(url: URL(string: urlString)) { Image in
             Image
                 .resizable()
-         
-                
         } placeholder: {
            ShimmerView()
  
@@ -35,7 +33,7 @@ struct ItemDestinationActivity: View {
                     HStack {
                         Text(title)
                             .foregroundColor(Color("black800"))
-                            .font(.custom("SFProRounded-Semibold", size: 17))
+                            .font(.system(size: 17, weight: .semibold, design: .rounded))
                             .padding(.leading,20)
                             .multilineTextAlignment(.leading)
                             .lineLimit(2)

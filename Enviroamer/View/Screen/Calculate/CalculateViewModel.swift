@@ -25,7 +25,7 @@ class TravelPlannerViewModel: ObservableObject {
 
     
     @Published var transportationMethod = "Walk"
-    @Published var hotelStarRating = "1 Star"
+    @Published var hotelStarRating = "3 stars"
     
     internal var provinces: [Location] {
         loadProvincesFromJSON()
@@ -93,20 +93,19 @@ class TravelPlannerViewModel: ObservableObject {
     }
 
     let carbonEmissionsPerKilometer: [String: Double] = [
-        "Walk": 0,
+        "Walk": 5,
         "Bicycle": 0,
-        "Bus": 90,
-        "Motorcycle": 120,
-        "Ship": 120,
-        "Plane": 285,
-        "Train": 60
+        "Bus": 105,
+        "Motorcycle": 103,
+        "Ship": 19,
+        "Plane": 255,
+        "Train": 41
     ]
     
-    // Sample data for carbon emissions (in grams) per night for each hotel star rating
     let carbonEmissionsPerNight: [String: Double] = [
-        "3 Star": 100,
-        "4 Stars": 150,
-        "5 Stars": 200
+        "3 stars": 100,
+        "4 stars": 150,
+        "5 stars": 200
     ]
     
     func calculateDistanceInKilometers() -> Double {
@@ -138,6 +137,23 @@ class TravelPlannerViewModel: ObservableObject {
         return totalTransportationCarbon + totalHotelCarbon
     }
     
+    var totalCarbonTransportation : Double {
+        let distanceInKilometers = calculateDistanceInKilometers()
+        
+        // Calculate carbon emissions for transportation
+        let transportationCarbonEmissions = carbonEmissionsPerKilometer[transportationMethod] ?? 0
+        let totalTransportationCarbon = distanceInKilometers * transportationCarbonEmissions
+         return totalTransportationCarbon
+    }
+    
+    var totalCarbonAkomodation : Double {
+        // Calculate carbon emissions for hotel stays
+        let nightsOfStay = Calendar.current.dateComponents([.day], from: startDate, to: endDate).day ?? 0
+        let hotelCarbonEmissionsPerNight = carbonEmissionsPerNight[hotelStarRating] ?? 0
+        let totalHotelCarbon = Double(nightsOfStay) * hotelCarbonEmissionsPerNight
+        
+        return totalHotelCarbon
+    }
     // Core Data context
     private let context = PersistenceController.shared.container.viewContext
 
@@ -151,12 +167,20 @@ class TravelPlannerViewModel: ObservableObject {
         newTrip.distanceToProvince = distanceToProvince
         newTrip.totalCarbonEmissions = totalCarbonEmissions
         newTrip.provinceName = provinces[selectedProvinceIndex].namaProvinsi
-        newTrip.imageKota = provinces[selectedProvinceIndex].imageKota 
+        newTrip.imageKota = provinces[selectedProvinceIndex].imageKota
         newTrip.idProvince = Int64(provinces[selectedProvinceIndex].idProvinsi)
+        newTrip.totalCarbonAkomodasi = totalCarbonAkomodation
+        newTrip.totalCarbonTransport = totalCarbonTransportation
+        
         
         PersistenceController.shared.save()
         isDataSaved = true
     }
+    
+    func deleteTrip(_ trip : Trip) {
+            context.delete(trip)
+            PersistenceController.shared.save()
+            }
 
     func resetIsDataSaved() {
             isDataSaved = false

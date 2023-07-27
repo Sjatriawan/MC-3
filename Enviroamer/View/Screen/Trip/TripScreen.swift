@@ -18,7 +18,7 @@ struct TripScreen: View {
             VStack{
                 HStack{
                     Text("Trips")
-                        .font(.custom("SFProRounded-Bold", size: 28))
+                        .font(.system(size: 28, weight: .bold, design: .rounded))
                         .foregroundColor(Color("black800"))
                     Spacer()
                     NavigationLink(destination: {
@@ -31,7 +31,7 @@ struct TripScreen: View {
                     
                 }
                 .padding(.bottom, 13)
-                SlidingTabView(selection: $selectedTab, tabs: ["Upcoming Trips", "Past Trips" , ], font: Font.custom("SFProRounded-Bold", size: 20),
+                SlidingTabView(selection: $selectedTab, tabs: ["Upcoming Trips", "Past Trips" , ], font: Font.system(size: 20 , weight: .bold, design: .rounded),
                                activeAccentColor: Color("black800"), selectionBarColor: Color("black800")
                 )
                 if selectedTab == 0 {

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "093E7C112A6FC03500F6CED1"
-               BuildableName = "EnviroamerWidgetExtension.appex"
+               BuildableName = "EnviroamerWidgetExtension"
                BlueprintName = "EnviroamerWidgetExtension"
                ReferencedContainer = "container:Enviroamer.xcodeproj">
             </BuildableReference>

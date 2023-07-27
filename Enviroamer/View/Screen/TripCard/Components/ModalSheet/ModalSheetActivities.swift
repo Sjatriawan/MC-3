@@ -18,21 +18,21 @@ struct ModalSheetActivities: View {
             VStack(alignment: .leading, spacing: 32){
                 Text("Activities in \(destinasi.nama)")
                     .foregroundColor(Color("black800"))
-                    .font(.custom("SFProRounded-Bold", size: 20))
-                
+                    .font(.system(size: 20, weight: .bold, design: .rounded))
+
                 ForEach(Array(zip(titleActivity, acticity)), id: \.0){ itemTitle, itemActivity in
                     VStack (alignment: .leading, spacing: 8){
                         HStack{
                             Image("activity")
                             Text(itemTitle)
                                 .foregroundColor(Color("black800"))
-                                .font(.custom("SFProRounded-Bold", size: 16))
+                                .font(.system(size: 16, weight: .bold, design: .rounded))
                         }
                        
                             
                             Text(itemActivity)
                             .foregroundColor(Color("black800"))
-                            .font(.custom("SFProRounded-Regular", size: 14))
+                            .font(.system(size: 14, weight: .regular, design: .rounded))
                                 .padding(.leading,40)
                         
                     }

@@ -1,18 +1,16 @@
 //
-//  FavoritesViewModel.swift
+//  FavoritesDestinationViewModel.swift
 //  Enviroamer
 //
-//  Created by tiyas aria on 25/07/23.
+//  Created by M Yogi Satriawan on 27/07/23.
 //
 
 import Foundation
 
-
-
-class FavoritesViewModel : ObservableObject{
-    @Published var favorites: [Location] = [] 
+class FavoriteDestinationViewModel : ObservableObject{
+    @Published var favorites: [Tourism] = []
       
-      private let FAV_KEY = "fav_key"
+      private let FAV_KEY = "fav_key_tourism"
       
       init() {
           loadFavorites()
@@ -26,25 +24,24 @@ class FavoritesViewModel : ObservableObject{
       
       func loadFavorites() {
           if let data = UserDefaults.standard.data(forKey: FAV_KEY),
-             let decodedFavorites = try? JSONDecoder().decode([Location].self, from: data) {
+             let decodedFavorites = try? JSONDecoder().decode([Tourism].self, from: data) {
               favorites = decodedFavorites
           }
       }
       
-      func addToFavorites(_ item: Location) {
+      func addToFavorites(_ item: Tourism) {
           favorites.append(item)
           saveFavorites()
       }
       
-      func removeFromFavorites(_ item: Location) {
+      func removeFromFavorites(_ item: Tourism) {
           if let index = favorites.firstIndex(of: item) {
               favorites.remove(at: index)
               saveFavorites()
           }
       }
       
-      func isFavorite(_ item: Location) -> Bool {
+      func isFavorite(_ item: Tourism) -> Bool {
           favorites.contains(item)
       }
-    
 }

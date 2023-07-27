@@ -15,14 +15,14 @@ struct ItemContentVertical: View {
         AsyncImage(url: URL(string: tourism.image[0])) { Image in
             switch Image{
             case .empty:
-                ShimmerViewVertical()
-                    .frame(width: 156, height: 237)
+
+                ShimmerView()
+
 
             case .success(let image) :
                 image
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 156, height: 237)
                     
             case .failure:
                 Color.gray
@@ -30,6 +30,7 @@ struct ItemContentVertical: View {
                 Color.gray
             }
         }
+        .frame(width: 156, height: 237)
         .cornerRadius(12)
         .overlay{
             VStack{
@@ -44,7 +45,7 @@ struct ItemContentVertical: View {
                     VStack(alignment: .leading){
                         Text(tourism.nama)
                             .lineLimit(2)
-                            .font(.custom("SFProRounded-Semibold", size: 20))
+                            .font(.system(size: 20, weight: .semibold, design: .rounded))
                             .multilineTextAlignment(.leading)
                             .foregroundColor(.white)
                         
@@ -52,7 +53,7 @@ struct ItemContentVertical: View {
                             Image("pin_location")
                                 .frame(width: 10 , height: 15)
                             Text(tourism.lokasi)
-                                .font(.custom("SFProRounded-Regular", size: 13))
+                                .font(.system(size: 13, weight: .regular, design: .rounded))
                                 .lineLimit(1)
                                 .foregroundColor(.white)
                         }
