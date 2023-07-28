@@ -25,7 +25,7 @@ struct ActivityOffsetScreen: View {
                     Text(activityOffset.deskripsiKegiatan[0])
                         .lineLimit(4)
                         .foregroundColor(Color("black800"))
-                        .font(.system(size: 14, weight: .regular, design: .rounded))                        .padding(.bottom,2)
+                        .font(.system(size: 16, weight: .regular, design: .rounded))                        .padding(.bottom,2)
 
                     Button {
                         isShowingModalDesc.toggle()
@@ -54,6 +54,18 @@ struct ActivityOffsetScreen: View {
                         ItemContact(image: "instagram") {
                             contactOffset.openInstagram(url: activityOffset.instagram)
                         }
+                    }
+                }
+                VStack(alignment: .leading){
+                    Divider()
+                        .frame(height: 1)
+                        .background(Color("black800"))
+                    HStack {
+                        Spacer()
+                        Text("Credit: \(activityOffset.resourceImage)")
+                            .font(.system(size: 8, weight: .regular, design: .rounded))
+                        Spacer()
+
                     }
                 }
             }
@@ -107,7 +119,7 @@ struct ItemImageOffset: View {
         } placeholder: {
            ShimmerView()
         }
-        .aspectRatio( contentMode: .fill)
+        .scaledToFill()
         .frame(width : 342,height : 400)
         .cornerRadius(12)
         .overlay{

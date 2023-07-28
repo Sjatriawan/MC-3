@@ -9,7 +9,17 @@ import SwiftUI
 
 struct PastTripScreen: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 20){
+            Spacer()
+            VStack(spacing: 20){
+                Text("No trips recorded yet.")
+                    .font(.system(size: 20 , weight: .bold, design: .rounded))
+                Text("It will be automatically added here as you embark on new adventures!")
+                    .multilineTextAlignment(.center)
+                    .font(.system(size: 14 , weight: .regular, design: .rounded))
+            }
+            Spacer()
+        }.padding(.horizontal,24)
     }
 }
 

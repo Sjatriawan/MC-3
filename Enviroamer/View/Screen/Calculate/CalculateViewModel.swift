@@ -93,19 +93,19 @@ class TravelPlannerViewModel: ObservableObject {
     }
 
     let carbonEmissionsPerKilometer: [String: Double] = [
-        "Walk": 5.0,
-        "Bicycle": 0.0,
-        "Bus": 105.0,
-        "Motorcycle": 103.0,
-        "Ship": 19.0,
-        "Plane": 255.0,
-        "Train": 41.0
+        "Walk": 5,
+        "Bicycle": 0,
+        "Bus": 105,
+        "Motorcycle": 103,
+        "Ship": 19,
+        "Plane": 255,
+        "Train": 41
     ]
     
     let carbonEmissionsPerNight: [String: Double] = [
-        "3 stars": 35.600,
-        "4 stars": 71.700,
-        "5 stars": 135.000
+        "3 stars": 35600,
+        "4 stars": 71700,
+        "5 stars": 135000
     ]
     
     func calculateDistanceInKilometers() -> Double {
@@ -122,7 +122,8 @@ class TravelPlannerViewModel: ObservableObject {
         }
     }
     
-    var totalCarbonEmissions: Double {
+    var totalCarbonEmissions : Double {
+        
         let distanceInKilometers = calculateDistanceInKilometers()
         
         // Calculate carbon emissions for transportation
@@ -135,6 +136,8 @@ class TravelPlannerViewModel: ObservableObject {
         let totalHotelCarbon = Double(nightsOfStay) * hotelCarbonEmissionsPerNight
         
         return totalTransportationCarbon + totalHotelCarbon
+        
+       
     }
     
     var totalCarbonTransportation : Double {
@@ -175,16 +178,22 @@ class TravelPlannerViewModel: ObservableObject {
         
         PersistenceController.shared.save()
         isDataSaved = true
+//        resetIsDataSaved()
     }
     
     func deleteTrip(_ trip : Trip) {
             context.delete(trip)
             PersistenceController.shared.save()
-            }
+    }
 
     func resetIsDataSaved() {
-            isDataSaved = false
-        }
+        selectedProvinceIndex = 0
+        transportationMethod = "Walk"
+        hotelStarRating = "3 stars"
+        startDate = Date()
+        endDate = Date()
+        isDataSaved = false
+    }
     
     // Fetch the saved data from Core Data
     func fetchSavedTrips() -> [Trip] {

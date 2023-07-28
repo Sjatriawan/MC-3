@@ -16,13 +16,9 @@ struct DestinationWishListScreen: View {
                 if favoriteItem.favorites.isEmpty{
                     EmptyDestinationWishLishScreen(destination: TourismViewModel().tourisms[0].listWisata[0])
                 } else {
-                    List{
+                    LazyVStack{
                         ForEach(favoriteItem.favorites, id: \.self ) { item in
-                            NavigationLink {
-                                DestinationScreen(destinasi: item)
-                            } label: {
-                                ItemDestinationTripFavorite(destination: item)
-                            }
+                            ItemDestinationTripFavorite(destination: item)
                         }
                     }
                     .listStyle(.plain)
@@ -88,44 +84,48 @@ struct ItemDestinationTripFavorite : View {
 
     var destination : Tourism
     var body : some View {
-        ZStack{
-            Color("neutral200")
-            HStack{
-                AsyncImage(url: URL(string: destination.image[0])) { Image in
-                    Image
-                        .resizable()
-                        .frame(width: 139)
-                } placeholder: {
-                    ShimmerView()
-                        .frame(width: 139)
-                }
-                .padding(.trailing, 18)
-                
-                Text(destination.nama)
-                    .font(.system(size: 16, weight: .semibold, design: .rounded))
-                    .foregroundColor(Color("black800"))
-                    .lineLimit(2)
-                Spacer()
-                
-                Image(systemName: favoriteItem.isFavorite(destination) ? "heart.fill" : "heart")
-                    .foregroundColor(favoriteItem.isFavorite(destination) ? Color("red600") : Color("grey100"))
-                    .onTapGesture {
-                        if favoriteItem.isFavorite(destination) {
-                            favoriteItem.removeFromFavorites(destination)
-                        } else {
-                            favoriteItem.addToFavorites(destination)
-                        }
+        NavigationLink(destination: {
+            DestinationScreen(destinasi: destination)
+        }, label: {
+            ZStack{
+                Color("neutral200")
+                HStack{
+                    AsyncImage(url: URL(string: destination.image[0])) { Image in
+                        Image
+                            .resizable()
+                            .frame(width: 139)
+                    } placeholder: {
+                        ShimmerView()
+                            .frame(width: 139)
                     }
-                    .font(.system(size: 24))
-                    .padding(.trailing,16)
-                    .padding(.bottom,40)
+                    .padding(.trailing, 18)
                     
-                
-                
-                
+                    Text(destination.nama)
+                        .font(.system(size: 16, weight: .semibold, design: .rounded))
+                        .foregroundColor(Color("black800"))
+                        .lineLimit(2)
+                    Spacer()
+                    
+                    Image(systemName: favoriteItem.isFavorite(destination) ? "heart.fill" : "heart")
+                        .foregroundColor(favoriteItem.isFavorite(destination) ? Color("red600") : Color("grey100"))
+                        .onTapGesture {
+                            if favoriteItem.isFavorite(destination) {
+                                favoriteItem.removeFromFavorites(destination)
+                            } else {
+                                favoriteItem.addToFavorites(destination)
+                            }
+                        }
+                        .font(.system(size: 24))
+                        .padding(.trailing,16)
+                        .padding(.bottom,40)
+                        
+                    
+                    
+                    
+                }
             }
-        }
-        .cornerRadius(12)
+            .cornerRadius(12)
         .frame(height: 105)
+        })
     }
 }

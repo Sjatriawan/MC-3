@@ -18,4 +18,6 @@ struct OffsetActivity  : Codable , Hashable ,Identifiable {
     var email : String
     var website : String
     var instagram : String
+    var resourceImage : String
+
 }

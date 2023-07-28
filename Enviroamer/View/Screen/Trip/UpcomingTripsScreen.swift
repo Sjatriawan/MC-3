@@ -8,16 +8,11 @@
 import SwiftUI
 
 struct UpcomingTripsScreen: View {
-    @State private var upcomingTripsItems : [Trips] = []
-    @EnvironmentObject var modelWisata : TourismViewModel
+//    @State private var upcomingTripsItems : [Trips] = []
+//    @EnvironmentObject var modelWisata : TourismViewModel
     
     var body: some View {
-        NavigationStack {
-            VStack{
-
-                TripScreenList()
-            }
-        }
+        TripScreenList()
     }
 }
 
@@ -32,29 +27,32 @@ struct TripScreenList: View {
     
     
     var body: some View {
-        ScrollView(showsIndicators: false){
+        VStack{
             if trips.isEmpty {
                 EmptyUpcomingTrips()
+                    .padding(.top, 50)
             } else {
-                LazyVStack {
-                    ForEach(trips) { trip in
-                        NavigationLink(destination: {
-                            
-                            let location = modelWisata.tourisms.first { location in
-                                location.idProvinsi == Int(trip.idProvince)
-                            }
-                            
-                            if let location {
-                                TripCardScreen(location: location)
-                            } else {
-                                Text("Location not found")
-                            }
+                ScrollView(showsIndicators: false) {
+                    LazyVStack{
+                        ForEach(trips) { trip in
+                            NavigationLink(destination: {
+                                
+                                let location = modelWisata.tourisms.first { location in
+                                    location.idProvinsi == Int(trip.idProvince)
+                                }
+                                
+                                if let location {
+                                    TripCardScreen(location: location)
+                                } else {
+                                    Text("Location not found")
+                                }
 
-                        }, label: {
-                            CardViewList(trip: trip)
-                                .frame(width: 322, height: 270)
-                        })
+                            }, label: {
+                                CardViewList(trip: trip)
+                                    .frame(width: 322, height: 270)
+                            })
 
+                        }
                     }
                 }
                 //            .padding()
@@ -167,6 +165,8 @@ struct UpcomingTripsScreen_Previews: PreviewProvider {
 }
 
 struct EmptyUpcomingTrips : View {
+    @EnvironmentObject var travelViewModel : TravelPlannerViewModel
+
     var body : some View {
         NavigationStack {
             VStack(spacing: 12){

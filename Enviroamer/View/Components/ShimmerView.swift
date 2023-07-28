@@ -35,30 +35,30 @@ public struct ShimmerView: View {
                     }
                 }
             
-            VStack{
-                RoundedRectangle(cornerRadius: Constants.cornerRadius)
-                    .fill(Color.gray)
-                    .opacity(opacity)
-                    .transition(.opacity)
-                    .onAppear {
-                        let baseAnimation = Animation.easeInOut(duration: Constants.duration)
-                        let repeated = baseAnimation.repeatForever(autoreverses: true)
-                        withAnimation(repeated) {
-                            self.opacity = Constants.maxOpacity
-                        }
-                    }.frame(width:250, height: 30)
-                RoundedRectangle(cornerRadius: Constants.cornerRadius)
-                    .fill(Color.gray)
-                    .opacity(opacity)
-                    .transition(.opacity)
-                    .onAppear {
-                        let baseAnimation = Animation.easeInOut(duration: Constants.duration)
-                        let repeated = baseAnimation.repeatForever(autoreverses: true)
-                        withAnimation(repeated) {
-                            self.opacity = Constants.maxOpacity
-                        }
-                    }.frame(width:250, height: 30)
-            }.position(x:150, y: 180)
+//            VStack{
+//                RoundedRectangle(cornerRadius: Constants.cornerRadius)
+//                    .fill(Color.gray)
+//                    .opacity(opacity)
+//                    .transition(.opacity)
+//                    .onAppear {
+//                        let baseAnimation = Animation.easeInOut(duration: Constants.duration)
+//                        let repeated = baseAnimation.repeatForever(autoreverses: true)
+//                        withAnimation(repeated) {
+//                            self.opacity = Constants.maxOpacity
+//                        }
+//                    }.frame(width:250, height: 30)
+//                RoundedRectangle(cornerRadius: Constants.cornerRadius)
+//                    .fill(Color.gray)
+//                    .opacity(opacity)
+//                    .transition(.opacity)
+//                    .onAppear {
+//                        let baseAnimation = Animation.easeInOut(duration: Constants.duration)
+//                        let repeated = baseAnimation.repeatForever(autoreverses: true)
+//                        withAnimation(repeated) {
+//                            self.opacity = Constants.maxOpacity
+//                        }
+//                    }.frame(width:250, height: 30)
+//            }.position(x:150, y: 180)
         }
         
     }

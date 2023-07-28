@@ -25,10 +25,9 @@ struct TravelPlannerView: View {
 //    @Environment(\.managedObjectContext) var moc
     @Environment(\.dismiss) var dismiss
     
-
-    
+   
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView{
                 VStack{
                     HStack {
@@ -61,36 +60,37 @@ struct TravelPlannerView: View {
                                     .stroke(Color("green600"), lineWidth: 1)
                             )
                         VStack{
-                            Rectangle()
-                                .foregroundColor(.clear)
-                                .frame(width: 3.09524, height: 3.09524)
-                                .background(Color(red: 0.25, green: 0.55, blue: 0.25))
-                                .cornerRadius(3.09524)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 3.09524)
-                                        .inset(by: 0.5)
-                                        .stroke(Color(red: 0.25, green: 0.55, blue: 0.25), lineWidth: 1)
-                                )
-                            Rectangle()
-                                .foregroundColor(.clear)
-                                .frame(width: 3.09524, height: 3.09524)
-                                .background(Color(red: 0.25, green: 0.55, blue: 0.25))
-                                .cornerRadius(3.09524)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 3.09524)
-                                        .inset(by: 0.5)
-                                        .stroke(Color(red: 0.25, green: 0.55, blue: 0.25), lineWidth: 1)
-                                )
-                            Rectangle()
-                                .foregroundColor(.clear)
-                                .frame(width: 3.09524, height: 3.09524)
-                                .background(Color(red: 0.25, green: 0.55, blue: 0.25))
-                                .cornerRadius(3.09524)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 3.09524)
-                                        .inset(by: 0.5)
-                                        .stroke(Color(red: 0.25, green: 0.55, blue: 0.25), lineWidth: 1)
-                                )
+//                             ini buat apa ya gi , rectangle ini , soalnya aku komen gak ngaruh apa2 di view nya ?
+//                            Rectangle()
+//                                .foregroundColor(.clear)
+//                                .frame(width: 3.09524, height: 3.09524)
+//                                .background(Color(red: 0.25, green: 0.55, blue: 0.25))
+//                                .cornerRadius(3.09524)
+//                                .overlay(
+//                                    RoundedRectangle(cornerRadius: 3.09524)
+//                                        .inset(by: 0.5)
+//                                        .stroke(Color(red: 0.25, green: 0.55, blue: 0.25), lineWidth: 1)
+//                                )
+//                            Rectangle()
+//                                .foregroundColor(.clear)
+//                                .frame(width: 3.09524, height: 3.09524)
+//                                .background(Color(red: 0.25, green: 0.55, blue: 0.25))
+//                                .cornerRadius(3.09524)
+//                                .overlay(
+//                                    RoundedRectangle(cornerRadius: 3.09524)
+//                                        .inset(by: 0.5)
+//                                        .stroke(Color(red: 0.25, green: 0.55, blue: 0.25), lineWidth: 1)
+//                                )
+//                            Rectangle()
+//                                .foregroundColor(.clear)
+//                                .frame(width: 3.09524, height: 3.09524)
+//                                .background(Color(red: 0.25, green: 0.55, blue: 0.25))
+//                                .cornerRadius(3.09524)
+//                                .overlay(
+//                                    RoundedRectangle(cornerRadius: 3.09524)
+//                                        .inset(by: 0.5)
+//                                        .stroke(Color(red: 0.25, green: 0.55, blue: 0.25), lineWidth: 1)
+//                                )
                         }
                         
                     }.frame(maxWidth: .infinity, alignment: .leading).padding(.horizontal)
@@ -112,7 +112,7 @@ struct TravelPlannerView: View {
                                         
                                         
                                         Text(viewModel.provinces[index].namaProvinsi)
-                                            .foregroundColor(index == viewModel.selectedProvinceIndex ? .green : .primary).font(.system(size: 12))
+                                            .foregroundColor(index == viewModel.selectedProvinceIndex ? Color("green600") : .primary).font(.system(size: 12))
                                         
                                     }
                                 }
@@ -126,20 +126,21 @@ struct TravelPlannerView: View {
                     calenderView
                     transportView
                     hotelView
+                    
                   
                     Button {
                         viewModel.saveData()
-                        dismiss()
                     } label: {
                         HStack(alignment: .center, spacing: 10){
                             Text("Save").foregroundColor(.white)
                         }.padding(.horizontal, 24)
                             .padding(.vertical, 12)
-                            .background(Color(red: 0.25, green: 0.55, blue: 0.25))
+                            .background(Color("green600"))
                             .cornerRadius(10)
                     }.alert("Data Saved", isPresented: $viewModel.isDataSaved) {
                         Button("Ok") {
                             viewModel.resetIsDataSaved()
+                            dismiss()
                         }
                     }message: {
                          Text("Your data success added in trip screen")
@@ -259,16 +260,16 @@ extension TravelPlannerView {
                             HStack {
                                 Text(method.rawValue)
                                     .frame(width: 90, height: 40, alignment: .leading).padding(.leading)
-                                    .foregroundColor(viewModel.transportationMethod == method.rawValue ? .white : .green)
+                                    .foregroundColor(viewModel.transportationMethod == method.rawValue ? .white : Color("green600"))
                                     .background(
                                         ZStack {
                                             if viewModel.transportationMethod != method.rawValue {
                                                 RoundedRectangle(cornerRadius: 12)
-                                                    .stroke(Color.green, lineWidth: 2) // Add outline border when not selected
+                                                    .stroke(Color("green600"), lineWidth: 2) // Add outline border when not selected
                                             }
                                         }
                                     )
-                                    .background(viewModel.transportationMethod == method.rawValue ? Color.green : Color.clear)
+                                    .background(viewModel.transportationMethod == method.rawValue ? Color("green600") : Color.clear)
                                     .cornerRadius(12)
                                 
                             }.padding(.bottom)
@@ -316,16 +317,16 @@ extension TravelPlannerView {
                             HStack {
                                 Text(method.rawValue)
                                     .frame(width: 90, height: 40, alignment: .leading).padding(.leading)
-                                    .foregroundColor(viewModel.hotelStarRating == method.rawValue ? .white : .green)
+                                    .foregroundColor(viewModel.hotelStarRating == method.rawValue ? .white : Color("green600"))
                                     .background(
                                         ZStack {
                                             if viewModel.hotelStarRating != method.rawValue {
                                                 RoundedRectangle(cornerRadius: 12)
-                                                    .stroke(Color.green, lineWidth: 2) // Add outline border when not selected
+                                                    .stroke(Color("green600"), lineWidth: 2) // Add outline border when not selected
                                             }
                                         }
                                     )
-                                    .background(viewModel.hotelStarRating == method.rawValue ? Color.green : Color.clear)
+                                    .background(viewModel.hotelStarRating == method.rawValue ? Color("green600") : Color.clear)
                                     .cornerRadius(12)
                                 
                             }.padding(.bottom)
@@ -404,16 +405,16 @@ struct CalendarView: View {
                     isSelectingStartDate = true
                 }
                 .padding()
-                .foregroundColor(isSelectingStartDate ? .white : .green)
-                .background(isSelectingStartDate ? Color.green : Color.clear)
+                .foregroundColor(isSelectingStartDate ? .white : Color("green600"))
+                .background(isSelectingStartDate ? Color("green600") : Color.clear)
                 .cornerRadius(42)
                 Spacer()
                 Button("End Date") {
                     isSelectingStartDate = false
                 }
                 .padding()
-                .foregroundColor(isSelectingStartDate ? .green : .white)
-                .background(isSelectingStartDate ? Color.clear : Color.green)
+                .foregroundColor(isSelectingStartDate ? Color("green600") : .white)
+                .background(isSelectingStartDate ? Color.clear : Color("green600"))
                 .cornerRadius(42)
             }
             .padding(.top, 8)
@@ -459,7 +460,6 @@ enum HotelStarMethod: String, CaseIterable, Identifiable {
     case tri = "3 stars"
     case four = "4 stars"
     case five = "5 stars"
-    
-    
+
     var id: String { rawValue }
 }

@@ -63,6 +63,7 @@ struct ItemImageCard: View {
                                 }
                                 
                             }
+                            .font(.system(size: 24))
                         
                     }
                     .padding(.horizontal, 16)

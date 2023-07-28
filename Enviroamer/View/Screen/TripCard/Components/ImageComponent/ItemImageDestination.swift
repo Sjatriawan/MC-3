@@ -21,15 +21,14 @@ struct ItemImageDestination: View {
                 ShimmerView()
                 
             }
+            .scaledToFill()
             .frame(width : 342,height : 400)
-            .aspectRatio(contentMode: .fit)
             .clipShape(CustomCorner(radius: 12, corners: [
                 .topLeft,
                 .topRight,
                 .bottomLeft,
                 .bottomRight
             ]))
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             
             
            

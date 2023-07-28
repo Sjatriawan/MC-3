@@ -147,6 +147,19 @@ struct DestinationScreen: View {
                     }
                 }
                 
+                VStack(alignment: .leading){
+                    Divider()
+                        .frame(height: 1)
+                        .background(Color("black800"))
+                    HStack {
+                        Spacer()
+                        Text("Credit: \(destinasi.resourceImage)")
+                            .font(.system(size: 8, weight: .regular, design: .rounded))
+                        Spacer()
+
+                    }
+                }
+                
                 
             }
             .sheet(isPresented: $isShowingModalDesc, content: {

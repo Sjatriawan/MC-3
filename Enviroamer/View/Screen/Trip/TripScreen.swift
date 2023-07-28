@@ -12,7 +12,6 @@ struct TripScreen: View {
     @State private var selectedTab : Int = 0
     @EnvironmentObject var modelWisata : TourismViewModel
     
-    
     var body: some View {
         NavigationStack{
             VStack{
@@ -54,5 +53,6 @@ struct TripScreen_Previews: PreviewProvider {
     static var previews: some View {
         TripScreen()
             .environmentObject(TourismViewModel())
+            .environmentObject(TravelPlannerViewModel())
     }
 }

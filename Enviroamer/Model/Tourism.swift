@@ -26,6 +26,7 @@ struct Tourism : Codable, Identifiable, Hashable {
     var transportasiWisata : [String]
     var timeToDestination : [String]
     var kotaPusat : String
+    var resourceImage : String
     
     var coordinateWisata :  Coordinates
     var locationCoordinate : CLLocationCoordinate2D{
