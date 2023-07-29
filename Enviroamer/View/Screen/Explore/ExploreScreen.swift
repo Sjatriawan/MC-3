@@ -10,6 +10,7 @@ import SwiftUI
 struct ExploreScreen: View {
     @EnvironmentObject var modelWisata : TourismViewModel
     let idProvinsi : Int = 2
+    let idOffset: Int = 1
     
     var body: some View {
         let data = self.modelWisata.tourisms[idProvinsi].listWisata

@@ -8,7 +8,6 @@
 import Foundation
 
 
-
 class FavoritesViewModel : ObservableObject{
     @Published var favorites: [Location] = [] 
       

@@ -60,37 +60,7 @@ struct TravelPlannerView: View {
                                     .stroke(Color("green600"), lineWidth: 1)
                             )
                         VStack{
-//                             ini buat apa ya gi , rectangle ini , soalnya aku komen gak ngaruh apa2 di view nya ?
-//                            Rectangle()
-//                                .foregroundColor(.clear)
-//                                .frame(width: 3.09524, height: 3.09524)
-//                                .background(Color(red: 0.25, green: 0.55, blue: 0.25))
-//                                .cornerRadius(3.09524)
-//                                .overlay(
-//                                    RoundedRectangle(cornerRadius: 3.09524)
-//                                        .inset(by: 0.5)
-//                                        .stroke(Color(red: 0.25, green: 0.55, blue: 0.25), lineWidth: 1)
-//                                )
-//                            Rectangle()
-//                                .foregroundColor(.clear)
-//                                .frame(width: 3.09524, height: 3.09524)
-//                                .background(Color(red: 0.25, green: 0.55, blue: 0.25))
-//                                .cornerRadius(3.09524)
-//                                .overlay(
-//                                    RoundedRectangle(cornerRadius: 3.09524)
-//                                        .inset(by: 0.5)
-//                                        .stroke(Color(red: 0.25, green: 0.55, blue: 0.25), lineWidth: 1)
-//                                )
-//                            Rectangle()
-//                                .foregroundColor(.clear)
-//                                .frame(width: 3.09524, height: 3.09524)
-//                                .background(Color(red: 0.25, green: 0.55, blue: 0.25))
-//                                .cornerRadius(3.09524)
-//                                .overlay(
-//                                    RoundedRectangle(cornerRadius: 3.09524)
-//                                        .inset(by: 0.5)
-//                                        .stroke(Color(red: 0.25, green: 0.55, blue: 0.25), lineWidth: 1)
-//                                )
+//
                         }
                         
                     }.frame(maxWidth: .infinity, alignment: .leading).padding(.horizontal)
@@ -105,6 +75,8 @@ struct TravelPlannerView: View {
                                             .resizable()
                                             .aspectRatio(contentMode: .fit)
                                             .frame(width: 80, height: 80)
+                                            .opacity(index == viewModel.selectedProvinceIndex ? 1.0 : 0.4) // Set opacity based on selection
+
                                             .overlay(
                                                 RoundedRectangle(cornerRadius: 10) // Add RoundedRectangle as overlay
                                                     .stroke(index == viewModel.selectedProvinceIndex ? Color("green600") : Color.gray, lineWidth: 2) // Apply different stroke color based on selection
@@ -122,31 +94,11 @@ struct TravelPlannerView: View {
                     }.frame(height: 120)
                         .blur(radius: !isCalenderExpanded ? 0:5)
                     //
-//                    call the extension , buat extension untuk mempermudah aturan viewnya
                     calenderView
                     transportView
                     hotelView
-                    
-                  
-                    Button {
-                        viewModel.saveData()
-                    } label: {
-                        HStack(alignment: .center, spacing: 10){
-                            Text("Save").foregroundColor(.white)
-                        }.padding(.horizontal, 24)
-                            .padding(.vertical, 12)
-                            .background(Color("green600"))
-                            .cornerRadius(10)
-                    }.alert("Data Saved", isPresented: $viewModel.isDataSaved) {
-                        Button("Ok") {
-                            viewModel.resetIsDataSaved()
-                            dismiss()
-                        }
-                    }message: {
-                         Text("Your data success added in trip screen")
-                    }
-                    .blur(radius: !isCalenderExpanded ? 0:5)
-                    
+                
+              
                 }
                 .sheet(isPresented: $isShowingModal, content: {
                     ModalSheetCarbon()
@@ -160,6 +112,27 @@ struct TravelPlannerView: View {
                     }
                 }
             }
+            Button {
+                viewModel.saveData()
+            } label: {
+                HStack(alignment: .center, spacing: 10){
+                    Text("Save").foregroundColor(.white)
+                }.padding(.horizontal, 24)
+                    .padding(.vertical, 12)
+                    .background(Color("green600"))
+                    .cornerRadius(16)
+            }.alert("Data Saved", isPresented: $viewModel.isDataSaved) {
+                Button("Ok") {
+                    viewModel.resetIsDataSaved()
+                    dismiss()
+                }
+            }message: {
+                 Text("Your data success added in trip screen")
+            }
+            .blur(radius: !isCalenderExpanded ? 0:5)
+            .frame(width: 330,alignment: .trailing).padding()
+           
+            
            
         }
         .navigationBarTitle("Plan Your Trip")
@@ -195,11 +168,13 @@ extension TravelPlannerView {
             Button(action: {
                 withAnimation {
                     isCalenderExpanded.toggle()
+                    isTransportExpanded = false
+                    isHotelExpanded = false
                 }
             }) {
                 RoundedRectangle(cornerRadius: 12)
                     .stroke(Color(red: 0.82, green: 0.82, blue: 0.82), lineWidth: 1)
-                    .frame(width: 324, height: 51, alignment: .leading)
+                    .frame(height: 51, alignment: .leading)
                     .overlay(
                         VStack{
                             HStack{
@@ -208,12 +183,13 @@ extension TravelPlannerView {
                                 Text("\(formatteDate(viewModel.startDate)) - \(formatteDate(viewModel.endDate))")
                             }
                             
-                        }.padding()
+                        }.padding(.horizontal)
                         
                     )
             }
             .contentShape(Rectangle())
             .blur(radius: !isCalenderExpanded ? 0:0)
+            .padding(.horizontal)
             
             
             if isCalenderExpanded {
@@ -226,73 +202,75 @@ extension TravelPlannerView {
         }
     }
     
-    private var transportView : some View {
-        VStack{
+    private var transportView: some View {
+        VStack {
             Button(action: {
                 withAnimation {
                     isTransportExpanded.toggle()
+                    isHotelExpanded = false
+                    isCalenderExpanded = false
                 }
             }) {
                 RoundedRectangle(cornerRadius: 12)
                     .stroke(Color(red: 0.82, green: 0.82, blue: 0.82), lineWidth: 1)
-                    .frame(width: 324, height: 51, alignment: .leading)
+                    .frame(height: 51, alignment: .leading)
                     .overlay(
-                        VStack{
-                            HStack{
+                        VStack {
+                            HStack {
                                 Text("How will you get there?")
                                 Spacer()
                                 Text("\(viewModel.transportationMethod)")
                             }
-                            
-                        }.padding()
-                        
+                        }.padding(.horizontal)
                     )
             }
             .contentShape(Rectangle())
-            .blur(radius: !isCalenderExpanded ? 0:5)
+            .blur(radius: !isCalenderExpanded ? 0 : 5)
+            .padding(.horizontal)
             
+
             if isTransportExpanded {
-                LazyVGrid(columns: gridLayouta, spacing: 0) {
-                    ForEach(TransportationMethod.allCases) { method in
-                        Button(action: {
-                            viewModel.transportationMethod = method.rawValue
-                        }) {
-                            HStack {
-                                Text(method.rawValue)
-                                    .frame(width: 90, height: 40, alignment: .leading).padding(.leading)
-                                    .foregroundColor(viewModel.transportationMethod == method.rawValue ? .white : Color("green600"))
-                                    .background(
-                                        ZStack {
-                                            if viewModel.transportationMethod != method.rawValue {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))], spacing: 0) {
+                                    ForEach(TransportationMethod.allCases, id: \.self) { method in
+                                        Button(action: {
+                                            viewModel.transportationMethod = method.rawValue
+                                        }) {
+                                            ZStack {
                                                 RoundedRectangle(cornerRadius: 12)
-                                                    .stroke(Color("green600"), lineWidth: 2) // Add outline border when not selected
+                                                    .stroke(Color("green600"), lineWidth: 2)
+                                                    .background(viewModel.transportationMethod == method.rawValue ? Color("green600") : Color.clear)
+                                                    .cornerRadius(12)
+
+                                                HStack {
+                                                    Image(systemName: method.iconName) // Use the associated icon for each item
+                                                        .foregroundColor(viewModel.transportationMethod == method.rawValue ? .white : Color("green600"))
+                                                        .frame(width: 30, height: 30) // Adjust the size of the icon as needed
+
+                                                    Text(method.rawValue)
+                                                        .frame(width: 60, height: 40, alignment: .leading)
+                                                        .foregroundColor(viewModel.transportationMethod == method.rawValue ? .white : Color("green600"))
+                                                }
                                             }
+                                            .padding(.bottom)
                                         }
-                                    )
-                                    .background(viewModel.transportationMethod == method.rawValue ? Color("green600") : Color.clear)
-                                    .cornerRadius(12)
-                                
-                            }.padding(.bottom)
-                        }
-                    }
-                }
-                .padding()
-                
+                                    }
+                                }
+                                .padding()
             }
         }
-        
     }
-    
+
     private var hotelView : some View{
         VStack{
             Button(action: {
                 withAnimation {
                     isHotelExpanded.toggle()
+                    isTransportExpanded = false
                 }
             }) {
                 RoundedRectangle(cornerRadius: 12)
                     .stroke(Color(red: 0.82, green: 0.82, blue: 0.82), lineWidth: 1)
-                    .frame(width: 324, height: 51, alignment: .leading)
+                    .frame(height: 51, alignment: .leading)
                     .overlay(
                         VStack{
                             HStack{
@@ -301,12 +279,13 @@ extension TravelPlannerView {
                                 Text("\(viewModel.hotelStarRating)")
                             }
                             
-                        }.padding()
+                        }.padding(.horizontal)
                         
                     )
             }
             .contentShape(Rectangle())
             .blur(radius: !isCalenderExpanded ? 0:5)
+            .padding(.horizontal)
             
             if isHotelExpanded {
                 LazyVGrid(columns: gridLayouta, spacing: 0) {
@@ -314,27 +293,29 @@ extension TravelPlannerView {
                         Button(action: {
                             viewModel.hotelStarRating = method.rawValue
                         }) {
-                            HStack {
-                                Text(method.rawValue)
-                                    .frame(width: 90, height: 40, alignment: .leading).padding(.leading)
-                                    .foregroundColor(viewModel.hotelStarRating == method.rawValue ? .white : Color("green600"))
-                                    .background(
-                                        ZStack {
-                                            if viewModel.hotelStarRating != method.rawValue {
-                                                RoundedRectangle(cornerRadius: 12)
-                                                    .stroke(Color("green600"), lineWidth: 2) // Add outline border when not selected
-                                            }
-                                        }
-                                    )
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke(Color("green600"), lineWidth: 2)
                                     .background(viewModel.hotelStarRating == method.rawValue ? Color("green600") : Color.clear)
-                                    .cornerRadius(12)
                                 
-                            }.padding(.bottom)
+                                HStack {
+                                    Image(systemName: "star.fill")
+                                        .foregroundColor(viewModel.hotelStarRating == method.rawValue ? .white : Color("green600"))
+                                        .frame(width: 20, height: 30)
+                                    
+                                    Text(method.rawValue)
+                                        .foregroundColor(viewModel.hotelStarRating == method.rawValue ? .white : Color("green600"))
+                                        .frame(width: 55, height: 30, alignment: .leading)
+                                }
+                            }
+                            .frame(width: 100, height: 40)
+                            .cornerRadius(12)
+                          
+                        
                         }
                     }
                 }
-                .padding()
-                
+                    .padding()
             }
         }
     }
@@ -386,6 +367,29 @@ struct CalendarView: View {
     
     var body: some View {
         VStack {
+            HStack {
+                Button("Start Date") {
+                    isSelectingStartDate = true
+                }
+                .frame(height: 10)
+                .padding()
+                .foregroundColor(isSelectingStartDate ? .white : Color("green600"))
+                .background(isSelectingStartDate ? Color("green600") : Color.clear)
+                .cornerRadius(42)
+                Spacer()
+                Text("to")
+                Spacer()
+                Button("End Date") {
+                    isSelectingStartDate = false
+                }
+                .frame(height: 10)
+                .padding()
+                .foregroundColor(isSelectingStartDate ? Color("green600") : .white)
+                .background(isSelectingStartDate ? Color.clear : Color("green600"))
+                .cornerRadius(42)
+               
+            }
+          
             DatePicker("", selection: isSelectingStartDate ? $startDate : $endDate, displayedComponents: .date)
                 .datePickerStyle(GraphicalDatePickerStyle())
                 .frame(height: 300)
@@ -400,24 +404,7 @@ struct CalendarView: View {
                     }
                 }
             
-            HStack {
-                Button("Start Date") {
-                    isSelectingStartDate = true
-                }
-                .padding()
-                .foregroundColor(isSelectingStartDate ? .white : Color("green600"))
-                .background(isSelectingStartDate ? Color("green600") : Color.clear)
-                .cornerRadius(42)
-                Spacer()
-                Button("End Date") {
-                    isSelectingStartDate = false
-                }
-                .padding()
-                .foregroundColor(isSelectingStartDate ? Color("green600") : .white)
-                .background(isSelectingStartDate ? Color.clear : Color("green600"))
-                .cornerRadius(42)
-            }
-            .padding(.top, 8)
+          
         }
     }
 }
@@ -453,6 +440,26 @@ enum TransportationMethod: String, CaseIterable, Identifiable {
     case train = "Train"
     
     var id: String { rawValue }
+    
+    
+    var iconName: String {
+        switch self {
+        case .walk:
+            return "figure.walk"
+        case .bicycle:
+            return "bicycle"
+        case .bus:
+            return "bus.fill"
+        case .motorcycle:
+            return "scooter"
+        case .ship:
+            return "ferry.fill"
+        case .plane:
+            return "airplane"
+        case .train:
+            return "tram.fill"
+        }
+    }
 }
 
 
@@ -463,3 +470,6 @@ enum HotelStarMethod: String, CaseIterable, Identifiable {
 
     var id: String { rawValue }
 }
+
+
+

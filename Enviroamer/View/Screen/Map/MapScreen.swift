@@ -240,13 +240,17 @@ struct MapView: UIViewRepresentable {
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
         mapView.showsUserLocation = true
-        mapView.delegate = context.coordinator // Set the delegate to the coordinator
+        mapView.delegate = context.coordinator
+        
+        
         return mapView
     }
     
     func updateUIView(_ uiView: MKMapView, context: Context) {
         uiView.removeAnnotations(uiView.annotations)
         uiView.addAnnotations(annotations.map(\.annotation)) // Extract the annotations from the MapAnnotationItem
+        
+        
    
     }
    
@@ -258,11 +262,16 @@ struct MapView: UIViewRepresentable {
         }
         
         func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-            // Get the selected annotation and set it in the parent view
             if let selectedAnnotation = view.annotation as? MKPointAnnotation {
                 parent.selectedAnnotation = parent.annotations.first(where: { $0.annotation == selectedAnnotation })
+
+                // Zoom in on the selected annotation with a custom span
+                let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05) // Adjust the span as desired for the zoom level
+                let region = MKCoordinateRegion(center: selectedAnnotation.coordinate, span: span)
+                mapView.setRegion(region, animated: true)
             }
         }
+
     }
 }
 
