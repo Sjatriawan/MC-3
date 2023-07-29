@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct UpcomingTripsScreen: View {
-//    @State private var upcomingTripsItems : [Trips] = []
-//    @EnvironmentObject var modelWisata : TourismViewModel
+    //    @State private var upcomingTripsItems : [Trips] = []
+    //    @EnvironmentObject var modelWisata : TourismViewModel
     
     var body: some View {
         TripScreenList()
@@ -24,7 +24,6 @@ struct TripScreenList: View {
     private var trips: FetchedResults<Trip>
     
     @EnvironmentObject var modelWisata : TourismViewModel
-    @EnvironmentObject var travelVm : TravelPlannerViewModel
     
     
     var body: some View {
@@ -33,38 +32,14 @@ struct TripScreenList: View {
                 EmptyUpcomingTrips()
                     .padding(.top, 50)
             } else {
-                List{
-                    ForEach(trips ) { trip in
-                        NavigationLink(destination: {
-                            
-                            let location = modelWisata.tourisms.first { location in
-                                location.idProvinsi == Int(trip.idProvince)
-                            }
-                            
-                            if let location {
-                                TripCardScreen(location: location)
-                            } else {
-                                Text("Location not found")
-                            }
-
-                        }, label: {
+                ScrollView(showsIndicators: false) {
+                    LazyVStack{
+                        ForEach(trips) { trip in
                             CardViewList(trip: trip)
                                 .frame(width: 322, height: 270)
-                                .swipeActions {
-                                    Button {
-                                        travelVm.deleteTrip(trip)
-                                    } label: {
-                                        Label("Delete", systemImage: "trash.fill")
-                                    }
-                                    .tint(Color.red)
-                                }
-                                
-                        })
+                        }
                     }
                 }
-                .listStyle(.plain)
-              
-                
                 //            .padding()
             }
         }
@@ -73,55 +48,100 @@ struct TripScreenList: View {
 
 struct CardViewList: View {
     let trip: Trip
-
     @EnvironmentObject var travelViewModel : TravelPlannerViewModel
+    @EnvironmentObject var modelWisata : TourismViewModel
+    
     
     var body: some View {
-        ZStack(alignment: .bottomLeading) {
-            AsyncImage(url: URL(string: trip.imageKota ?? "")) { phase in
-                switch phase {
-                case .empty:
-                    ShimmerView()
-                        .frame(width: 322, height: 230)
-                case .success(let image):
-                    image
-                        .resizable()
-                        .frame(width: 322, height: 230)
-                        .scaledToFit()
+        ZStack {
+            NavigationLink(destination: {
+                let location = modelWisata.tourisms.first { location in
+                    location.idProvinsi == Int(trip.idProvince)
+                }
+                
+                if let location {
+                    TripCardScreen(location: location)
+                } else {
+                    Text("Location not found")
+                }
+                
+            }, label: {
+                ZStack(alignment: .bottomLeading) {
+                    AsyncImage(url: URL(string: trip.imageKota ?? "")) { phase in
+                        switch phase {
+                        case .empty:
+                            ShimmerView()
+                                .frame(width: 322, height: 230)
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .frame(width: 322, height: 230)
+                                .scaledToFit()
+                            
+                        case .failure:
+                            // Placeholder view for failed loading
+                            Color.gray
+                        @unknown default:
+                            // Placeholder view for unknown cases
+                            Color.gray
+                        }
+                    }
+                    .cornerRadius(12)
                     
-                case .failure:
-                    // Placeholder view for failed loading
-                    Color.gray
-                @unknown default:
-                    // Placeholder view for unknown cases
-                    Color.gray
+                    Rectangle()
+                        .frame(height: 75)
+                        .foregroundColor(.black)
+                        .opacity(0.4)
+                        .blur(radius: 8)
+                    
+                    HStack {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("\(trip.provinceName ?? "")")
+                                .font(.system(size: 17, weight: .semibold, design: .rounded))
+                                .foregroundColor(.white)
+                            Text("\(formattedDate(date: trip.startDate)) - \(formattedDate(date: trip.endDate))")
+                                .font(.system(size: 15, weight: .regular, design: .rounded))
+                                .foregroundColor(.white)
+                        }
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 16)
+                        Spacer()
+                        
+                        
+                        
+                        
+                    }
+                    
+                }
+                .cornerRadius(12)
+//                .padding(.vertical, 8)
+            })
+            HStack {
+                Spacer()
+                
+                VStack {
+                    Spacer()
+                    Menu {
+                        Button("Delete") {
+                            travelViewModel.deleteTrip(trip)
+                        }
+                    } label: {
+                        Image(systemName: "ellipsis.circle.fill")
+                            .font(.system(size: 24))
+                            .foregroundColor(.white)
+                    }
+                    .padding(.bottom, 50)
+                    .padding(.trailing, 12)
                 }
             }
-            .cornerRadius(12)
             
-            Rectangle()
-                .frame(height: 75)
-                .foregroundColor(.black)
-                .opacity(0.4)
-                .blur(radius: 8)
             
-            VStack(alignment: .leading, spacing: 8) {
-                Text("\(trip.provinceName ?? "")")
-                    .font(.system(size: 17, weight: .semibold, design: .rounded))
-                    .foregroundColor(.white)
-                Text("\(formattedDate(date: trip.startDate)) - \(formattedDate(date: trip.endDate))")
-                    .font(.system(size: 15, weight: .regular, design: .rounded))
-                    .foregroundColor(.white)
-            }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 16)        }
-        .cornerRadius(12)
-        //        .padding(.horizontal, 16)
-        .padding(.vertical, 8)
-       
+            
+        }
+        
     }
     
-  
+    
     private func formattedDate(date: Date?) -> String {
         if let date = date {
             let dateFormatter = DateFormatter()
@@ -160,7 +180,7 @@ struct UpcomingTripsScreen_Previews: PreviewProvider {
 
 struct EmptyUpcomingTrips : View {
     @EnvironmentObject var travelViewModel : TravelPlannerViewModel
-
+    
     var body : some View {
         NavigationStack {
             VStack(spacing: 12){
@@ -192,5 +212,8 @@ struct EmptyUpcomingTrips : View {
         }
     }
 }
+
+
+
 
 
