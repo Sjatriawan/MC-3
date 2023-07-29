@@ -13,8 +13,8 @@ struct CarbonContentTrip: View {
 //    @EnvironmentObject viewModel : TravelPlannerViewModel
 
     var body: some View {
-        let totalAkomodasi = trip.totalCarbonAkomodasi / 25
-        let totalTransportasi  = trip.totalCarbonTransport / 25
+        let totalAkomodasi = trip.totalCarbonAkomodasi / 10
+        let totalTransportasi  = trip.totalCarbonTransport / 20
         
 
         VStack(alignment: .leading, spacing: 32){
@@ -49,6 +49,8 @@ struct CarbonContentTrip: View {
                 DetailCarbon(carbon: trip.totalCarbonTransport, valueProgres: totalTransportasi, titleProgressBar:  "Transportasi", color: Color(hex: "EE983A"), shadowColor: Color(hex: "AB6212"))
                 
                 DetailCarbon(carbon: trip.totalCarbonAkomodasi, valueProgres: totalAkomodasi, titleProgressBar: "Akomodasi" , color: Color(hex: "7E4E75") , shadowColor:Color(hex: "1A0115") )
+                
+                 
                 
               
                 
@@ -98,7 +100,7 @@ struct DetailCarbon : View {
         VStack (alignment: .leading){
             Text("\(carbon / 1_000_000, specifier: "%.2f") tonsCO₂e")
                 .foregroundColor(Color("black800"))
-                .font(.system(size: 16, weight: .bold, design: .rounded))   .padding(.bottom, 6)
+                .font(.system(size: 16, weight: .bold, design: .rounded)).padding(.bottom, 6)
             
             Rectangle()
                 .frame(width: valueProgres / 100 , height: 32)
