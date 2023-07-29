@@ -24,6 +24,7 @@ struct TripScreenList: View {
     private var trips: FetchedResults<Trip>
     
     @EnvironmentObject var modelWisata : TourismViewModel
+    @EnvironmentObject var travelVm : TravelPlannerViewModel
     
     
     var body: some View {
@@ -32,29 +33,38 @@ struct TripScreenList: View {
                 EmptyUpcomingTrips()
                     .padding(.top, 50)
             } else {
-                ScrollView(showsIndicators: false) {
-                    LazyVStack{
-                        ForEach(trips) { trip in
-                            NavigationLink(destination: {
-                                
-                                let location = modelWisata.tourisms.first { location in
-                                    location.idProvinsi == Int(trip.idProvince)
+                List{
+                    ForEach(trips ) { trip in
+                        NavigationLink(destination: {
+                            
+                            let location = modelWisata.tourisms.first { location in
+                                location.idProvinsi == Int(trip.idProvince)
+                            }
+                            
+                            if let location {
+                                TripCardScreen(location: location)
+                            } else {
+                                Text("Location not found")
+                            }
+
+                        }, label: {
+                            CardViewList(trip: trip)
+                                .frame(width: 322, height: 270)
+                                .swipeActions {
+                                    Button {
+                                        travelVm.deleteTrip(trip)
+                                    } label: {
+                                        Label("Delete", systemImage: "trash.fill")
+                                    }
+                                    .tint(Color.red)
                                 }
                                 
-                                if let location {
-                                    TripCardScreen(location: location)
-                                } else {
-                                    Text("Location not found")
-                                }
-
-                            }, label: {
-                                CardViewList(trip: trip)
-                                    .frame(width: 322, height: 270)
-                            })
-
-                        }
+                        })
                     }
                 }
+                .listStyle(.plain)
+              
+                
                 //            .padding()
             }
         }
@@ -95,32 +105,16 @@ struct CardViewList: View {
                 .opacity(0.4)
                 .blur(radius: 8)
             
-            HStack {
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("\(trip.provinceName ?? "")")
-                        .font(.system(size: 17, weight: .semibold, design: .rounded))
-                        .foregroundColor(.white)
-                    Text("\(formattedDate(date: trip.startDate)) - \(formattedDate(date: trip.endDate))")
-                        .font(.system(size: 15, weight: .regular, design: .rounded))
-                        .foregroundColor(.white)
-                }
-                .padding(.horizontal, 16)
-                .padding(.vertical, 16)
-                Spacer()
-                Menu {
-                    Button("Delete") {
-                        travelViewModel.deleteTrip(trip)
-                    }
-                } label: {
-                    Image(systemName: "ellipsis.circle.fill")
-                        .font(.system(size: 24))
-                        .foregroundColor(.white)
-                }.padding(.horizontal, 16)
-                    .padding(.vertical, 8)
-                
-
+            VStack(alignment: .leading, spacing: 8) {
+                Text("\(trip.provinceName ?? "")")
+                    .font(.system(size: 17, weight: .semibold, design: .rounded))
+                    .foregroundColor(.white)
+                Text("\(formattedDate(date: trip.startDate)) - \(formattedDate(date: trip.endDate))")
+                    .font(.system(size: 15, weight: .regular, design: .rounded))
+                    .foregroundColor(.white)
             }
-        }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 16)        }
         .cornerRadius(12)
         //        .padding(.horizontal, 16)
         .padding(.vertical, 8)

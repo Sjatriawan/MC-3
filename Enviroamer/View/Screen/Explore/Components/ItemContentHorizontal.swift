@@ -24,8 +24,8 @@ struct ItemContentHorizontal: View {
             ShimmerViewVertical()
             
         }
+        .scaledToFill()
         .frame(width: 342, height: 237)
-        .scaledToFit()
         .cornerRadius(12)
         .overlay{
             VStack{
