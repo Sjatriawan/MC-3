@@ -17,7 +17,7 @@
                    "deskripsi" : [
                     "Taraju is the name of a tourist village which is the pride of Tasikmalaya. The Taraju Tourism Village area has an area of 543.2 Ha and is located in the west of Tasikmalaya Regency. The area is at an altitude of 900 meters above sea level. ",
                     "About 55% of this village area is rice fields while the rest is dry land.\nNature in Taraju Village is still very beautiful and well maintained. Visitors can easily find stretches of tea gardens in this village. Apart from that, this place has many rice field tours, waterfalls, and rivers. There is also a tour package for Taraju Village featuring cultural arts performances from the village."],
-                  "image" : ["https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/new%20taraju.png?alt=media&token=5e5e5e88-6abf-4d34-898a-d27e79c45c6f",
+                  "image" : ["https://i.ibb.co/zJzdLC0/new-taraju.png",
                   "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/taraju2.png?alt=media&token=449ee439-ae85-48ce-aaa6-4e44aea1a1a5"] ,
                   "judulKegiatan" : [
                     "Tour around the village of Taraju",
@@ -54,7 +54,7 @@
                     "Guranteng Tourism Village is an integration of many destinations or tourism potentials in the Guranteng Village area, both destinations that are already running well such as the Parung Nature Forum and Pasir Kirisik, as well as those that are still under development such as Kampung Sapi Tourism, Pasir Jeungjing Camping Ground, Agrotourism Mount Jugul, Cultural Tourism of Pencak Silat and Wayang Golek, Embung Desa Tourism, Point 0 KM Citanduy, Paragliding Pasir Gowong, Rafting and others.",
                     "Each destination has its own uniqueness and advantages that can be enjoyed according to the needs of tourists."
                 ],
-               "image" : ["https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/new%20guranteng.png?alt=media&token=e03b0234-c6ea-4ce9-910c-d308ab83bce3",
+               "image" : ["https://i.ibb.co/yRZqFfF/new-guranteng.png",
                "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/guranteng2.png?alt=media&token=95888376-78a0-4f8b-9959-57fb8086e9ad"] ,
                "judulKegiatan" : [
                 "Parung Natural Park",
@@ -95,7 +95,7 @@
                     "The specialty of the Cibuntu Tourism Village is its soothing natural atmosphere, combined with the togetherness of local residents in protecting the environment.Nowadays, cool and cool places are the choice of workaholics who want to relax and heal, refresh for a while.",
                     "Not only famous for its natural beauty, this tourist village is also known as one of the tourist villages that often makes achievements, including being ranked fifth as the best ASEAN tourism village for homestays in 2016 and won second place as the best tourism village in the prestigious Community award. Based Tourism (CBT) in 2017 by the Indonesian Ministry of Tourism and Creative Economy."
                 ],
-               "image" : ["https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/cibuntu1.png?alt=media&token=6d95d0e2-222f-4ebe-83b1-8aaeeed24a72",
+               "image" : ["https://i.ibb.co/rtnKCHJ/cibuntu1.png",
                "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/cibuntu2.png?alt=media&token=052eef22-73dc-4211-b133-f67fabe0bca8"] ,
                "judulKegiatan" : [
                 "Ciremai mountain tracking",
@@ -124,7 +124,7 @@
             "latitude" : -7.062332,
             "longitude" : 107.614805
         } ,
-        "imageKota" : "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/jabar.png?alt=media&token=4e5df235-4b30-453e-ab13-e72ceedb6297",
+        "imageKota" : "https://i.ibb.co/v1h9dTP/jabar.png",
         "tranportasiProvinsi" : ["Motorcycle" , "Car", "Bus", "Walk", "Bicycle", "Train"],
         "kegiatanOffset" : [
             {
@@ -135,7 +135,7 @@
                     "We initiated a platform to gather citizen science mapping tools with LIPI (now BRIN) named marinedebris.id since 2017 with the aim to create appropriate programs based on primary data. This is because we believe anybody can contribute in helping policy-makers and other stakeholders decide what is the best solution in preventing and combating marine debris for a cleaner ocean.DCA is always keen to provide awareness raising and training regarding marine debris and how to solve the problem.",
                     "Taking roles as speakers and trainers in seminars, workshops, conferences, instructing clean.We cannot combat marine debris alone, and in order to succeed we need communities, especially the ones living by bodies of water, to take action. This can be achieved by empowering them through raising their awareness and provide impactful action against marine debris for them to do in their daily lives.\nWe help and boost private sectors to do real sustainable efforts with its business core on combating marine debris."
                 ],
-                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/offset-jabar-dca.png?alt=media&token=4d471ae8-861c-42cb-b1d2-73b17be5718c",
+                "fotoKegiatan" : "https://i.ibb.co/64CBMvX/offset-jabar-dca.png",
                 "alamat" : "Jl. Papandayan, Mampang, Kec. Pancoran Mas, Kota Depok, Jawa Barat 16433" ,
                 "noTelp" : "+6285155086232",
                 "email" : "contact@diverscleanaction.org",
@@ -152,7 +152,7 @@
                     "Founded in 1993, YPBB is a non-profit and non-governmental organization, which has been dedicated to helping people achieve a high quality of life for humanity, for the current generation and especially for our children and grandchildren through a lifestyle in harmony with nature. YPBB has been known for its leadership on organic living issues, especially with its main campaign, Zero Waste.",
                     "YPBB promotes the best innovations for an organic lifestyle and helps people adopt this lifestyle effectively through educational programs, group support, community organizing, as well as technology and infrastructure support. YPBB was developed with the awareness that in order to realize a strategic vision and mission for human life in the future, in addition to strong ideals YPBB also requires a solid, efficient and properly designed organization. YPBB was developed as a community-based organization with a professional, transparent and efficient support system."
                 ],
-                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/ypbb%20new.png?alt=media&token=31aa48c0-9722-40c2-841c-87faa3ae4f2e" ,
+                "fotoKegiatan" : "https://i.ibb.co/k8bYqTF/offset-jabar-greeneration.png" ,
                 "noTelp" : "0811-2237-900",
                 "email" : "ypbb@ypbb.or.id",
                 "website" : "https://ypbb.web.id/" ,
@@ -168,7 +168,7 @@
                     "Greeneration Foundation is a foundation engaged in the field of EcoRanger is an extraordinary team in Indonesian tourism destinations that builds sustainable tourism. We solve the problem of waste in tourist destinations by developing educational, entrepreneurial, mentoring, organizational and empowering competencies. ",
                     "Support us to maintain the charm of Indonesia's strategic tourist destinations!.We aspire to build local community awareness to solve the waste problem in the national tourism area. We work with the community through systematic, effective and sustainable programs."
                 ],
-                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/offset-jabar-greeneration.png?alt=media&token=acd782d9-b9cd-42e8-80f0-11ec758699e2",
+                "fotoKegiatan" : "https://i.ibb.co/jyJQC3z/ypbb-new.png",
                 "alamat" : "Jl. Cikutra Baru V No.36, Neglasari, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40124" ,
                 "noTelp" : "022 20544245",
                 "email" : "info@greeneration.org",
@@ -199,7 +199,7 @@
                     "Lace up your sneakers, hop on a bicycle, or embark on an educational adventure by exploring the diverse flora, or simply relax in the breathtaking scenery that this eco-friendly sanctuary has to offer. Subak Sembung Ecotourism is a haven for nature enthusiasts, providing an eco-friendly getaway that promotes environmental preservation. Escape the hustle and bustle and discover the perfect blend of nature's beauty and sustainable tourism at Subak Sembung Ecotourism."
                    ],
                     "image" : [
-                        "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/subak%20sembung%20%20new.png?alt=media&token=2aebfac7-c492-4018-9996-d35a086f6338",
+                        "https://i.ibb.co/tLDVynL/subak-sembung-new.png",
                         "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/subak-bali2.png?alt=media&token=9519181f-d753-48e6-bd74-ba027678a306"] ,
                     "judulKegiatan" : [
                         "Enjoy natural beauty",
@@ -239,7 +239,7 @@
                     "However, to ensure the sustainable population of crabs, the resourceful farmers transitioned to crab and fish cultivation, establishing the remarkable Kampoeng Kepiting Bali Ecotourism. Support the fisherman community while taking in the fascinating mangrove ecology and the beauty of nature. Enjoy tasty seafood while taking in the welcoming atmosphere of the community. Kampoeng Kepiting offers an unforgettable adventure that combines nature,cuisine, and cultural immersion"
                 ],
                 "image" : [
-                    "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/kampung%20kepiting%20new.png?alt=media&token=0aa3936f-ab27-4c0d-83af-ec2260e6ccfd",
+                    "https://i.ibb.co/ZM70xG0/kampung-kepiting-new.png",
                     "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/kepiting-bali2.png?alt=media&token=2814e09f-a94d-4d6f-b8be-fd46497ed442"] ,
                 "judulKegiatan":[
                     "Canoe tour to clean mangroves",
@@ -287,7 +287,7 @@
                     "Immerse yourself in the tranquil atmosphere, surrounded by ancient trees and sacred sites that exude a sense of calmness. Discover the cultural significance of the Ubud Monkey Forest as you witness its beauty and engage with the lively monkeys. A visit to this captivating destination promises cherished memories of your time in Bali."
                 ],
                 "image" : [
-                    "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/monkey%20forest%20new.png?alt=media&token=52c90b92-5669-435b-bbfe-40e2408fdb11",
+                    "https://i.ibb.co/FBvnDGD/monkey-bali.png",
                     "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/monkey-bali2.png?alt=media&token=3fc44568-9326-47e5-8ef1-20187e5a632a"] ,
                 "judulKegiatan":  [
                     "Monkey Encounters",
@@ -315,7 +315,7 @@
             "latitude" : -8.409043,
             "longitude" : 115.184915
         } ,
-        "imageKota" : "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/bali.png?alt=media&token=bf648f62-f5e1-4570-ad86-028de498dd83",
+        "imageKota" : "https://i.ibb.co/8rJhTNx/bali.png",
         "tranportasiProvinsi" : [
             "Bicycle" , "Car", "Bus" , "Motorcycle", "Walk"
         ],
@@ -328,7 +328,7 @@
                     "Monthly Beach Cleanups to Create Awareness.\nAround 80% of all waste in the ocean comes from land and thus, from us consumers. Currently, Indonesia is number 2 in the list of most marine polluting countries in the world. Every year Indonesia produces 6.8 tons of plastic waste, of which 61% is not collected and disposed of safely, of which 40% ends up in the ocean. R.O.L.E. Foundation organizes monthly beach cleanups in the south area of Bali. ",
                     "After cleaning the beaches, the collected waste is weighted and brought to the ZeroWaste Center, where it’s cleaned and separated according to the type of plastic and whether it can be recycled or not. The aim is to bring as least as possible to the landfill.\nBy doing beach cleanups, R.O.L.E. Foundation aims to create awareness about alternative ways of dealing with waste, so that the environment in Bali can be improved. We share this knowledge with local communities, local governments and beach cleaners."
                 ],
-                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/offset-bali-clean-up.png?alt=media&token=550138fe-83ae-46a8-899d-82e3192226f8",
+                "fotoKegiatan" : "https://i.ibb.co/t8FzYCB/offset-bali-clean-up.png",
                 "alamat" : "JI. Bongantik, No. 101Nusa Dua, Bali, Indonesia" ,
                 "noTelp" : "+62 361 477 1657 ",
                 "email" : "info@rolefoundation.org",
@@ -345,7 +345,7 @@
                     "ZeroWaste Training is a program developed by R.O.L.E. Foundation to train local people or company staff to become a ZeroWaste Specialist with knowledge about waste management, permaculture, composting and other zero waste practices.",
                     "The aim is to have every type of waste become more valuable and less waste send to the landfill. Company staff can apply the knowledge in their office, and individuals can apply their gained knowledge into their household practices, or share it with community members to improve their environment’s sustainability."
                 ],
-                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/offset-bali-waste.png?alt=media&token=95427a49-1c25-4f4d-bf60-5bbff06b778a",
+                "fotoKegiatan" : "https://i.ibb.co/znkkmy6/offset-bali-waste.png",
                 "alamat" : "JI. Bongantik, No. 101Nusa Dua, Bali, Indonesia" ,
                 "noTelp" : "+62 361 477 1657 ",
                 "email" : "info@rolefoundation.org",
@@ -362,7 +362,7 @@
                     "The Bali Mangrove Care Forum (FPMB), was formed with the aim of protecting, preserving, rehabilitating, replanting and educating, as a joint effort to save mangroves in Bali and support government programs in fighting climate change.The mangrove forest under the care of The Mangrove Care Forum Bali is located in the Ngurah Rai Grand Forest Park, a 1,373.5 hectare mangrove forest at the Benoa Bay Area in Bali. ",
                     "The mangrove forest suffers from severe pollution and misuse, & debris and rubbish from nearby villages. Deforestation of trees and littering its grounds are a common sight. The focus of the Mangrove Care Forum Bali is to involve the communities surrounding the mangrove and enlist regular help to clean up and create a safe environment for plants and marine life to thrive. A further goal is to prevent further abrasion of coastline and to regrow the affected areas to lush mangrove vegetation."
                 ],
-                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/mangrove%20new.png?alt=media&token=e2c45aa0-06ec-4db5-a71e-34fa03e39b9c",
+                "fotoKegiatan" : "https://i.ibb.co/SrjHkBp/mangrove-new.png",
                 "alamat" : "Denpasar, Pulau Bali, Indonesia" ,
                 "noTelp" : "-",
                 "email" : "-",
@@ -393,7 +393,7 @@
                     "The area of this village expands around 13 hectares on patterned land and a rubber forest area which is now used for various kinds of outdoor activities. Some of the attractions existed in this village environment such as premium tents, playgrounds, camp cabins, culinary tours and some fun, eco-friendly, and education-based activities to be enjoyed with friends and family."
                    ],
                     "image" : [
-                        "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/ekang1.png?alt=media&token=fb7500f3-b2c6-4acb-9a1d-00272ca39a48",
+                        "https://i.ibb.co/cDQT7Ch/ekang1.png",
                         "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/ekang2.png?alt=media&token=46c7df65-72ab-4a09-b401-caea612de598"
                     ] ,
                     "judulKegiatan" :[
@@ -432,7 +432,7 @@
                     "This village is one of the community-based Seagrass Conservation Areas. This area has an important role in providing habitat for a variety of fish species, especially those that are still in the juvenile stage. Pengudang Village offers marine beauty such as mangrove tours and exploration of the natural beauty under the sea."
                 ],
                 "image" : [
-                    "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/pengudang1.png?alt=media&token=fd809b43-5180-44ce-967b-421f010ab895",
+                    "https://i.ibb.co/f155qNr/pengudang1.png",
                     "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/pengudang2.png?alt=media&token=a2aebeb0-aab3-4a71-92cd-141ace03f410"] ,
                 "judulKegiatan" :[
                     "Mangrove Tour",
@@ -466,7 +466,7 @@
                     "Apart from mangroves, this tour also has beautiful white sand beaches along the sea coast of Nongsa area with the view directly facing Singapore and Malaysia. Some of the natural tourism potentials are mangrove conservation, flora and fauna diversity, educational tours, and beach tourism. "
                 ],
                 "image" : [
-                    "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/pandangTakjemu1.png?alt=media&token=f18c221d-fc59-429a-b42a-6ae4c5814c97",
+                    "https://i.ibb.co/0hp3g8k/pandang-Takjemu1.png",
                     "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/pandangTakJemu2.png?alt=media&token=3f99708d-0690-462b-88c2-c5631fdb84a9"] ,
                     "judulKegiatan":[
                         "Mangrove educational tours",
@@ -489,7 +489,7 @@
             "latitude" : 1.136704,
             "longitude" : 104.425753
         } ,
-        "imageKota" : "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/kepri.png?alt=media&token=cd7840f9-dd1a-41c1-b643-d0122fa3b6b1",
+        "imageKota" : "https://i.ibb.co/tPjs14S/kepri.png",
         "tranportasiProvinsi" : [ "Bicycle" , "Car", "Bus" , "Motorcycle", "Walk"],
         "kegiatanOffset" : [
             {
@@ -500,7 +500,7 @@
                     "The Ecology Foundation is a non-governmental organization who envisions an environmentally-educated and independent Indonesian community with a flourishing and diverse ecosystem. In order to empower the conservation and protection of Riau Archipelago, the foundation has missions to: \n 1.preserve marine or coastal areas, island environment, and local wildlife; and \n2.grow community activities, and action as a forum decision-making.",
                     "One of several ways that anyone can support their missions is by making a donation to preserve endangered species of sea turtle. There is only one in every thousand turtle eggs lain that will make it to adulthood. By doing it, people will:\n1.help the foundation to supervise operational;\n2.support communication and documentation tools;\n3.provide artifical rescue nests; and\n4.educate and socialize communities awareness."
                 ],
-                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/offset-kepri-turtle.png?alt=media&token=119a3d03-7cd3-42d6-9056-ca4fa9f149e9",
+                "fotoKegiatan" : "https://i.ibb.co/hMKC1jD/offset-kepri-turtle.png",
                 "alamat" : "Jl. Basuki Rahmat No.09, Tanjungpinang, Kepulauan Riau, Indonesia" ,
                 "noTelp" : "+62812-6715-1393",
                 "email" : "ecologyfoundation@ecology.or.id",
@@ -517,7 +517,7 @@
                     "Seven Clean Seas is a community of individuals and organisation that commits to challenge the status quo, get involved, and clean the seas. The community’s goal is to remove plastic waste that pollute coastal communal and river environment as well as tp work with local communities to collect and manage it.MRF is established to properly manage waste they collect from their sites.",
                     "It also enables more and better recycling of the collected waste or other end-of-life opportunities (waste to energy) rather than sending it to landfill.Beside, it becomes education space for local community engagement and educational activities. It also welcomes international visitors or companies who want to learn about their projects.\nAnyone make a donation that will support their mission to keep oceans clean and healthy. For further action, SCS also welcome some kind of involvement from public. "
                 ],
-                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/offset-kepri-scs.png?alt=media&token=d8fa69a3-1dcb-489f-bc12-16c1dfbe167f",
+                "fotoKegiatan" : "https://i.ibb.co/Lv5CRZx/Establishing-a-Seven-Clean-Seas-SCS-Materials-Recovery-Facility-MRF-in-Batam-and-Strengthening-Recyc.png",
                 "alamat" : "Unit 02-01, 68 Circular Rd, Singapore" ,
                 "noTelp" : "+6592727953",
                 "email" : "hello@sevencleanseas.com",
@@ -534,7 +534,7 @@
                     "The Ecology Foundation is a non-governmental organization who envisions an environmentally-educated and independent Indonesian community with a flourishing and diverse ecosystem. In order to empower the conservation and protection of Riau Archipelago, the foundation has missions to:\n1.preserve marine or coastal areas, island environment, and local wildlife; and\n2.grow community activities, and action as a forum decision-making",
                     "One of several ways that anyone can support their missions is by making a donation to plant tree. Tree planting is a simple way to reduce carbon in atmosphere and protect coasts. The foundation will reforest critical coastal land to give rich ecosystems a change to recover. By doing it, people will:\n1.support foundation to work with local community groups to plant and supply plants from local nursery; and\n2.be one step closer to help protect environment. "
                 ],
-                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/offset-kepri-tree.png?alt=media&token=2201c55a-1496-441d-8550-d9b2111c5d91",
+                "fotoKegiatan" : "https://i.ibb.co/2P1Kwv2/offset-kepri-tree.png",
                 "alamat" : "Jl. Basuki Rahmat No.09, Tanjungpinang, Kepulauan Riau, Indonesia" ,
                 "noTelp" : "+62812-6715-1393",
                 "email" : "ecologyfoundation@ecology.or.id",
@@ -565,7 +565,7 @@
                     "For visitors who want to stay overnight, the Bilebante Green Tourism Village has homestay facilities available. In addition, there are other facilities such as a camping ground, swimming pool, fishing market, bicycle path, as well as a training center for seaweed processing SMEs."
                    ],
                     "image" : [
-                        "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/bilebante%20new.png?alt=media&token=ef8776a6-e16b-49c9-a943-44fa0f525243",
+                        "https://i.ibb.co/CbZw5NY/bilebante-new.png",
                         "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/bilebante2.png?alt=media&token=00e412fa-1b96-4aa4-8399-1f7f02d62857"] ,
                     "judulKegiatan" :
                     [
@@ -605,7 +605,7 @@
                     "Mount Rinjani National Park has high biodiversity. The area is used as a place of research and a source of germplasm collection. Mount Rinjani National Park is also a natural and educational tourism spot."
                 ],
                 "image" : [
-                    "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/rinjani%20new.png?alt=media&token=8ecd074c-c9b2-4a36-b05c-b0e03b8a4b22",
+                    "https://i.ibb.co/Jq8jtZM/rinjani-new.png",
                     "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/rinjani2.png?alt=media&token=35839f83-9410-4e93-8d3b-fa3f8bb9e74e"
                     ] ,
                     "judulKegiatan":[
@@ -644,7 +644,7 @@
                     ""
                 ],
                 "image" : [
-                    "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/els1.png?alt=media&token=c0950de7-a4cf-4f21-8fc1-bc1e6b1251a0",
+                    "https://i.ibb.co/wYJjNqS/els1.png",
                     "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/els2.png?alt=media&token=e259585a-3d0c-4de2-9b2b-261a1b7e92cf"] ,
                 "judulKegiatan" :[
                         "Religious Tourism [Sacred MaQom]",
@@ -674,7 +674,7 @@
             "latitude" :-8.630750 ,
             "longitude" : 117.434306
         } ,
-        "imageKota" : "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/ntb.png?alt=media&token=df008b1c-cbb7-4365-b26c-c03bdee90bd3",
+        "imageKota" : "https://i.ibb.co/gMTc66q/ntb.png",
         "tranportasiProvinsi" : [
             "Bicycle" , "Car", "Bus" , "Motorcycle", "Walk"
         ],
@@ -687,7 +687,7 @@
                     "The Gili Eco Trust is a non-profit organisation based in the Gili Islands in Indonesia which aims to protect environment and to create sustainable islands for everyone to enjoy. It has grown and expanded its activities from marine conservation to waste management and sustainable eco-tourism.\nEvery Friday afternoon, the organisation usually has one activity called Debris-Free Friday. It was created to bring divers from different shops together and now sponsored by more than forty businesses in Trawangan for the last seven years.",
                     "Everyone can join it by cleaning up plastic and marine debris that pollute the environment. Each year, tourists, divers, and local communities have collected around 7.000 kg of marine debris from this activity.\nBy joining this, people can learn waste strategies and adopt it to newly found beach clean techniques to help sift and sort through plastics. They make sure to continue to recycle up to 70% of the trash found on the beach."
                 ],
-                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/Debris-Free%20Friday.png?alt=media&token=33a112a6-ca25-44eb-8f10-a542cb01b94b",
+                "fotoKegiatan" : "https://i.ibb.co/kqtRHLC/Debris-Free-Friday.png",
                 "alamat" : "Jl. Ikan Hiu, Gili Indah, Pemenang, Lombok Utara, Nusa Tenggara Barat, Indonesia" ,
                 "noTelp" : "+62 8133 960 0553",
                 "email" : "info@giliecotrust.com",
@@ -704,7 +704,7 @@
                     "The Gili Eco Trust is a non-profit organisation based in the Gili Islands in Indonesia which aims to protect environment and to create sustainable islands for everyone to enjoy. It has grown and expanded its activities from marine conservation to waste management and sustainable eco-tourism.\nThe organisation open volunteer opportunity for anyone who is passionate and motivated to become eco-warrior on their daily environmental missions. ",
                     "If they are fascinated about Biorocks and want to learn more about incredible reef restoration technique, there will be two weeks intensive programme to build and sink their own artificial coral reefs. There are also several available positions in their green team among helping out the local staff in the recycling centre, to additional beach cleans, the green team continues to collect data and research trends in tourism, solid waste, events planning and communications.\nThe volunteering activities is open only for full-time volunteers/interns who stay for a minimum of two months because they will be properly trained and inducted before independently undertake tasks."
                 ],
-                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/Volunteer.png?alt=media&token=996f5f88-925c-46e1-89b1-9658c5bd9862",
+                "fotoKegiatan" : "https://i.ibb.co/CH4xbcs/Volunteer.png",
                 "alamat" : "Jl. Ikan Hiu, Gili Indah, Pemenang, Lombok Utara, Nusa Tenggara Barat, Indonesia" ,
                 "noTelp" : "+62 8133 960 0553",
                 "email" : "info@giliecotrust.com",
@@ -721,7 +721,7 @@
                     "The Gili Eco Trust is a non-profit organisation based in the Gili Islands in Indonesia which aims to protect environment and to create sustainable islands for everyone to enjoy. It has grown and expanded its activities from marine conservation to waste management and sustainable eco-tourism.\nThe organisation headquarters double up as an eco-friendly gift shop and plastic-free store. Tourist can take a look at their homemade, unique jewellery, upcycled from glass bottles found on the island. ",
                     "There is a range of travel items to help individuals move around as plastic-free as possible. Tourists can buy reusable tote bag, metal reusable straw, bamboo travel cutlery or grocery produce bags.\nRecently, the organisation showcase local and artisan products handmade in Lombok like handmade soaps, shampoo bars, and many more. By doing this, tourists can support some brilliant social enterprised they partnered with. Beside, there is also second-hand clothes rail from the donation from people who left island after shopping too much, along with an extensive book swap shop for holiday reads."
                 ],
-                "fotoKegiatan" : "https://firebasestorage.googleapis.com/v0/b/mc3-boboho.appspot.com/o/Zero%20Waste%20Gift%20Shop.png?alt=media&token=87273856-86ca-4ee3-a7d9-df8c5ce4032d",
+                "fotoKegiatan" : "https://i.ibb.co/HCRC1NT/Zero-Waste-Gift-Shop.png",
                 "alamat" : "Jl. Ikan Hiu, Gili Indah, Pemenang, Lombok Utara, Nusa Tenggara Barat, Indonesia" ,
                 "noTelp" : "+62 8133 960 0553",
                 "email" : "info@giliecotrust.com",

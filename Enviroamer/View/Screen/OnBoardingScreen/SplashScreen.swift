@@ -9,57 +9,63 @@
 import SwiftUI
 
 struct SplashScreen: View {
-
-        @State private var shouldShowSplash = false
-        @Environment(\.colorScheme) var colorScheme
+    
+    @State private var shouldShowSplash = false
+    @Environment(\.colorScheme) var colorScheme
+    @State private var size = 0.3
+    @State private var opacity = 0.5
+    
     @StateObject  private var userViewModel = UserViewModel()
-
-        var body: some View {
-            ZStack{
-                if self.shouldShowSplash {
-                    if userViewModel.currentUserSignIn {
-                        HomeScreen()
+    
+    var body: some View {
+        if self.shouldShowSplash {
+            if userViewModel.currentUserSignIn {
+                HomeScreen()
+            } else {
+                OnboardingView()
+            }
+        } else {
+            
+            VStack {
+                VStack{
+                    if colorScheme == .dark {
+                        Image("app_logo") // Gambar untuk dark mode
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 150)
+                            .scaleEffect(size)
+                            .opacity(opacity)
+                            .animation(.easeInOut(duration: 2))
+                        
                     } else {
-                        OnboardingView()
+                        Image("app_logo") // Gambar untuk light mode
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 150)
+                            .scaleEffect(size)
+                            .opacity(opacity)
+                            .animation(.easeInOut(duration: 2))
+                        
+                        
                     }
-                } else {
-                    ContainerRelativeShape()
-                        .fill(Color("neutral200"))
-                        .edgesIgnoringSafeArea(.all)
-                        .opacity(shouldShowSplash ? 0 : 1)
                     
-                    VStack{
-                        if colorScheme == .dark {
-                            Image("applogo") // Gambar untuk dark mode
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 150)
-    //                            .opacity(shouldShowSplash ? 0 : 1)
-                        } else {
-                            Image("applogo") // Gambar untuk light mode
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 150)
-    //                            .opacity(shouldShowSplash ? 0 : 1)
-                        }
-        
-                        Text("Travel consciously, Experience differently")
-                            .multilineTextAlignment(.center)
-                            .font(.system(size: 17, weight: .bold, design: .rounded))
-                            .foregroundColor(Color("green600"))
+                }
+                .onAppear{
+                    withAnimation(.easeInOut(duration: 2)) {
+                        size = 1.0
+                        opacity = 1.0
                     }
-                    .opacity(shouldShowSplash ? 0 : 1)
-                    .padding(.horizontal, 24)
                 }
             }
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     self.shouldShowSplash = true
                 }
-               
+                
             }
         }
     }
+}
 
 struct SplashScreen_Previews: PreviewProvider {
     static var previews: some View {

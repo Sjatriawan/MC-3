@@ -14,7 +14,7 @@ struct ExploreScreen: View {
     
     var body: some View {
         let data = self.modelWisata.tourisms[idProvinsi].listWisata
-        let dataOffset = self.modelWisata.tourisms[idProvinsi].kegiatanOffset
+        let dataOffset = self.modelWisata.tourisms[idOffset].kegiatanOffset
         NavigationStack {
             ScrollView (showsIndicators: false){
                 VStack(alignment: .leading, spacing: 24){

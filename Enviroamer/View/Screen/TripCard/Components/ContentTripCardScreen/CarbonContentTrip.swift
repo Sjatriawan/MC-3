@@ -10,8 +10,13 @@ import SwiftUI
 struct CarbonContentTrip: View {
     let trip : Trip
     let location : Location
+//    @EnvironmentObject viewModel : TravelPlannerViewModel
 
     var body: some View {
+        let totalAkomodasi = trip.totalCarbonAkomodasi / 25
+        let totalTransportasi  = trip.totalCarbonTransport / 25
+        
+
         VStack(alignment: .leading, spacing: 32){
             VStack(alignment: .leading){
                 Text("Get ready for the odyssey!")
@@ -41,9 +46,11 @@ struct CarbonContentTrip: View {
                     .background(.black)
                     .padding(.bottom)
                 
-                DetailCarbon(carbon: trip.totalCarbonAkomodasi, valueProgres: 2.0, titleProgressBar: "Hotel" , color: Color(hex: "EE983A") , shadowColor: Color(hex: "AB6212"))
+                DetailCarbon(carbon: trip.totalCarbonTransport, valueProgres: totalTransportasi, titleProgressBar:  "Transportasi", color: Color(hex: "EE983A"), shadowColor: Color(hex: "AB6212"))
                 
-                DetailCarbon(carbon: trip.totalCarbonTransport, valueProgres: 1.5, titleProgressBar:  "Transportation", color: Color(hex: "7E4E75"), shadowColor: Color(hex: "1A0115"))
+                DetailCarbon(carbon: trip.totalCarbonAkomodasi, valueProgres: totalAkomodasi, titleProgressBar: "Akomodasi" , color: Color(hex: "7E4E75") , shadowColor:Color(hex: "1A0115") )
+                
+              
                 
                 HStack{
                     HStack{
@@ -89,12 +96,12 @@ struct DetailCarbon : View {
     
     var body : some View {
         VStack (alignment: .leading){
-            Text("\(carbon / 1_000_000, specifier: "%.2f") tons")
+            Text("\(carbon / 1_000_000, specifier: "%.2f") tonsCO₂e")
                 .foregroundColor(Color("black800"))
                 .font(.system(size: 16, weight: .bold, design: .rounded))   .padding(.bottom, 6)
             
             Rectangle()
-                .frame(width: valueProgres * 100, height: 32)
+                .frame(width: valueProgres / 100 , height: 32)
                 .foregroundColor(color)
                 .cornerRadius(10)
                 .overlay{
