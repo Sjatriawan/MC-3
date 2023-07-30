@@ -62,9 +62,9 @@ struct CarbonContentTrip: View {
                         Text("\(trip.totalCarbonTransport / 1_000_000, specifier: "%.2f") tonsCO₂e")
                             .foregroundColor(.white)
                             .font(.system(size: 14 , weight: .semibold, design: .rounded))
+                            
 
                     }
-                    
                     
                     BarMark(
                         x: .value("Total Carbon", trip.totalCarbonAkomodasi),
@@ -82,7 +82,6 @@ struct CarbonContentTrip: View {
                 .chartXAxis(.hidden)
                 .chartYAxis{
                     AxisMarks { _ in
-                        AxisGridLine()
                         AxisValueLabel()
 
                     }
