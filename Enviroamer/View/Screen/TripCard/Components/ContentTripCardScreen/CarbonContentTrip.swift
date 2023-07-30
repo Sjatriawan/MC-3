@@ -57,20 +57,20 @@ struct CarbonContentTrip: View {
                         x: .value("Total Carbon", trip.totalCarbonTransport),
                         y: .value("Transportation Method", trip.transportationMethod ?? "")
                     )
-                    .foregroundStyle(by: .value("Total Carbon", trip.totalCarbonTransport))
+                    .foregroundStyle(Color("green600"))
                     .annotation (position: .overlay) {
                         Text("\(trip.totalCarbonTransport / 1_000_000, specifier: "%.2f") tonsCO₂e")
                             .foregroundColor(.white)
                             .font(.system(size: 14 , weight: .semibold, design: .rounded))
+                            
 
                     }
-                    
                     
                     BarMark(
                         x: .value("Total Carbon", trip.totalCarbonAkomodasi),
                         y: .value("Accomodation", trip.hotelStarRating ?? "")
                     )
-                    .foregroundStyle(by: .value("Total Carbon", trip.totalCarbonAkomodasi))
+                    .foregroundStyle(Color("red600"))
                     .annotation (position: .overlay) {
                         Text("\(trip.totalCarbonAkomodasi / 1_000_000, specifier: "%.2f") tonsCO₂e")
                             .foregroundColor(.white)
@@ -82,7 +82,6 @@ struct CarbonContentTrip: View {
                 .chartXAxis(.hidden)
                 .chartYAxis{
                     AxisMarks { _ in
-                        AxisGridLine()
                         AxisValueLabel()
 
                     }
