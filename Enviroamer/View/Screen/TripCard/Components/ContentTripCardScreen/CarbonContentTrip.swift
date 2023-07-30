@@ -11,13 +11,13 @@ import Charts
 struct CarbonContentTrip: View {
     let trip : Trip
     let location : Location
-//    @EnvironmentObject viewModel : TravelPlannerViewModel
-
+    //    @EnvironmentObject viewModel : TravelPlannerViewModel
+    
     var body: some View {
-//        let totalAkomodasi = trip.totalCarbonAkomodasi * 100
-//        let totalTransportasi  = trip.totalCarbonTransport * 100
+        //        let totalAkomodasi = trip.totalCarbonAkomodasi * 100
+        //        let totalTransportasi  = trip.totalCarbonTransport * 100
         
-
+        
         VStack(alignment: .leading, spacing: 32){
             VStack(alignment: .leading){
                 Text("Get ready for the odyssey!")
@@ -30,7 +30,7 @@ struct CarbonContentTrip: View {
                     .foregroundColor(Color("black800"))
                     .font(.system(size: 16, weight: .regular, design: .rounded))
             }
-          
+            
             
             VStack(alignment: .leading){
                 Text("Predicted carbon emission")
@@ -47,35 +47,40 @@ struct CarbonContentTrip: View {
                     .background(.black)
                     .padding(.bottom)
                 
-//                DetailCarbon(carbon: trip.totalCarbonTransport, valueProgres: 300, titleProgressBar:  "Transportasi", color: Color(hex: "EE983A"), shadowColor: Color(hex: "AB6212"))
-//
-//                DetailCarbon(carbon: trip.totalCarbonAkomodasi, valueProgres: 300, titleProgressBar: "Akomodasi" , color: Color(hex: "7E4E75") , shadowColor:Color(hex: "1A0115") )
-//
-//
+                //                DetailCarbon(carbon: trip.totalCarbonTransport, valueProgres: 300, titleProgressBar:  "Transportasi", color: Color(hex: "EE983A"), shadowColor: Color(hex: "AB6212"))
+                //
+                //                DetailCarbon(carbon: trip.totalCarbonAkomodasi, valueProgres: 300, titleProgressBar: "Akomodasi" , color: Color(hex: "7E4E75") , shadowColor:Color(hex: "1A0115") )
+                //
+                //
                 Chart{
                     BarMark(
                         x: .value("Total Carbon", trip.totalCarbonTransport),
                         y: .value("Transportation Method", trip.transportationMethod ?? "")
                     )
-                    .foregroundStyle(Color("green600"))
+                    .cornerRadius(10)
+                    .shadow(color: Color(hex: "AB6212"), radius: 0)
+                    .foregroundStyle(Color("orange"))
                     .annotation (position: .overlay) {
                         Text("\(trip.totalCarbonTransport / 1_000_000, specifier: "%.2f") tonsCO₂e")
                             .foregroundColor(.white)
                             .font(.system(size: 14 , weight: .semibold, design: .rounded))
-                            
-
+                        
+                        
                     }
                     
                     BarMark(
                         x: .value("Total Carbon", trip.totalCarbonAkomodasi),
                         y: .value("Accomodation", trip.hotelStarRating ?? "")
                     )
-                    .foregroundStyle(Color("red600"))
+               
+                    .shadow(color:Color(hex: "1A0115"), radius: 0)
+                    .foregroundStyle(Color("purple"))
                     .annotation (position: .overlay) {
                         Text("\(trip.totalCarbonAkomodasi / 1_000_000, specifier: "%.2f") tonsCO₂e")
                             .foregroundColor(.white)
                             .font(.system(size: 14 , weight: .semibold, design: .rounded))
                     }
+                    .cornerRadius(10)
                     
                 }
                 .chartLegend(.hidden)
@@ -83,13 +88,28 @@ struct CarbonContentTrip: View {
                 .chartYAxis{
                     AxisMarks { _ in
                         AxisValueLabel()
-
+                        
                     }
-
+                    
                 }
-
+                
+                HStack{
+                    HStack{
+                        Image("plane")
+                        Text("get to the city")
+                            .foregroundColor(Color("black800"))
+                            .font(.system(size: 14, weight: .regular, design: .rounded))
+                    }
+                    Spacer()
+                    HStack{
+                        Image("akomodai")
+                        Text("accommodation")
+                            .foregroundColor(Color("black800"))
+                            .font(.system(size: 14, weight: .regular, design: .rounded))
+                    }
+                }
             }
-           
+            
             .padding(24)
             .cornerRadius(10)
             .overlay(
@@ -97,7 +117,7 @@ struct CarbonContentTrip: View {
                     .stroke(Color(hex: "#A5B5A0"), lineWidth: 2) // Set the border color and width
             )
             
-           
+            
             
         }
     }
@@ -132,7 +152,7 @@ struct DetailCarbon : View {
                             .foregroundColor(.white)
                             .foregroundColor(Color("black800"))
                             .font(.system(size: 16, weight: .semibold, design: .rounded))
-//                            .padding(.bottom, 3)
+                        //                            .padding(.bottom, 3)
                     }
                 }
                 .background(
