@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Charts
 
 struct CarbonContentTrip: View {
     let trip : Trip
@@ -46,29 +47,48 @@ struct CarbonContentTrip: View {
                     .background(.black)
                     .padding(.bottom)
                 
-                DetailCarbon(carbon: trip.totalCarbonTransport, valueProgres: 300, titleProgressBar:  "Transportasi", color: Color(hex: "EE983A"), shadowColor: Color(hex: "AB6212"))
+//                DetailCarbon(carbon: trip.totalCarbonTransport, valueProgres: 300, titleProgressBar:  "Transportasi", color: Color(hex: "EE983A"), shadowColor: Color(hex: "AB6212"))
+//
+//                DetailCarbon(carbon: trip.totalCarbonAkomodasi, valueProgres: 300, titleProgressBar: "Akomodasi" , color: Color(hex: "7E4E75") , shadowColor:Color(hex: "1A0115") )
+//
+//
+                Chart{
+                    BarMark(
+                        x: .value("Total Carbon", trip.totalCarbonTransport),
+                        y: .value("Transportation Method", trip.transportationMethod ?? "")
+                    )
+                    .foregroundStyle(by: .value("Total Carbon", trip.totalCarbonTransport))
+                    .annotation (position: .overlay) {
+                        Text("\(trip.totalCarbonTransport / 1_000_000, specifier: "%.2f") tonsCO₂e")
+                            .foregroundColor(.white)
+                            .font(.system(size: 14 , weight: .semibold, design: .rounded))
 
-                DetailCarbon(carbon: trip.totalCarbonAkomodasi, valueProgres: 300, titleProgressBar: "Akomodasi" , color: Color(hex: "7E4E75") , shadowColor:Color(hex: "1A0115") )
-                
-                 
-                
-              
-                
-                HStack{
-                    HStack{
-                        Image("plane")
-                        Text("get to the city")
-                            .foregroundColor(Color("black800"))
-                            .font(.system(size: 14, weight: .regular, design: .rounded))
                     }
-                    Spacer()
-                    HStack{
-                        Image("akomodai")
-                        Text("accommodation")
-                            .foregroundColor(Color("black800"))
-                            .font(.system(size: 14, weight: .regular, design: .rounded))
+                    
+                    
+                    BarMark(
+                        x: .value("Total Carbon", trip.totalCarbonAkomodasi),
+                        y: .value("Accomodation", trip.hotelStarRating ?? "")
+                    )
+                    .foregroundStyle(by: .value("Total Carbon", trip.totalCarbonAkomodasi))
+                    .annotation (position: .overlay) {
+                        Text("\(trip.totalCarbonAkomodasi / 1_000_000, specifier: "%.2f") tonsCO₂e")
+                            .foregroundColor(.white)
+                            .font(.system(size: 14 , weight: .semibold, design: .rounded))
                     }
+                    
                 }
+                .chartLegend(.hidden)
+                .chartXAxis(.hidden)
+                .chartYAxis{
+                    AxisMarks { _ in
+                        AxisGridLine()
+                        AxisValueLabel()
+
+                    }
+
+                }
+
             }
            
             .padding(24)
