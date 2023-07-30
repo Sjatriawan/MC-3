@@ -13,8 +13,8 @@ struct CarbonContentTrip: View {
 //    @EnvironmentObject viewModel : TravelPlannerViewModel
 
     var body: some View {
-        let totalAkomodasi = trip.totalCarbonAkomodasi / 10
-        let totalTransportasi  = trip.totalCarbonTransport / 20
+//        let totalAkomodasi = trip.totalCarbonAkomodasi * 100
+//        let totalTransportasi  = trip.totalCarbonTransport * 100
         
 
         VStack(alignment: .leading, spacing: 32){
@@ -46,9 +46,9 @@ struct CarbonContentTrip: View {
                     .background(.black)
                     .padding(.bottom)
                 
-                DetailCarbon(carbon: trip.totalCarbonTransport, valueProgres: totalTransportasi, titleProgressBar:  "Transportasi", color: Color(hex: "EE983A"), shadowColor: Color(hex: "AB6212"))
-                
-                DetailCarbon(carbon: trip.totalCarbonAkomodasi, valueProgres: totalAkomodasi, titleProgressBar: "Akomodasi" , color: Color(hex: "7E4E75") , shadowColor:Color(hex: "1A0115") )
+                DetailCarbon(carbon: trip.totalCarbonTransport, valueProgres: 300, titleProgressBar:  "Transportasi", color: Color(hex: "EE983A"), shadowColor: Color(hex: "AB6212"))
+
+                DetailCarbon(carbon: trip.totalCarbonAkomodasi, valueProgres: 300, titleProgressBar: "Akomodasi" , color: Color(hex: "7E4E75") , shadowColor:Color(hex: "1A0115") )
                 
                  
                 
@@ -70,6 +70,7 @@ struct CarbonContentTrip: View {
                     }
                 }
             }
+           
             .padding(24)
             .cornerRadius(10)
             .overlay(
@@ -103,7 +104,7 @@ struct DetailCarbon : View {
                 .font(.system(size: 16, weight: .bold, design: .rounded)).padding(.bottom, 6)
             
             Rectangle()
-                .frame(width: valueProgres / 100 , height: 32)
+                .frame(width: valueProgres, height: 32)
                 .foregroundColor(color)
                 .cornerRadius(10)
                 .overlay{
@@ -126,3 +127,5 @@ struct DetailCarbon : View {
         .padding(.bottom)
     }
 }
+
+//    .frame(width: min(CGFloat(self.value)*geo.size.width, geo.size.width ), height: geo.size.height)

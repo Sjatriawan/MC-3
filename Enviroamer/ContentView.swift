@@ -11,16 +11,9 @@ import CoreLocation
 struct ContentView: View {
     var body: some View {
        SplashScreen()
+            .preferredColorScheme(.light)
     }
-//     check nama font 
-//    init(){
-//        for familyName in UIFont.familyNames {
-//            print(familyName)
-//            for fontName in UIFont.fontNames(forFamilyName: familyName){
-//                print("---\(fontName)---")
-//            }
-//        }
-//    }
+
 }
 
 

@@ -39,7 +39,8 @@ struct ModalSheetActivities: View {
                 }
             }
             
-            .padding(.vertical, 32)
+            .padding(.top, 70)
+            .padding(.bottom, 20)
             .padding(.horizontal,24)
         }
     }

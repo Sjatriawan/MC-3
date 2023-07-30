@@ -103,9 +103,9 @@ class TravelPlannerViewModel: ObservableObject {
     ]
     
     let carbonEmissionsPerNight: [String: Double] = [
-        "3 stars": 35600,
-        "4 stars": 71700,
-        "5 stars": 135000
+        "3 stars": 30000,
+        "4 stars": 59000,
+        "5 stars": 113000
     ]
     
     func calculateDistanceInKilometers() -> Double {
@@ -146,6 +146,7 @@ class TravelPlannerViewModel: ObservableObject {
         // Calculate carbon emissions for transportation
         let transportationCarbonEmissions = carbonEmissionsPerKilometer[transportationMethod] ?? 0
         let totalTransportationCarbon = distanceInKilometers * transportationCarbonEmissions
+        print(totalTransportationCarbon)
          return totalTransportationCarbon
     }
     
@@ -154,7 +155,8 @@ class TravelPlannerViewModel: ObservableObject {
         let nightsOfStay = Calendar.current.dateComponents([.day], from: startDate, to: endDate).day ?? 0
         let hotelCarbonEmissionsPerNight = carbonEmissionsPerNight[hotelStarRating] ?? 0
         let totalHotelCarbon = Double(nightsOfStay) * hotelCarbonEmissionsPerNight
-        
+        print(totalHotelCarbon)
+
         return totalHotelCarbon
     }
     // Core Data context

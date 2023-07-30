@@ -79,13 +79,6 @@
 			remoteGlobalIDString = 092B74CE2A66372300723890;
 			remoteInfo = Enviroamer;
 		};
-		093E7C232A6FC03600F6CED1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 092B74C72A66372300723890 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 093E7C112A6FC03500F6CED1;
-			remoteInfo = EnviroamerWidgetExtension;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -180,13 +173,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		092B74E72A66372400723890 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		093E7C0F2A6FC03500F6CED1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -491,7 +477,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				093E7C242A6FC03600F6CED1 /* PBXTargetDependency */,
 			);
 			name = Enviroamer;
 			packageProductDependencies = (
@@ -538,22 +523,6 @@
 			productReference = 092B74EA2A66372400723890 /* EnviroamerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		093E7C112A6FC03500F6CED1 /* EnviroamerWidgetExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 093E7C262A6FC03600F6CED1 /* Build configuration list for PBXNativeTarget "EnviroamerWidgetExtension" */;
-			buildPhases = (
-				093E7C0E2A6FC03500F6CED1 /* Sources */,
-				093E7C0F2A6FC03500F6CED1 /* Frameworks */,
-				093E7C102A6FC03500F6CED1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = EnviroamerWidgetExtension;
-			productName = EnviroamerWidgetExtension;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -574,9 +543,6 @@
 					092B74E92A66372400723890 = {
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = 092B74CE2A66372300723890;
-					};
-					093E7C112A6FC03500F6CED1 = {
-						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
@@ -600,7 +566,6 @@
 				092B74CE2A66372300723890 /* Enviroamer */,
 				092B74DF2A66372400723890 /* EnviroamerTests */,
 				092B74E92A66372400723890 /* EnviroamerUITests */,
-				093E7C112A6FC03500F6CED1 /* EnviroamerWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -625,13 +590,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		092B74E82A66372400723890 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		093E7C102A6FC03500F6CED1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -711,13 +669,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		093E7C0E2A6FC03500F6CED1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -730,11 +681,6 @@
 			isa = PBXTargetDependency;
 			target = 092B74CE2A66372300723890 /* Enviroamer */;
 			targetProxy = 092B74EB2A66372400723890 /* PBXContainerItemProxy */;
-		};
-		093E7C242A6FC03600F6CED1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 093E7C112A6FC03500F6CED1 /* EnviroamerWidgetExtension */;
-			targetProxy = 093E7C232A6FC03600F6CED1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -861,7 +807,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Enviroamer/Preview Content\"";
-				DEVELOPMENT_TEAM = 86T9R8CK49;
+				DEVELOPMENT_TEAM = 5DW5L865S3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -882,7 +828,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ev.envior;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiyas.aria;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
@@ -941,7 +887,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 86T9R8CK49;
+				DEVELOPMENT_TEAM = 5DW5L865S3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -986,7 +932,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 86T9R8CK49;
+				DEVELOPMENT_TEAM = 5DW5L865S3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -1021,65 +967,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Enviroamer;
-			};
-			name = Release;
-		};
-		093E7C272A6FC03600F6CED1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 86T9R8CK49;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EnviroamerWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = EnviroamerWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ev.enviroamer.Enviroamer1.EnviroamerWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		093E7C282A6FC03600F6CED1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 86T9R8CK49;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EnviroamerWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = EnviroamerWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ev.enviroamer.Enviroamer1.EnviroamerWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -1118,15 +1005,6 @@
 			buildConfigurations = (
 				092B74FB2A66372400723890 /* Debug */,
 				092B74FC2A66372400723890 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		093E7C262A6FC03600F6CED1 /* Build configuration list for PBXNativeTarget "EnviroamerWidgetExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				093E7C272A6FC03600F6CED1 /* Debug */,
-				093E7C282A6FC03600F6CED1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

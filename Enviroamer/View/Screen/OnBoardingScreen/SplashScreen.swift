@@ -28,26 +28,14 @@ struct SplashScreen: View {
             
             VStack {
                 VStack{
-                    if colorScheme == .dark {
-                        Image("app_logo") // Gambar untuk dark mode
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 150)
-                            .scaleEffect(size)
-                            .opacity(opacity)
-                            .animation(.easeInOut(duration: 2))
-                        
-                    } else {
-                        Image("app_logo") // Gambar untuk light mode
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 150)
-                            .scaleEffect(size)
-                            .opacity(opacity)
-                            .animation(.easeInOut(duration: 2))
-                        
-                        
-                    }
+                    Image("app_logo") // Gambar untuk light mode
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 150)
+                        .scaleEffect(size)
+                        .opacity(opacity)
+                        .animation(.easeInOut(duration: 2))
+                     
                     
                 }
                 .onAppear{
