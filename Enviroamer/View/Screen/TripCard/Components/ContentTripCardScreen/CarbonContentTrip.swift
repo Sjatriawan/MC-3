@@ -57,7 +57,7 @@ struct CarbonContentTrip: View {
                         x: .value("Total Carbon", trip.totalCarbonTransport),
                         y: .value("Transportation Method", trip.transportationMethod ?? "")
                     )
-                    .foregroundStyle(by: .value("Total Carbon", trip.totalCarbonTransport))
+                    .foregroundStyle(.purple)
                     .annotation (position: .overlay) {
                         Text("\(trip.totalCarbonTransport / 1_000_000, specifier: "%.2f") tonsCO₂e")
                             .foregroundColor(.white)
@@ -70,7 +70,7 @@ struct CarbonContentTrip: View {
                         x: .value("Total Carbon", trip.totalCarbonAkomodasi),
                         y: .value("Accomodation", trip.hotelStarRating ?? "")
                     )
-                    .foregroundStyle(by: .value("Total Carbon", trip.totalCarbonAkomodasi))
+                    .foregroundStyle(Color("green400"))
                     .annotation (position: .overlay) {
                         Text("\(trip.totalCarbonAkomodasi / 1_000_000, specifier: "%.2f") tonsCO₂e")
                             .foregroundColor(.white)
