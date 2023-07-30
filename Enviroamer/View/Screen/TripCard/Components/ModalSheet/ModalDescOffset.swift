@@ -30,7 +30,7 @@ struct ModalDescOffset: View {
                     }, label: {
                         HStack{
                             Image(systemName: isSpeaking ? "stop.circle.fill" : "speaker.wave.3.fill")
-                            Text(isSpeaking ? "Stop Listening" : "Listen")
+                            Text(isSpeaking ? "Stop" : "Listen")
                         }
                         .foregroundColor(Color("green600"))
                         
